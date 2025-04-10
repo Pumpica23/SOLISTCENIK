@@ -214,4 +214,53 @@ footer p {
     .item-details h3 {
         font-size: 1em;
     }
+}
+
+/* Language Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+    /* Initially hidden - JS will show it */
+    /* display: none;  <-- We will control this via JS */
+}
+
+.modal-content {
+    background-color: var(--menu-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+.modal-content h2 {
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: var(--heading-weight);
+}
+
+.modal-content button {
+    background-color: var(--menu-active-bg);
+    color: var(--menu-active-color);
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    font-size: 1.1em;
+    transition: opacity 0.3s ease;
+    min-width: 100px;
+}
+
+.modal-content button:hover {
+    opacity: 0.8;
 } 
