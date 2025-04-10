@@ -138,11 +138,24 @@ main {
 }
 
 .item-price {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: white;
+    /* Container for size and cost */
     white-space: nowrap;
     margin-left: 15px;
+    text-align: right; /* Align nested spans to the right */
+}
+
+.item-size {
+    display: block; /* Put size on its own line */
+    font-size: 0.85em; /* Make size smaller */
+    color: var(--product-info-desc-color); /* Use description color for size */
+    font-weight: 400; /* Normal weight for size */
+}
+
+.item-cost {
+    display: block; /* Put cost on its own line */
+    font-size: 1.1em; /* Keep original price font size */
+    font-weight: 600; /* Keep original price font weight */
+    color: white; /* Keep price color white */
 }
 
 footer {
@@ -183,8 +196,19 @@ footer p {
 
     .item-price {
         margin-left: 0;
-        margin-top: 5px;
-        font-size: 1.1em;
+        margin-top: 8px; /* Adjusted margin for two lines */
+        font-size: 1em; /* Adjusted base size for mobile */
+        text-align: left; /* Align left on mobile */
+    }
+
+    .item-size {
+        display: inline; /* Keep size inline on mobile */
+        margin-right: 8px; /* Add space between size and cost */
+    }
+
+    .item-cost {
+         display: inline; /* Keep cost inline on mobile */
+         font-size: 1em; /* Adjust cost size for mobile */
     }
 
     .item-details h3 {

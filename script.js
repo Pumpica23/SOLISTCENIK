@@ -79,7 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const priceSpan = document.createElement('span');
             priceSpan.classList.add('item-price');
-            priceSpan.textContent = item.price;
+
+            // Regex to identify size/unit and price parts
+            // Looks for patterns like "0,1 l 3,20 €" or "100g 15,50 €" or "0,1 l / 0,75 l 4,50 € / 31,50 €"
+            const priceRegex = /^((?:[\d,\.]+\s*(?:l|g|kg|ml)(?:\s*\/\s*)?)+)\s*(.*€.*)$/i;
+            const priceMatch = item.price ? item.price.match(priceRegex) : null;
+
+            if (priceMatch) {
+                // If size/unit found, split into separate spans
+                priceSpan.innerHTML = `<span class="item-size">${priceMatch[1].trim()}</span> <span class="item-cost">${priceMatch[2].trim()}</span>`;
+            } else if (item.price) {
+                // Otherwise, just display the price
+                priceSpan.innerHTML = `<span class="item-cost">${item.price}</span>`;
+            } else {
+                priceSpan.innerHTML = `<span class="item-cost"></span>`; // Handle null/empty price
+            }
+
             itemDiv.appendChild(priceSpan);
 
             categoryDiv.appendChild(itemDiv);
