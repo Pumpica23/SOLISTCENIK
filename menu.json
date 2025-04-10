@@ -699,5 +699,255 @@
         "description": null
       }
     ]
+  },
+  {
+    "category": "Vinska karta / Wine Card",
+    "items": [
+      {
+        "title": "Hišno vino / House Wine - Solist belo",
+        "price": "0,1 l 3,20 €",
+        "description": null
+      },
+      {
+        "title": "Hišno vino / House Wine - Solist rdeče",
+        "price": "0,1 l 3,20 €",
+        "description": null
+      },
+      {
+        "title": "Sveža bela vina - GAŠPER, Rebula",
+        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža bela vina - ZARRO, Malvazija",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža bela vina - Princic Chardonay",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Goriska brda, suho/dry"
+      },
+      {
+        "title": "Sveža bela vina - ERZETIČ, Sivi pinot",
+        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža bela vina - FERJANČIČ, Pinela",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža bela vina - BURJA, Zelen",
+        "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Bela polna vina - ŠČUREK, Stara Brajda",
+        "price": "0,75 l 42,00 €",
+        "description": "SLO, Goriška Brda, suho/dry, 2016"
+      },
+      {
+        "title": "Bela polna vina - Tilia Nostra",
+        "price": "0,75 l 35,00 €",
+        "description": "SLO, Vipavska dolina, suho/dry"
+      },
+      {
+        "title": "Bela polna vina - SIMČIČ EDI, Triton lex",
+        "price": "0,75 l 46,00 €",
+        "description": "SLO, Goriška Brda, suho/dry 2017"
+      },
+      {
+        "title": "Bela polna vina - BATIČ, Angel",
+        "price": "0,75 l 64,00 €",
+        "description": "SLO, Vipavska dolina, suho/dry, 2017"
+      },
+      {
+        "title": "Bela polna vina - KRISTANČIČ, Chardoney PAVÓ, LIMITED EDITION",
+        "price": "0,75 l 74,00 €",
+        "description": "SLO, Goriška Brda, 2019"
+      },
+      {
+        "title": "Sladka vina - STEYER, Dišeči traminec",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Štajerska, polsladko/semi-sweet"
+      },
+      {
+        "title": "Sladka vina - ŠTURM, Rumeni muškat",
+        "price": "0,1 l / 0,75 l 5,50 € / 38,50 €",
+        "description": "SLO, Bela krajina, polsladko/semi-sweet"
+      },
+      {
+        "title": "Sveža rdeča vina - SIMČIČ MARJAN, Cabernet sauvignon",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža rdeča vina - ERZETIČ, Črna rebula",
+        "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža rdeča vina - ŠTOKA PRIMOŽ, Teran",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Kras, suho/dry"
+      },
+      {
+        "title": "Sveža rdeča vina - ROJAC, Refošk",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Sveža rdeča vina - ŠUKLJE, Modra frankinja",
+        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+        "description": "SLO, Bela krajina, suho/dry"
+      },
+      {
+        "title": "Sveža rdeča vina - FERJANČIČ, Merlot",
+        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+        "description": "SLO, Goriška Brda, suho/dry"
+      },
+      {
+        "title": "Rdeča polna vina - JAKONČIČ A., Carolina rdeča",
+        "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+        "description": "SLO, Goriška Brda, suho/dry, 2016"
+      },
+      {
+        "title": "Rdeča polna vina - TILIA, Rubido l.2017",
+        "price": "0,75 l 45,00 €",
+        "description": "SLO, Vipavska dolina, suho/dry, 2017"
+      },
+      {
+        "title": "Rdeča polna vina - MOVIA, Veliko rdeče",
+        "price": "0,75 l 74,00 €",
+        "description": "SLO, Goriška Brda, suho/dry 2010"
+      },
+      {
+        "title": "Rdeča polna vina - FEDORA, Farjla 2022",
+        "price": "0,75 l 49,00 €",
+        "description": "SLO, Vipava, suho/dry 2022"
+      },
+      {
+        "title": "Rose vina / Rose Wines - BATIČ, Rose",
+        "price": "0,75 l 4,50 € / 31,50 €",
+        "description": "SLO, Vipavska dolina, polsuho/semi-dry"
+      },
+      {
+        "title": "Oranžna vina / Orange Wine - ŠUMENJAK, Alter",
+        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+        "description": "SLO, štajerska, polsuho/semi-dry"
+      },
+      {
+        "title": "Oranžna vina / Orange Wine - Zarro Malvazija",
+        "price": "0,75 l 40,00 €",
+        "description": "SLO, istra, suho/dry"
+      },
+      {
+        "title": "Oranžna vina / Orange Wine - GRAVNER, Rebula",
+        "price": "0,75 l 160,00 €",
+        "description": "SLO/ITA, colio, suho/dry"
+      },
+      {
+        "title": "Penine In Prosecco - SOLIGO, Prosecco",
+        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+        "description": "ITA, Veneto, suho/dry"
+      },
+      {
+        "title": "Penine In Prosecco - Villa Folini Blancs de Blancs",
+        "price": "0,75 l 33,00 €",
+        "description": "ITA, Toscana, suho/dry"
+      },
+      {
+        "title": "Penine In Prosecco - Bagueri Zero Dosage",
+        "price": "0,75 l 35,00 €",
+        "description": "SLO, brda, suho/dry"
+      },
+      {
+        "title": "Penine In Prosecco - BJANA, Penina BJANA Brut",
+        "price": "0,1 l / 0,75 l 6,50 € / 45,50 €",
+        "description": "SLO, Goriška Brda, Brut"
+      },
+      {
+        "title": "Penine In Prosecco - BJANA, Penina BJANA Rose",
+        "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+        "description": "SLO, Goriška Brda, Brut"
+      },
+      {
+        "title": "Penine In Prosecco - JACOB'S CREEK, Sparkling Rose",
+        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+        "description": "AUS, suho/dry"
+      },
+      {
+        "title": "Penine In Prosecco - Domaine Slapšak Brut Reserve",
+        "price": "0,1 l / 0,75 l 5,00 € / 35,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Pol Roger, Brut Reserve",
+        "price": "0,75 l 100,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Mumm, Cordon Rouge",
+        "price": "0,75 l 110,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Moet & Chardon, Brut Imperial",
+        "price": "0,75 l 110,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Moet, Ice",
+        "price": "0,75 l 120,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Taittanger, Brut Reserve",
+        "price": "0,75 l 120,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Taittanger, Prestige Rose",
+        "price": "0,75 l 120,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Veuve Clicquot, Brut-Yellow Label",
+        "price": "0,75 l 120,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Veuve Clicquot, Rich",
+        "price": "0,75 l 130,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Louis Roeder, Cristal 2002",
+        "price": "0,75 l 600,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Dom Perignon, Brut 2009",
+        "price": "0,75 l 300,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Bellaire Luxe",
+        "price": "0,75 l 110,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Bellaire Rose",
+        "price": "0,75 l 110,00 €",
+        "description": null
+      },
+      {
+        "title": "Šampanjci / Champagne - Ruinart, Blanc de Blancs",
+        "price": "0,75 l 210,00 €",
+        "description": null
+      }
+    ]
   }
 ] 
