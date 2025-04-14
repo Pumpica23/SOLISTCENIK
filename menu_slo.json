@@ -8,18 +8,13 @@
         "description": "(Espresso, smetana, vanilija sladoled)"
       },
       {
-        "title": "Ledena kava",
-        "price": "5,00 €",
-        "description": "(Espresso, mleko, javorjev med)"
+        "title": "Ledena kava s sladoledom",
+        "price": "5,90 €",
+        "description": "(Espresso,vanilijin sladoled, mleko, javorjev sirup)"
       },
       {
         "title": "Kava (čez led)",
         "price": "3,50 €",
-        "description": null
-      },
-      {
-        "title": "Ledena kava s sladoledom",
-        "price": "5,90 €",
         "description": null
       },
       {
