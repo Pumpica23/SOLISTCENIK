@@ -1,6 +1,6 @@
 [
   {
-    "category": "Bevande Fresche Estive Solist",
+    "category": "Bevande Rinfrescanti Estive Solist",
     "items": [
       {
         "title": "Espresso Ghiacciato Solist",
@@ -8,18 +8,13 @@
         "description": "(Espresso, panna, gelato alla vaniglia)"
       },
       {
-        "title": "Caffè Ghiacciato",
-        "price": "5,00 €",
-        "description": "(Espresso, latte, miele d'acero)"
+        "title": "Caffè Ghiacciato con Gelato",
+        "price": "5,90 €",
+        "description": "(Espresso, gelato alla vaniglia, latte, sciroppo d'acero)"
       },
       {
         "title": "Caffè (su ghiaccio)",
         "price": "3,50 €",
-        "description": null
-      },
-      {
-        "title": "Caffè Ghiacciato con gelato",
-        "price": "5,90 €",
         "description": null
       },
       {
@@ -35,12 +30,12 @@
       {
         "title": "Tè Freddo Naturale",
         "price": "0,40 l 4,50 €",
-        "description": "(Pesca, tè verde)"
+        "description": "(Pesca, verde)"
       },
       {
-        "title": "Tè Freddo Naturale con purea",
+        "title": "Tè Freddo Naturale con Purea",
         "price": "0,40 l 4,90 €",
-        "description": "(Mango, pesca bianca, frutto della passione, lampone, ananas)"
+        "description": "(Mango, pesca bianca, frutto della passione, lampone, ananas, fragola)"
       },
       {
         "title": "Limonata",
@@ -50,82 +45,85 @@
       {
         "title": "Limonata Aromatizzata",
         "price": "4,20 €",
-        "description": "(Mango, pesca bianca, frutto della passione, lampone, ananas)"
+        "description": "(Mango, pesca bianca, frutto della passione, lampone, ananas, fragola)"
       }
     ]
   },
   {
-    "category": "Cocktail Esclusivi",
+    "category": "COCKTAIL SIGNATURE",
     "items": [
-       {
-        "title": "Clover Club",
-        "price": "12,00 €",
-        "description": "(Gin, lamponi freschi, succo di lime, albume d'uovo, lampone liofilizzato)"
+      {
+        "title": "Solist Spritz",
+        "price": "10,00 €",
+        "description": "(Broken Bones Cloud Gin, prosecco, fiore di ibisco, succo di limone, acqua gassata)"
       },
       {
-        "title": "Pornstar Martini",
+        "title": "Midnight Mojito [premium]",
+        "price": "10,00 €",
+        "description": "(Rum La Hachichera Banana, Crème de Cassis, lime, zucchero di canna, menta, purea di banana, purea di ribes nero, soda)"
+      },
+      {
+        "title": "Fig Leaf [premium]",
         "price": "14,00 €",
-        "description": "(Vodka Elyx, sciroppo di vaniglia, succo di lime, frutto della passione fresco, spuma di spumante)"
+        "description": "(Clase Azul Plata, succo di limone, sciroppo d'agave, sale, acqua tonica alle foglie di fico)"
       },
       {
-        "title": "Fuming Passion",
-        "price": "17,00 €",
-        "description": "(Mezcal, miele, succo di lime, frutto della passione fresco, spuma di tè fiore di pisello blu)"
-      },
-      {
-        "title": "Forgotten Anniversary",
-        "price": "17,00 €",
-        "description": "(Rum, succo di lime fresco, amaretto, succo di mirtillo rosso, estratto di ibisco, albume d'uovo, brillantini)"
-      },
-      {
-        "title": "Smoky Matcha",
+        "title": "Clarified New York Sour [premium]",
         "price": "13,00 €",
-        "description": "(Whiskey Islay, tè verde matcha, succo di limone, lampone liofilizzato, albume d'uovo)"
+        "description": "(Chivas XIII Extra, succo di limone, sciroppo di zucchero, Cabernet Sauvignon - versione cristallina e liscia del tradizionale New York Sour.)"
       },
       {
-        "title": "Matara Punch 'Sri Lanka'",
-        "price": "17,00 €",
-        "description": "(Mezcal, polvere di curry, succo di lime, mango fresco, succo d'ananas)"
+        "title": "Clarified Whiskey Sour [premium]",
+        "price": "12,00 €",
+        "description": "(Chivas XIII Extra, succo di limone, sciroppo di zucchero - versione cristallina e liscia del tradizionale Whiskey Sour.)"
       },
       {
-        "title": "Pisco Sour",
+        "title": "Pornstar Martini [premium]",
+        "price": "14,00 €",
+        "description": "(vodka Belvedere, purea di frutto della passione, sciroppo di vaniglia, succo di lime, shot di prosecco)"
+      },
+      {
+        "title": "Absolut Passion Collins",
+        "price": "8,50 €",
+        "description": "(Vodka Absolut, succo di limone, soda, purea di frutto della passione, sciroppo di zucchero)"
+      },
+      {
+        "title": "Cooling Potion",
+        "price": "9,00 €",
+        "description": "(cetriolo fresco, lime, sciroppo d'acero, soda)"
+      },
+      {
+        "title": "Extra Whiskey Sour [premium]",
         "price": "11,00 €",
-        "description": "(Pisco, succo di limone, sciroppo di zucchero, bitters)"
-      },
-      {
-        "title": "Truffle Espresso Martin",
-        "price": "16,00 €",
-        "description": "(Vodka, Liquore al caffè Mr. Black, miele, caffè espresso, tartufo liofilizzato)"
-      },
-      {
-        "title": "Twisted Bee's Knees",
-        "price": "15,00 €",
-        "description": "(Gin, liquore al miele, succo di limone, polline di favo)"
-      },
-      {
-        "title": "Extra Whiskey Sour",
-        "price": "15,00 €",
         "description": "(Whiskey, marmellata di ananas-mango, succo di limone, succo d'arancia fresco, albume d'uovo)"
       },
       {
-        "title": "Bloody Marry",
-        "price": "16,00 €",
-        "description": "(Vodka Elyx, pomodorini freschi, spezie, limone, succo di pomodoro)"
+        "title": "Forgotten Anniversary [premium]",
+        "price": "12,00 €",
+        "description": "(Rum, succo di lime fresco, liquore alla mandorla, succo di mirtillo rosso, estratto di ibisco, albume d'uovo, brillantini)"
       },
       {
-        "title": "Cuban Pineapple Smash",
-        "price": "20,00 €",
-        "description": "(Rum Havana 7yo., miele, frutto della passione fresco, succo d'ananas, zenzero fresco, succo di lime, bitters)"
+        "title": "Skrewball Espresso Martini [premium]",
+        "price": "10,00 €",
+        "description": "(Skrewball Peanut Butter whiskey, liquore al caffè Mr. Black, espresso shot, miele)"
       },
       {
-        "title": "Bramble",
+        "title": "Clover Club",
         "price": "11,00 €",
-        "description": "(Gin Beefeater 24, Sciroppo di fiori di sambuco, succo di limone, purea naturale di more, Crem de Cassis De Kuyper)"
+        "description": "(Gin, lamponi freschi, succo di lime, albume d'uovo, lampone liofilizzato)"
+      },
+      {
+        "title": "Tickle Pickle",
+        "price": "10,00 €",
+        "description": "(Amuerte, succo di sottaceti, basilico, succo di limone, sciroppo di zucchero)"
       }
     ]
   },
   {
     "category": "Bevande Calde",
+    "subcategories": [
+      {
+        "name": "Caffè",
     "items": [
       {
         "title": "Caffè Espresso",
@@ -138,12 +136,12 @@
         "description": null
       },
       {
-        "title": "Caffè con latte",
+            "title": "Caffè con Latte",
         "price": "2,70 €",
         "description": null
       },
       {
-        "title": "Caffè con panna",
+            "title": "Caffè con Panna",
         "price": "2,70 €",
         "description": null
       },
@@ -158,7 +156,7 @@
         "description": null
       },
       {
-        "title": "Caffè Latte",
+            "title": "Caffè Bianco",
         "price": "3,20 €",
         "description": null
       },
@@ -168,17 +166,17 @@
         "description": null
       },
       {
-        "title": "Caffe con Panna / Patron XO",
-        "price": "2,60 € / 5,10 €",
+            "title": "Caffe con Patron XO (Tequila al Caffè)",
+            "price": "5,10 €",
         "description": null
       },
       {
-        "title": "Cioccolata",
+            "title": "Cacao",
         "price": "2,80 €",
         "description": null
       },
       {
-        "title": "Cioccolata con panna",
+            "title": "Cacao con Panna",
         "price": "3,30 €",
         "description": null
       },
@@ -196,594 +194,773 @@
         "title": "Babychino",
         "price": "2,10 €",
         "description": null
+          }
+        ]
       },
       {
-        "title": "Liquore al Miele",
-        "price": "4,50 €",
-        "description": null
+        "name": "Aggiunte",
+        "items": [
+          { "title": "Latte", "price": "0,30 €", "description": null },
+          { "title": "Panna", "price": "0,50 €", "description": null },
+          { "title": "Limone", "price": "0,50 €", "description": null },
+          { "title": "Miele", "price": "0,40 €", "description": null },
+          { "title": "Caffè d'orzo", "price": "+0,50 €", "description": null },
+          { "title": "Caffè decaffeinato", "price": "+0,50 €", "description": null },
+          { "title": "Caffè con latte vegetale", "price": "+0,40 €", "description": null }
+        ]
       },
       {
-        "title": "Grog / Punch",
-        "price": "4,50 €",
-        "description": null
-      },
-      {
-        "title": "Tè alla frutta",
+        "name": "Tè Selezionati",
+        "items": [
+          {
+            "title": "Tè alla Frutta",
         "price": "3,20 €",
         "description": null
       },
       {
-        "title": "Tisana alle erbe",
+            "title": "Tisana alle Erbe",
         "price": "3,20 €",
         "description": null
       },
       {
-        "title": "Tè nero",
+            "title": "Tè Nero",
         "price": "3,20 €",
         "description": null
       },
       {
-        "title": "Tè verde",
+            "title": "Tè Verde",
         "price": "3,20 €",
         "description": null
       },
       {
-        "title": "Tè con zenzero fresco",
+            "title": "Tè con Zenzero Fresco",
         "price": "3,20 €",
         "description": null
       },
       {
-        "title": "Tè Solist (tè con menta fresca)",
+            "title": "Tè Solist (tè con menta fresca e zenzero fresco)",
         "price": "3,20 €",
         "description": null
+          }
+        ]
       }
     ]
   },
   {
     "category": "Bevande Analcoliche",
-    "items": [
+    "subcategories": [
       {
-        "title": "Succo d'arancia naturale",
-        "price": "0,1 l 2,70 €",
-        "description": null
+        "name": "Succhi Freschi",
+        "items": [
+          { "title": "Succo d'Arancia Naturale", "price": "0,1 l 2,70 €", "description": null },
+          { "title": "Succo di Pompelmo Naturale", "price": "0,1 l 2,90 €", "description": null }
+        ]
       },
       {
-        "title": "Succo di pompelmo naturale",
-        "price": "0,1 l 2,90 €",
-        "description": null
+        "name": "Bevande in Bottiglia",
+        "items": [
+          { "title": "Coca-Cola", "price": "0,25 l 3,90 €", "description": null },
+          { "title": "Coca-Cola Zero", "price": "0,25 l 3,90 €", "description": null },
+          { "title": "Fanta", "price": "0,25 l 3,90 €", "description": null },
+          { "title": "Sprite", "price": "0,25 l 3,90 €", "description": null },
+          { "title": "Schweppes", "price": "0,25 l 3,90 €", "description": "(Bitter Lemon, Tangerine)" },
+          { "title": "Thomas Henry", "price": "0,20 l 4,30 €", "description": null },
+          { "title": "Fever Tree", "price": "0,20 l 4,30 €", "description": null },
+          { "title": "Cockta", "price": "0,33 l 4,00 €", "description": null },
+          { "title": "Orangina", "price": "0,25 l 3,90 €", "description": null }
+        ]
       },
       {
-        "title": "Coca-Cola",
-        "price": "0,25 l 3,90 €",
-        "description": null
+        "name": "Cocktail Analcolici",
+        "items": [
+          { "title": "Virgin Mojito", "price": "7,00 €", "description": "(Lime, zucchero, menta, acqua frizzante, Sprite, purea di frutta a scelta)" },
+          { "title": "Mojito alla Frutta Analcolico", "price": "7,50 €", "description": "(Lime, zucchero, menta, acqua frizzante, Sprite, purea di frutta a scelta)" },
+          { "title": "Virgin Pina Colada", "price": "8,00 €", "description": "(Succo d'ananas, ananas fresco, purea di cocco)" },
+          { "title": "Passion Colada", "price": "8,00 €", "description": "(Ananas fresco, purea di cocco, purea di frutto della passione, succo d'arancia)" },
+          { "title": "Bonita", "price": "8,00 €", "description": "(Banana, purea di cocco, succo di mirtillo)" },
+          { "title": "Tom Collins Analcolico", "price": "7,50 €", "description": "(Gin Analcolico Brin, succo di limone, sciroppo di zucchero, acqua frizzante)" },
+          { "title": "Tom Collins alla Frutta Analcolico", "price": "7,80 €", "description": "(Gin Analcolico Brin, succo di limone, sciroppo di zucchero, purea di frutta a scelta, acqua frizzante)" }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Cocktail",
+    "subcategories": [
+      {
+        "name": "Aperitivi",
+        "items": [
+          { "title": "Ramazzotti Rosato Spritz", "price": "7,90 €", "description": "(prosecco, Ramazzotti rosato, basilico)" },
+          { "title": "Ramazzotti Rosato Tonic", "price": "7,90 €", "description": "(Schweppes tonic water, Ramazzotti rosato, lime)" },
+          { "title": "Aperol Spritz", "price": "8,00 €", "description": "(Aperol, Prosecco Costaross, soda)" },
+          { "title": "Hugo Spritz", "price": "8,00 €", "description": "(liquore al sambuco, Prosecco Costaross, menta, soda)" },
+          { "title": "Lillet Hugo Spritz", "price": "9,00 €", "description": "(prosecco, Lillet Blanc, lime, menta)" },
+          { "title": "Lillet Hugo Tonic", "price": "9,00 €", "description": "(Lillet Blanc, tonic water, lime, menta, liquore al sambuco)" },
+          { "title": "Passion Spritz", "price": "8,50 €", "description": "(prosecco, purea di frutto della passione, acqua gassata)" },
+          { "title": "Mango Spritz", "price": "8,50 €", "description": "(prosecco, purea di mango, acqua gassata)" },
+          { "title": "Mimosa", "price": "7,50 €", "description": "(prosecco, succo d'arancia fresco)" },
+          { "title": "Bellini", "price": "8,30 €", "description": "(prosecco, Peachtree, purea di pesca bianca, ciliegia da cocktail)" },
+          { "title": "Malibu Spritz", "price": "8,30 €", "description": "(prosecco, rum al cocco Malibu, lime, soda)" },
+          { "title": "Bergamotto Italicus Spritz", "price": "9,00 €", "description": "(Italicus Rosolio Di Bergamotto, succo di limone, prosecco, oliva)" },
+          { "title": "Limoncello Spritz", "price": "9,00 €", "description": "(Limoncello, prosecco, sciroppo di zucchero, succo di limone, acqua gassata)" }
+        ]
       },
       {
-        "title": "Coca-Cola Zero",
-        "price": "0,25 l 3,90 €",
-        "description": null
+        "name": "Easy Mix",
+        "items": [
+          { "title": "Gin Tonic", "price": "7,50 €", "description": null },
+          { "title": "Jack Cola", "price": "7,50 €", "description": null },
+          { "title": "Jameson Cola", "price": "7,50 €", "description": null },
+          { "title": "Jameson Berry", "price": "8,00 €", "description": null },
+          { "title": "Absolut Mix (Arancia, Mirtillo Rosso, Ananas, Mela)", "price": "8,00 €", "description": null },
+          { "title": "Jagermeister Cola", "price": "8,00 €", "description": null },
+          { "title": "Gin Berry", "price": "8,00 €", "description": null },
+          { "title": "Pink Gin Tonic", "price": "8,00 €", "description": null }
+        ]
       },
       {
-        "title": "Fanta",
-        "price": "0,25 l 3,90 €",
-        "description": null
+        "name": "Drink corti",
+        "items": [
+          { "title": "Cosmopolitan", "price": "8,00 €", "description": "(vodka Absolut Citron, Triple Sec, succo di mirtillo rosso, lime)" },
+          { "title": "Margarita", "price": "8,00 €", "description": "(tequila Olmeca, Triple Sec, lime)" },
+          { "title": "Margarita alla frutta", "price": "8,50 €", "description": "(tequila Olmeca, Triple Sec, lime + frutta fresca)" },
+          { "title": "Daiquiri", "price": "8,00 €", "description": "(rum Havana 3 Anos, Triple Sec, lime)" },
+          { "title": "Daiquiri alla frutta", "price": "8,50 €", "description": "(rum Havana 3 Anos, Triple Sec, lime + frutta fresca)" },
+          { "title": "Old Cuban", "price": "10,00 €", "description": "(Havana 7yo, menta, prosecco, sciroppo di zucchero, lime, Angostura bitters)" },
+          { "title": "Espresso Martini", "price": "9,00 €", "description": "(vodka Absolut, Kahlua, caffè)" },
+          { "title": "White Russian", "price": "7,50 €", "description": "(vodka Absolut, Kahlua, panna)" },
+          { "title": "Black Russian", "price": "7,30 €", "description": "(vodka Absolut, Kahlua)" },
+          { "title": "Twisted Bees Knees", "price": "15,00 €", "description": "(Gin, liquore al miele, succo di limone, polline di miele)" },
+          { "title": "Maestros Old Fashioned", "price": "10,50 €", "description": "(Havana Seleccion De Maestros, zucchero di canna, Angostura bitters)" },
+          { "title": "Extra Old Fashioned", "price": "9,50 €", "description": "(Chivas XIII Extra, zucchero di canna, Angostura bitters)" }
+        ]
       },
       {
-        "title": "Sprite",
-        "price": "0,25 l 3,90 €",
-        "description": null
+        "name": "Negroni",
+        "items": [
+          { "title": "Negroni Classic", "price": "9,00 €", "description": "(Campari, Beefeater Gin, Vermouth dolce)" },
+          { "title": "Pink Negroni", "price": "9,00 €", "description": "(Campari, Beefeater Pink Gin, Vermouth dolce)" },
+          { "title": "Negroni Bianco", "price": "9,00 €", "description": "(Italicus Bergamotto, Lillet Blanc, Malfy Originale)" },
+          { "title": "Chocolate Negroni", "price": "9,00 €", "description": "(Ramazzotti Amaro, Lillet Rogue, Malfy Originale, bitter al cioccolato)" },
+          { "title": "Negroni Rumoni", "price": "9,00 €", "description": "(Havana 3yo, Campari, Vermouth dolce)" },
+          { "title": "Negroni Sbagliato", "price": "9,00 €", "description": "(Campari, prosecco, Vermouth dolce)" },
+          { "title": "Negroni Americano", "price": "9,00 €", "description": "(Campari, soda, Vermouth dolce)" }
+        ]
       },
       {
-        "title": "Schweppes",
-        "price": "0,25 l 3,90 €",
-        "description": "(Bitter Lemon, Mandarino)"
+        "name": "Drink lunghi",
+        "items": [
+          { "title": "Tom Collins", "price": "8,50 €", "description": "(gin Beefeater, soda, succo di limone)" },
+          { "title": "Tom Collins alla frutta", "price": "9,00 €", "description": "(gin Beefeater, soda, succo di limone, frutta fresca)" },
+          { "title": "Skinny Bitch", "price": "8,00 €", "description": "(vodka Absolut, succo di limone, soda)" },
+          { "title": "Skinny Redhead", "price": "8,50 €", "description": "(vodka Absolut, succo di limone, soda, purea di fragole)" },
+          { "title": "Absolut Watermelon Collins", "price": "9,00 €", "description": "(Absolut Watermelon, Watermelon Fruity mix, succo di limone, soda)" },
+          { "title": "Caipirinha", "price": "8,50 €", "description": "(cachaca Janeiro, zucchero di canna, lime)" },
+          { "title": "Caipiroska", "price": "8,50 €", "description": "(vodka Absolut, zucchero di canna, lime)" },
+          { "title": "Mojito", "price": "8,50 €", "description": "(rum Havana 3 Anos, soda, zucchero bianco, menta, lime)" },
+          { "title": "Mojito alla frutta", "price": "9,00 €", "description": "(rum Havana 3 Anos, soda, zucchero bianco, menta, lime, frutta fresca)" },
+          { "title": "Moscow Mule", "price": "8,50 €", "description": "(vodka Absolut, lime, ginger beer)" },
+          { "title": "Moscow Mule alla frutta", "price": "9,00 €", "description": "(vodka Absolut, lime, purea di frutta, ginger beer)" },
+          { "title": "Brexit Mule", "price": "8,50 €", "description": "(gin Beefeater, lime, ginger beer)" },
+          { "title": "Brexit Mule alla frutta", "price": "9,00 €", "description": "(gin Beefeater, lime, ginger beer, purea di frutta)" },
+          { "title": "Caipirinha alla frutta", "price": "9,00 €", "description": "(cachaca Janeiro, zucchero di canna, lime, frutta fresca)" },
+          { "title": "Caipirissima", "price": "8,00 €", "description": "(Havana 3 Anos, zucchero di canna, lime)" },
+          { "title": "Caipirissima alla frutta", "price": "8,50 €", "description": "(Havana 3 Anos, zucchero di canna, lime, purea di frutta)" },
+          { "title": "Jameson Summer", "price": "9,00 €", "description": "(whiskey Jameson, liquore al sambuco, succo di mela, rosmarino)" },
+          { "title": "Tequila Sunrise", "price": "8,90 €", "description": "(tequila Olmeca, succo d'arancia, sciroppo di granatina, succo di limone)" },
+          { "title": "Mai Tai", "price": "11,90 €", "description": "(rum Havana 3 Anos, rum Havana Especial, Peachtree, Amaretto, sciroppo di granatina, succo di limone)" },
+          { "title": "Pina Colada", "price": "9,00 €", "description": "(rum Havana 3 Anos, succo d'ananas, purea di cocco Ponthier, ananas)" },
+          { "title": "Long Island Iced Tea", "price": "11,90 €", "description": "(gin Beefeater, vodka Absolut, tequila Olmeca, rum Havana 3 Anos, Coca-Cola, succo di limone)" },
+          { "title": "Adios Mother****er", "price": "11,90 €", "description": "(Havana 3 Anos, gin Beefeater, vodka Absolut, tequila Olmeca, Blue Curacao, succo di limone, sciroppo di zucchero, Sprite)" },
+          { "title": "Bergamot Collins", "price": "9,50 €", "description": "(Italicus Bergamotto, Malfy Limone, succo di limone, sciroppo di zucchero, soda)" },
+          { "title": "Bow Street Collins", "price": "9,00 €", "description": "(Jameson, Lillet Blanc, sciroppo di sambuco, succo di limone, soda)" },
+          { "title": "Bramble", "price": "14,00 €", "description": "(gin Beefeater 24, sciroppo di sambuco, succo di limone, topping di ribes nero sferificato)" },
+          { "title": "Rizz Fizz", "price": "10,00 €", "description": "(gin Beefeater, succo di limone, albume d'uovo, ghiaccio blu)" }
+        ]
       },
       {
-        "title": "Rauch Tè Freddo",
-        "price": "0,33 l 3,90 €",
-        "description": "(pesca e ibisco, frutti di bosco)"
+        "name": "Solist Sours",
+        "items": [
+          { "title": "Amaretto Sour", "price": "14,00 €", "description": "(Disaronno, succo di limone, sciroppo di zucchero, albume d'uovo, succo d'arancia fresco, Angostura bitters)" },
+          { "title": "La Hachichera 2 Sour", "price": "15,00 €", "description": "(La Hachichera Banana, Angostura bitters, succo di limone, albume d'uovo)" },
+          { "title": "Pisco Sour", "price": "11,00 €", "description": "(Pisco, succo di limone, sciroppo di zucchero, bitters)" }
+        ]
       },
       {
-        "title": "Thomas Henry",
-        "price": "0,20 l 4,30 €",
-        "description": null
+        "name": "Speciali",
+        "items": [
+          { "title": "Matara Punch Sri Lanka", "price": "17,00 €", "description": "(Mezcal, polvere di curry, succo di lime, mango fresco, succo d'ananas)" },
+          { "title": "Bloody Mary", "price": "16,00 €", "description": "(vodka Elyx, pomodorino fresco, spezie, limone, succo di pomodoro)" },
+          { "title": "Cuban Pineapple Smash", "price": "20,00 €", "description": "(rum Havana 7yo., miele, frutto della passione fresco, succo d'ananas, zenzero fresco, succo di lime, bitters)" },
+          { "title": "Solist Ladykiller", "price": "14,00 €", "description": "(Hendricks Flora Adora, purea di lampone, vaniglia, lime, prosecco)" }
+        ]
       },
       {
-        "title": "Fever Three", 
-        "price": "0,20 l 4,30 €",
-        "description": null
-      },
-      {
-        "title": "Cockta",
-        "price": "0,25 l 4,00 €",
-        "description": null
-      },
-      {
-        "title": "Orangina",
-        "price": "0,25 l 3,90 €",
-        "description": null
-      },
-      {
-        "title": "Radenska",
-        "price": "0,25 l 3,10 €",
-        "description": null
-      },
-      {
-        "title": "Ora",
-        "price": "0,25 l 3,90 €",
-        "description": null
-      },
-      {
-        "title": "Vitamin Well",
-        "price": "0,5 l 4,90 €",
-        "description": null
-      },
-      {
-        "title": "Acqua",
-        "price": "0,5 l 3,00 €",
-        "description": null
-      },
-      {
-        "title": "Virgin Mojito",
-        "price": "7,00 €",
-        "description": "(Lime, zucchero, menta, acqua frizzante, Sprite)"
-      },
-      {
-        "title": "Virgin Fruit Mojito",
-        "price": "7,50 €",
-        "description": "(frutta a scelta)"
-      },
-      {
-        "title": "Virgin Pina",
-        "price": "8,00 €",
-        "description": "(succo d'ananas, ananas fresco, purea di cocco)"
-      },
-      {
-        "title": "Passion Colada",
-        "price": "8,00 €",
-        "description": "(ananas fresco, purea di cocco, purea di frutto della passione, succo d'arancia)"
-      },
-      {
-        "title": "Bonita",
-        "price": "8,00 €",
-        "description": "(banana, purea di cocco, succo di mirtillo)"
-      },
-      {
-        "title": "Virgin Tom Collins",
-        "price": "7,50 €",
-        "description": null
-      },
-      {
-        "title": "Virgin fruit Tom Collins",
-        "price": "7,50 €",
-        "description": null
+        "name": "Mocktail",
+        "items": [
+          { "title": "Cucumber Cooler", "price": "7,00 €", "description": "(Cetriolo fresco, lime, sciroppo di agave, soda)" },
+          { "title": "Virgin Pina Colada", "price": "8,00 €", "description": "(Succo d'ananas, ananas fresco, purea di cocco)" },
+          { "title": "Virgin Mojito", "price": "7,00 €", "description": "(Lime, zucchero, menta, acqua gassata, Sprite, purea di frutta opzionale)" },
+          { "title": "Virgin Tom Collins", "price": "7,50 €", "description": "(Virgin Gin Brin, succo di limone, sciroppo di zucchero, acqua gassata)" },
+          { "title": "Virgin Tom Collins Fruit", "price": "7,80 €", "description": "(Virgin Gin Brin, succo di limone, sciroppo di zucchero, purea di frutta opzionale, acqua gassata)" },
+          { "title": "Passion Colada", "price": "8,00 €", "description": "(Ananas fresco, purea di cocco, purea di frutto della passione, succo d'arancia)" }
+        ]
       }
     ]
   },
   {
     "category": "Birra",
-    "items": []
-  },
-  {
-    "category": "Carta dei Vini",
-    "items": [
+    "subcategories": [
       {
-        "title": "Vino della Casa - Solist Bianco",
-        "price": "0,1 l 3,20 €",
-        "description": null
+        "name": "Birra in Bottiglia",
+        "items": [
+          { "title": "Union, 4,9% alc.", "price": "0,33 l 3,90 €", "description": "(SLO, Lager)" },
+          { "title": "Laško, 4,9% alc.", "price": "0,33 l 3,90 €", "description": "(SLO, Lager)" },
+          { "title": "Union non filtrata, 4,9% alc.", "price": "0,50 l 4,50 €", "description": "(SLO, Lager)" },
+          { "title": "Radler Stiegl, 2,0% alc.", "price": "0,33 l 3,90 €", "description": "(AUT)" },
+          { "title": "Heineken, 5,0% alc.", "price": "0,33 l 4,90 €", "description": "(NED, Lager)" },
+          { "title": "Heineken, 0,0% alc.", "price": "0,33 l 4,20 €", "description": "(NED, analcolica)" },
+          { "title": "Erdinger, 5,6% alc.", "price": "0,50 l 5,50 €", "description": "(GER, Birra Weizen)" },
+          { "title": "Stiegl Weisse, 5,8% alc.", "price": "0,50 l 5,40 €", "description": "(AUT, Birra Weizen)" },
+          { "title": "Guinness, 4,2% alc.", "price": "0,44 l 5,50 €", "description": "(IRL, Stout)" },
+          { "title": "Corona", "price": "0,33 l 4,90 €", "description": "(MEX, Lager Chiara)" }
+        ]
       },
       {
-        "title": "Vino della Casa - Solist Rosso",
-        "price": "0,1 l 3,20 €",
-        "description": null
+        "name": "Birre Artigianali Slovene",
+        "items": [
+          { "title": "Reservoir Dogs, Warrior PA, 5,5% alc.", "price": "0,33 l 4,70 €", "description": "(Pale Ale)" },
+          { "title": "Reservoir Dogs, Grim Reaper IPA, 7,0% alc.", "price": "0,33 l 5,00 €", "description": "(IPA)" },
+          { "title": "Reservoir Dogs, Single Blondie ALE, 5,0% alc.", "price": "0,33 l 5,00 €", "description": "(Ale)" },
+          { "title": "Reservoir Dogs, Starvation, 8,0% alc.", "price": "0,33 l 5,00 €", "description": "(Black IPA)" },
+          { "title": "Tektonik Normal, 5,1% alc.", "price": "0,50 l 5,90 €", "description": null }
+        ]
       },
       {
-        "title": "Vini Bianchi Freschi - GAŠPER, Rebula",
-        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
-        "description": "(SLO, Goriška Brda, secco)"
+        "name": "Birra alla Spina",
+        "items": [
+          { "title": "Carlsberg", "price": "0,25 l 3,70 €", "description": null },
+          { "title": "Carlsberg", "price": "0,50 l 4,90 €", "description": null }
+        ]
       },
       {
-        "title": "Vini Bianchi Freschi - ZARRO, Malvasia",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Bianchi Freschi - Princic Chardonay",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Goriska brda, secco)"
-      },
-      {
-        "title": "Vini Bianchi Freschi - ERZETIČ, Pinot Grigio",
-        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Bianchi Freschi - FERJANČIČ, Pinela",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Bianchi Freschi - BURJA, Zelen",
-        "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Bianchi Corposi - ŠČUREK, Stara Brajda",
-        "price": "0,75 l 42,00 €",
-        "description": "(SLO, Goriška Brda, secco, 2016)"
-      },
-      {
-        "title": "Vini Bianchi Corposi - Tilia Nostra",
-        "price": "0,75 l 35,00 €",
-        "description": "(SLO, Valle del Vipacco, secco)"
-      },
-      {
-        "title": "Vini Bianchi Corposi - SIMČIČ EDI, Triton lex",
-        "price": "0,75 l 46,00 €",
-        "description": "(SLO, Goriška Brda, secco 2017)"
-      },
-      {
-        "title": "Vini Bianchi Corposi - BATIČ, Angel",
-        "price": "0,75 l 64,00 €",
-        "description": "(SLO, Valle del Vipacco, secco, 2017)"
-      },
-      {
-        "title": "Vini Bianchi Corposi - KRISTANČIČ, Chardoney PAVÓ, LIMITED EDITION",
-        "price": "0,75 l 74,00 €",
-        "description": "(SLO, Goriška Brda, 2019)"
-      },
-      {
-        "title": "Vini Dolci - STEYER, Traminer Aromatico",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Štajerska, semi-dolce)"
-      },
-      {
-        "title": "Vini Dolci - ŠTURM, Moscato Giallo",
-        "price": "0,1 l / 0,75 l 5,50 € / 38,50 €",
-        "description": "(SLO, Bela krajina, semi-dolce)"
-      },
-      {
-        "title": "Vini Rossi Freschi - SIMČIČ MARJAN, Cabernet sauvignon",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Rossi Freschi - ERZETIČ, Ribolla Nera",
-        "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Rossi Freschi - ŠTOKA PRIMOŽ, Terrano",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Carso, secco)"
-      },
-      {
-        "title": "Vini Rossi Freschi - ROJAC, Refosco",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Rossi Freschi - ŠUKLJE, Franconia Blu",
-        "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
-        "description": "(SLO, Bela krajina, secco)"
-      },
-      {
-        "title": "Vini Rossi Freschi - FERJANČIČ, Merlot",
-        "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
-        "description": "(SLO, Goriška Brda, secco)"
-      },
-      {
-        "title": "Vini Rossi Corposi - JAKONČIČ A., Carolina Rosso",
-        "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
-        "description": "(SLO, Goriška Brda, secco, 2016)"
-      },
-      {
-        "title": "Vini Rossi Corposi - TILIA, Rubido l.2017",
-        "price": "0,75 l 45,00 €",
-        "description": "(SLO, Valle del Vipacco, secco, 2017)"
-      },
-      {
-        "title": "Vini Rossi Corposi - MOVIA, Veliko Rosso",
-        "price": "0,75 l 74,00 €",
-        "description": "(SLO, Goriška Brda, secco 2010)"
-      },
-      {
-        "title": "Vini Rossi Corposi - FEDORA, Farjla 2022",
-        "price": "0,75 l 49,00 €",
-        "description": "(SLO, Vipava, secco 2022)"
-      },
-      {
-        "title": "Vini Rosati - BATIČ, Rose",
-        "price": "0,75 l 4,50 € / 31,50 €",
-        "description": "(SLO, Valle del Vipacco, semi-secco)"
-      },
-      {
-        "title": "Vini Arancioni - ŠUMENJAK, Alter",
-        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
-        "description": "(SLO, štajerska, semi-secco)"
-      },
-      {
-        "title": "Vini Arancioni - Zarro Malvasia",
-        "price": "0,75 l 40,00 €",
-        "description": "(SLO, istra, secco)"
-      },
-      {
-        "title": "Vini Arancioni - GRAVNER, Rebula",
-        "price": "0,75 l 160,00 €",
-        "description": "(SLO/ITA, Collio, secco)"
-      },
-      {
-        "title": "Spumanti & Prosecco - SOLIGO, Prosecco",
-        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
-        "description": "(ITA, Veneto, secco)"
-      },
-      {
-        "title": "Spumanti & Prosecco - Villa Folini Blancs de Blancs",
-        "price": "0,75 l 33,00 €",
-        "description": "(ITA, Toscana, secco)"
-      },
-      {
-        "title": "Spumanti & Prosecco - Bagueri Zero Dosage",
-        "price": "0,75 l 35,00 €",
-        "description": "(SLO, brda, secco)"
-      },
-      {
-        "title": "Spumanti & Prosecco - BJANA, Spumante BJANA Brut",
-        "price": "0,1 l / 0,75 l 6,50 € / 45,50 €",
-        "description": "(SLO, Goriška Brda, Brut)"
-      },
-      {
-        "title": "Spumanti & Prosecco - BJANA, Spumante BJANA Rose",
-        "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
-        "description": "(SLO, Goriška Brda, Brut)"
-      },
-      {
-        "title": "Spumanti & Prosecco - JACOB'S CREEK, Sparkling Rose",
-        "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
-        "description": "(AUS, secco)"
-      },
-      {
-        "title": "Spumanti & Prosecco - Domaine Slapšak Brut Reserve",
-        "price": "0,1 l / 0,75 l 5,00 € / 35,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Pol Roger, Brut Reserve",
-        "price": "0,75 l 100,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Mumm, Cordon Rouge",
-        "price": "0,75 l 110,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Moet & Chandon, Brut Imperial",
-        "price": "0,75 l 110,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Moet, Ice",
-        "price": "0,75 l 120,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Taittanger, Brut Reserve",
-        "price": "0,75 l 120,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Taittanger, Prestige Rose",
-        "price": "0,75 l 120,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Veuve Clicquot, Brut-Yellow Label",
-        "price": "0,75 l 120,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Veuve Clicquot, Rich",
-        "price": "0,75 l 130,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Louis Roeder, Cristal 2002",
-        "price": "0,75 l 600,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Dom Perignon, Brut 2009",
-        "price": "0,75 l 300,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Bellaire Luxe",
-        "price": "0,75 l 110,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Bellaire Rose",
-        "price": "0,75 l 110,00 €",
-        "description": null
-      },
-      {
-        "title": "Champagne - Ruinart, Blanc de Blancs",
-        "price": "0,75 l 210,00 €",
-        "description": null
+        "name": "Sidro",
+        "items": [
+          { "title": "Somersby, 4,5% alc.", "price": "0,33 l 3,70 €", "description": "(DEN, Sidro di Mele)" },
+          { "title": "Bunka", "price": "0,33 l 4,50 €", "description": "(SLO)" }
+        ]
       }
     ]
   },
   {
-    "category": "Distillati, Liquori",
-    "items": []
+    "category": "Carta dei Vini",
+    "subcategories": [
+      {
+        "name": "Vino della Casa",
+        "items": [
+          {
+            "title": "Solist Bianco",
+            "price": "0,1 l 3,50 €",
+            "description": null
+          },
+          {
+            "title": "Solist Rosso",
+            "price": "0,1 l 3,50 €",
+            "description": null
+          }
+        ]
+      },
+      {
+        "name": "Vini Speciali",
+        "items": [
+          {
+            "title": "ARRETWINES, Rooster Run Cviček",
+            "price": "23,00 €",
+            "description": "(SLO, Dolenjska, 2024) 0,75l"
+          }
+        ]
+      },
+      {
+        "name": "Vini Bianchi Freschi",
+        "items": [
+          {
+            "title": "GAŠPER, Rebula",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "ZARRO, Malvasia",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "Princic Chardonnay",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "ERZETIČ, Pinot Grigio",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "FERJANČIČ, Pinela",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "BURJA, Zelen",
+            "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "PRINČIČ, Jakot",
+            "price": "0,75 l 28,70 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Bianchi Corposi",
+        "items": [
+          {
+            "title": "ŠČUREK, Stara Brajda",
+            "price": "0,75 l 42,00 €",
+            "description": "(SLO, Goriška Brda, secco, 2016)"
+          },
+          {
+            "title": "Tilia Nostra",
+            "price": "0,75 l 35,00 €",
+            "description": "(SLO, Valle del Vipava, secco)"
+          },
+          {
+            "title": "SIMČIČ EDI, Triton lex",
+            "price": "0,75 l 46,00 €",
+            "description": "(SLO, Goriška Brda, secco 2017)"
+          },
+          {
+            "title": "BATIČ, Angel",
+            "price": "0,75 l 64,00 €",
+            "description": "(SLO, Valle del Vipava, secco, 2017)"
+          },
+          {
+            "title": "KRISTANČIČ, Chardonnay PAVÓ, LIMITED EDITION",
+            "price": "0,75 l 74,00 €",
+            "description": "(SLO, Goriška Brda, 2019)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Dolci",
+        "items": [
+          {
+            "title": "STEYER, Traminer Aromatico",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Štajerska, amabile)"
+          },
+          {
+            "title": "ŠTURM, Moscato Giallo",
+            "price": "0,1 l / 0,75 l 5,50 € / 38,50 €",
+            "description": "(SLO, Bela Krajina, amabile)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Rossi Freschi",
+        "items": [
+          {
+            "title": "SIMČIČ MARJAN, Cabernet Sauvignon",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "ERZETIČ, Črna Rebula",
+            "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "ŠTOKA PRIMOŽ, Teran",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Kras, secco)"
+          },
+          {
+            "title": "ROJAC, Refošk",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          },
+          {
+            "title": "ŠUKLJE, Blaufränkisch",
+            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "description": "(SLO, Bela Krajina, secco)"
+          },
+          {
+            "title": "FERJANČIČ, Merlot",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "description": "(SLO, Goriška Brda, secco)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Rossi Corposi",
+        "items": [
+          {
+            "title": "JAKONČIČ A., Carolina Red",
+            "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+            "description": "(SLO, Goriška Brda, secco, 2016)"
+          },
+          {
+            "title": "TILIA, Rubido l.2017",
+            "price": "0,75 l 45,00 €",
+            "description": "(SLO, Valle del Vipava, secco, 2017)"
+          },
+          {
+            "title": "MOVIA, Veliko Rdeče",
+            "price": "0,75 l 74,00 €",
+            "description": "(SLO, Goriška Brda, secco 2010)"
+          },
+          {
+            "title": "FEDORA, Pokalca - Črna Rebula",
+            "price": "0,75 l 49,00 €",
+            "description": "(SLO, Vipava, secco 2022)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Rosati",
+        "items": [
+          {
+            "title": "BATIČ, Rose",
+            "price": "0,75 l 4,50 € / 31,50 €",
+            "description": "(SLO, Valle del Vipava, semi-secco)"
+          }
+        ]
+      },
+      {
+        "name": "Vini Orange",
+        "items": [
+          {
+            "title": "ŠUMENJAK, Alter",
+            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "description": "(SLO, Štajerska, semi-secco)"
+          },
+          {
+            "title": "Zarro Malvasia",
+            "price": "0,75 l 40,00 €",
+            "description": "(SLO, Istria, secco)"
+          },
+          {
+            "title": "GRAVNER, Rebula",
+            "price": "0,75 l 160,00 €",
+            "description": "(SLO/ITA, Collio, secco)"
+          }
+        ]
+      },
+      {
+        "name": "Spumanti e Prosecco",
+        "items": [
+          {
+            "title": "SOLIGO, Prosecco",
+            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "description": "(ITA, Veneto, secco)"
+          },
+          {
+            "title": "Villa Folini Blancs de Blancs",
+            "price": "0,75 l 33,00 €",
+            "description": "(ITA, Toscana, secco)"
+          },
+          {
+            "title": "Bagueri Zero Dosage",
+            "price": "0,75 l 35,00 €",
+            "description": "(SLO, Brda, secco)"
+          },
+          {
+            "title": "BJANA, Spumante BJANA Brut",
+            "price": "0,1 l / 0,75 l 6,50 € / 45,50 €",
+            "description": "(SLO, Goriška Brda, Brut)"
+          },
+          {
+            "title": "BJANA, Spumante BJANA Rose",
+            "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+            "description": "(SLO, Goriška Brda, Brut)"
+          },
+          {
+            "title": "JACOB'S CREEK, Sparkling Rose",
+            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "description": "(AUS, secco)"
+          },
+          {
+            "title": "Domaine Slapšak Brut Reserve",
+            "price": "0,1 l / 0,75 l 5,00 € / 35,00 €",
+            "description": null
+          }
+        ]
+      },
+      {
+        "name": "Champagne",
+        "items": [
+          {
+            "title": "Pol Roger, Brut Reserve",
+            "price": "0,75 l 100,00 €",
+            "description": null
+          },
+          {
+            "title": "Mumm, Cordon Rouge",
+            "price": "0,75 l 110,00 €",
+            "description": null
+          },
+          {
+            "title": "Moet & Chandon, Brut Imperial",
+            "price": "0,75 l 110,00 €",
+            "description": null
+          },
+          {
+            "title": "Moet, Ice",
+            "price": "0,75 l 120,00 €",
+            "description": null
+          },
+          {
+            "title": "Taittinger, Brut Reserve",
+            "price": "0,75 l 120,00 €",
+            "description": null
+          },
+          {
+            "title": "Taittinger, Prestige Rose",
+            "price": "0,75 l 120,00 €",
+            "description": null
+          },
+          {
+            "title": "Veuve Clicquot, Brut-Yellow Label",
+            "price": "0,75 l 120,00 €",
+            "description": null
+          },
+          {
+            "title": "Veuve Clicquot, Rich",
+            "price": "0,75 l 130,00 €",
+            "description": null
+          },
+          {
+            "title": "Louis Roederer, Cristal 2002",
+            "price": "0,75 l 600,00 €",
+            "description": null
+          },
+          {
+            "title": "Dom Perignon, Brut 2009",
+            "price": "0,75 l 300,00 €",
+            "description": null
+          },
+          {
+            "title": "Belaire Luxe",
+            "price": "0,75 l 110,00 €",
+            "description": null
+          },
+          {
+            "title": "Belaire Rose",
+            "price": "0,75 l 110,00 €",
+            "description": null
+          },
+          {
+            "title": "Ruinart, Blanc de Blancs",
+            "price": "0,75 l 210,00 €",
+            "description": null
+          }
+        ]
+      }
+    ]
   },
   {
-    "category": "Cocktail",
+    "category": "Distillati / Liquori",
+    "subcategories": [
+  {
+        "name": "Amari",
     "items": [
-       {
-        "title": "Aperol Spritz",
-        "price": "7,50 €",
-        "description": "(Aperol, prosecco Costaross, soda)"
+          { "title": "Amaro Ramazzotti", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Campari", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Becherovka", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Jägermeister", "price": "0,03 l 4,50 €", "description": null }
+        ]
       },
       {
-        "title": "Hugo Spritz",
-        "price": "8,00 €",
-        "description": "(liquore ai fiori di sambuco, prosecco Costaross, menta, soda)"
+        "name": "Distillati",
+        "items": [
+          { "title": "Viljamovka (Brandy di Pera)", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Dunja (Brandy di Cotogna)", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Šljiva (Brandy di Prugna)", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Kajsija (Brandy di Albicocca)", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Pelin (Assenzio)", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Grappa Roner", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Sambuca Ramazzotti", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Liquore ai Mirtilli Kejžar", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Arkanj (Distillato di Vino di Mele 6 anni)", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Tica (Brandy di Prugna con Bacche di Ginepro)", "price": "0,03 l 6,50 €", "description": null }
+        ]
       },
       {
-        "title": "Gin Tonic",
-        "price": "7,50 €",
-        "description": "(Gin Beefeater, Thomas Henry tonic)"
+        "name": "Vodka",
+        "items": [
+          { "title": "Absolut", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Absolut Passion Fruit", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Absolut Elyx Top Premium", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Absolut Pear", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Absolut Watermelon", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Absolut Raspberry", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Belvedere", "price": "0,03 l 7,00 €", "description": null },
+          { "title": "Grey Goose", "price": "0,03 l 8,50 €", "description": null }
+        ]
       },
       {
-        "title": "Whiskey Sour",
-        "price": "8,00 €",
-        "description": "(Whiskey Jameson, succo di limone, sciroppo di zucchero, albume d'uovo)"
+        "name": "Rum",
+        "items": [
+          { "title": "Havana Club Anejo 3 Anos, 40% alc.", "price": "0,03 l 5,10 €", "description": null },
+          { "title": "Havana Club Especial, 40% alc.", "price": "0,03 l 5,30 €", "description": null },
+          { "title": "Havana Club 7 Anos, 40% alc.", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Havana Club Selección De Maestros, 45% alc.", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Havana Club Pacto Navio, 40% alc.", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Havana Club 15 Anos, 40% alc.", "price": "0,03 l 10,50 €", "description": null },
+          { "title": "La Hachicera n. 1 (Finitura Moscato)", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "La Hachicera n. 2 (Infuso di Banana)", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Mount Gay Black Barrel", "price": "0,03 l 7,00 €", "description": null },
+          { "title": "Ron Zacapa 23 anni", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Pyrat", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Diplomatico", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Rum Domestico", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "La Hechicera Reserva", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Bumbu Original", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Bumbu XO", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Diplomatico Ambassador", "price": "0,03 l 32,50 €", "description": null },
+          { "title": "Eminente 10 anni", "price": "0,03 l 10,00 €", "description": null }
+        ]
       },
       {
-        "title": "Cosmopolitan",
-        "price": "8,00 €",
-        "description": "(vodka Absolut Citron, Triple Sec, succo di mirtillo rosso, lime)"
+        "name": "Tequila",
+        "items": [
+          { "title": "Olmeca Tequila Blanco", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Olmeca Tequila Gold", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Avion Silver", "price": "0,03 l 7,00 €", "description": null },
+          { "title": "Patron Silver", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Patron Coffee", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Clase Azul Reposado", "price": "0,03 l 29,50 €", "description": null },
+          { "title": "Codigo Rosa", "price": "0,03 l 8,50 €", "description": null }
+        ]
       },
       {
-        "title": "Margherita",
-        "price": "8,00 €",
-        "description": "(Tequila Olmeca, Triple Sec, lime)"
+        "name": "Gin",
+        "items": [
+          { "title": "Beefeater Gin", "price": "0,03 l 5,20 €", "description": "(ING)" },
+          { "title": "Beefeater 24", "price": "0,03 l 6,50 €", "description": "(ING)" },
+          { "title": "Beefeater Burroughs Reserve", "price": "0,03 l 9,50 €", "description": "(ING, gin invecchiato)" },
+          { "title": "Plymouth", "price": "0,03 l 6,50 €", "description": "(ING)" },
+          { "title": "Malfy Gin Originale", "price": "0,03 l 5,50 €", "description": "(ITA)" },
+          { "title": "Malfy Gin Rosa", "price": "0,03 l 6,00 €", "description": "(ITA)" },
+          { "title": "Malfy Gin Con Limone", "price": "0,03 l 6,00 €", "description": "(ITA)" },
+          { "title": "Malfy Gin Con Arancia", "price": "0,03 l 6,00 €", "description": "(ITA)" },
+          { "title": "The Botanist", "price": "0,03 l 7,00 €", "description": "(SCO)" },
+          { "title": "Nordes", "price": "0,03 l 7,50 €", "description": "(SPA)" },
+          { "title": "Hendrick's", "price": "0,03 l 6,50 €", "description": "(ING)" },
+          { "title": "Mare", "price": "0,03 l 8,00 €", "description": "(SPA)" },
+          { "title": "Monkey 47", "price": "0,03 l 9,50 €", "description": "(GER)" },
+          { "title": "Nikka Coffey Gin", "price": "0,03 l 7,50 €", "description": "(GPN)" },
+          { "title": "Gunpowder", "price": "0,03 l 7,50 €", "description": "(IRL)" },
+          { "title": "Amuerte Cocoa Gin", "price": "0,03 l 8,00 €", "description": "(BEL)" }
+        ]
       },
       {
-        "title": "Margherita alla Frutta",
-        "price": "8,50 €",
-        "description": "(Tequila Olmeca, Triple Sec, lime + frutta fresca)"
+        "name": "Gin Sloveni",
+        "items": [
+          { "title": "Gin Brin", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Broken Bones Navy", "price": "0,03 l 7,30 €", "description": null },
+          { "title": "Santei Skrasa", "price": "0,03 l 7,00 €", "description": null },
+          { "title": "Limbay", "price": "0,03 l 4,00 €", "description": null }
+        ]
       },
       {
-        "title": "Daiquiri",
-        "price": "8,00 €",
-        "description": "(Rum Havana 3 anni, Triple Sec, lime)"
+        "name": "Liquori",
+        "items": [
+          { "title": "Kahlua", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Malibu", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Carolans", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Cointreau", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Amaretto", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "DeKuyper Original Peachtree", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "DeKuyper Triple Sec", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Southern Comfort", "price": "0,03 l 5,00 €", "description": null }
+        ]
       },
       {
-        "title": "Daiquiri alla Frutta",
-        "price": "8,50 €",
-        "description": "(Rum Havana 3 anni, Triple Sec, lime + frutta fresca)"
+        "name": "Cognac & Brandy",
+        "items": [
+          { "title": "Martell V.S.O.P.", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Martell Cordon Bleu", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Martell X.O.", "price": "0,03 l 14,50 €", "description": null },
+          { "title": "Remy Martin V.S.O.P.", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Remy Martin 1738", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Remy Martin X.O.", "price": "0,03 l 15,50 €", "description": null }, 
+          { "title": "Hennessy V.S.O.P.", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Hennessy X.O.", "price": "0,03 l 17,50 €", "description": null },
+          { "title": "Hennessy Paradis", "price": "0,03 l 70,50 €", "description": null },
+          { "title": "Camus", "price": "0,03 l 14,50 €", "description": null },
+          { "title": "Ararat Akhtamar, 10 anni", "price": "0,03 l 7,10 €", "description": "(Armeno)" }
+        ]
       },
       {
-        "title": "Espresso Martini",
-        "price": "9,00 €",
-        "description": "(vodka Absolut, Kahlua, caffè)"
+        "name": "Whisky Scozzese Miscelato",
+        "items": [
+          { "title": "Ballantine's Finest", "price": "0,03 l 4,50 €", "description": null },
+          { "title": "Ballantine's 12 anni", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Ballantine's 17 anni", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Ballantine's Brasil", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Chivas Regal 12 anni", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Chivas Extra", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Chivas Regal XV", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "Chivas Regal 18 anni", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Royal Salute 21 anni", "price": "0,03 l 12,50 €", "description": null },
+          { "title": "Johnnie Walker Black Label 12 anni", "price": "0,03 l 6,50 €", "description": null }
+        ]
       },
       {
-        "title": "White Russian",
-        "price": "7,50 €",
-        "description": "(vodka Absolut, Kahlua, panna)"
+        "name": "Whisky Scozzese Single Malt",
+        "items": [
+          { "title": "Aberlour 12 anni", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Ardbeg 10 anni", "price": "0,03 l 8,00 €", "description": null },
+          { "title": "Scapa Skiren", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "The Glenlivet Founder Reserve", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "The Glenlivet 15 anni", "price": "0,03 l 7,50 €", "description": null },
+          { "title": "The Glenlivet 18 anni", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Laphroaig 10 anni", "price": "0,03 l 8,00 €", "description": null }
+        ]
       },
       {
-        "title": "Black Russian",
-        "price": "7,30 €",
-        "description": "(vodka Absolut, Kahlua)"
+        "name": "Whiskey Irlandese",
+        "items": [
+          { "title": "Jameson", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Jameson Crested", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Jameson Black Barrel", "price": "0,03 l 6,00 €", "description": null },
+          { "title": "Jameson 18 anni", "price": "0,03 l 10,00 €", "description": null },
+          { "title": "Redbreast Single Pot Still", "price": "0,03 l 6,50 €", "description": null },
+          { "title": "Tullamore Dew", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Tullamore Dew 12 anni", "price": "0,03 l 7,00 €", "description": null }
+        ]
       },
       {
-        "title": "Havana Mojito",
-        "price": "8,50 €",
-        "description": "(rum Havana 3 anni, soda, zucchero bianco, menta, lime)"
+        "name": "Whiskey Americano",
+        "items": [
+          { "title": "Four Roses", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Four Roses Single Barrel", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Jack Daniel's Gentleman", "price": "0,03 l 5,50 €", "description": null },
+          { "title": "Jack Daniel's", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Jack Daniel's Honey", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Jack Daniel's Single Barrel", "price": "0,03 l 7,00 €", "description": null },
+          { "title": "Jim Beam Black", "price": "0,03 l 5,00 €", "description": null },
+          { "title": "Jim Beam Bourbon", "price": "0,03 l 5,00 €", "description": null }
+        ]
       },
       {
-        "title": "Mojito alla Frutta",
-        "price": "9,00 €",
-        "description": "(rum Havana 3 anni, soda, zucchero bianco, menta, lime, frutta fresca)"
-      },
-      {
-        "title": "Capirinha",
-        "price": "8,50 €",
-        "description": "(Cachaca Janeiro, zucchero di canna, lime)"
-      },
-      {
-        "title": "Caipirinha alla Frutta",
-        "price": "9,00 €",
-        "description": "(Cachaca Janeiro, zucchero di canna, lime, frutta fresca)"
-      },
-      {
-        "title": "Caipiroska",
-        "price": "8,50 €",
-        "description": "(vodka Absolut, zucchero di canna, lime)"
-      },
-      {
-        "title": "Caipiroska alla Frutta",
-        "price": "9,00 €",
-        "description": "(vodka Absolut, zucchero di canna, lime, frutta fresca)"
-      },
-      {
-        "title": "Moscow Mule",
-        "price": "8,50 €",
-        "description": "(vodka Absolut, ginger beer, lime)"
-      },
-      {
-        "title": "Moscow Mule alla Frutta",
-        "price": "9,00 €",
-        "description": "(vodka Absolut, ginger beer, lime, frutta fresca)"
-      },
-      {
-        "title": "Brexit Mule",
-        "price": "8,00 €",
-        "description": "(Gin Beefeater, ginger beer, menta, lime)"
-      },
-      {
-        "title": "Brexit Mule alla Frutta",
-        "price": "8,50 €",
-        "description": "(Gin Beefeater, ginger beer, menta, lime, frutta fresca)"
-      },
-      {
-        "title": "Tom Collins",
-        "price": "8,50 €",
-        "description": "(Gin Beefeater, soda, succo di limone)"
-      },
-      {
-        "title": "Tom Collins alla Frutta",
-        "price": "9,00 €",
-        "description": "(Gin Beefeater, soda, succo di limone, frutta fresca)"
-      },
-      {
-        "title": "Jameson Summer",
-        "price": "9,00 €",
-        "description": "(whiskey Jameson, liquore ai fiori di sambuco, succo di mela, rosmarino)"
-      },
-      {
-        "title": "Long Island Ice Tea",
-        "price": "11,90 €",
-        "description": "(Gin Beefeater, vodka Absolut, tequila Olmeca, rum Havana 3 anni, Coca-Cola, succo di limone)"
-      },
-      {
-        "title": "Pina Colada",
-        "price": "9,00 €",
-        "description": "(rum Havana 3 anni, succo d'ananas, purea di cocco Ponthier, ananas)"
-      },
-      {
-        "title": "Tequila Sunrise",
-        "price": "8,90 €",
-        "description": "(tequila Olmeca, succo d'arancia, sciroppo di granatina, succo di limone)"
-      },
-      {
-        "title": "Mai Thai by Solist",
-        "price": "11,90 €",
-        "description": "(rum Havana 3 anni, rum Havana especial, Peachtree, Amaretto, sciroppo di granatina, succo di limone)"
-      },
-      {
-        "title": "Caipirissima",
-        "price": "8,00 €",
-        "description": "(Havana 3 Anni, zucchero di canna, lime)"
-      },
-       {
-        "title": "B52",
-        "price": "5,50 €",
-        "description": null
-      },
-      {
-        "title": "Kamikaze",
-        "price": "5,50 €",
-        "description": null
-      },
-      {
-        "title": "Pornstar Martini Shot",
-        "price": "5,50 €",
-        "description": null
+        "name": "Whiskey Asiatico",
+        "items": [
+          { "title": "Nikka Taketsuru 12 anni", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Nikka from the barrel", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Kavalan Single Malt", "price": "0,03 l 9,50 €", "description": null },
+          { "title": "Kavalan Solist Cask Strength", "price": "0,03 l 20,50 €", "description": null }
+        ]
       }
     ]
   },
@@ -796,9 +973,9 @@
         "description": null
       },
       {
-        "title": "Cigoj Prosciutto-coscia di maiale",
+        "title": "Prosciutto Cigoj - Coscia di Maiale",
         "price": "100g 15,90 €",
-        "description": "(stagionato 30 mesi)"
+        "description": "(stagionato almeno 30 mesi)"
       },
       {
         "title": "Iberico",
@@ -811,7 +988,7 @@
         "description": null
       },
       {
-        "title": "Tris di formaggi",
+        "title": "Tris di Formaggi",
         "price": "100g 12,90 €",
         "description": null
       },
@@ -826,7 +1003,7 @@
         "description": null
       },
       {
-        "title": "Cornetto salato",
+        "title": "Cornetto Salato",
         "price": "6,00 €",
         "description": null
       },

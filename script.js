@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSloButton = document.getElementById('lang-slo');
     const langEngButton = document.getElementById('lang-eng');
     const langItaButton = document.getElementById('lang-ita');
+    const langDeButton = document.getElementById('lang-de');
     let menuData = [];
 
     function loadMenu(lang) {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     langSloButton.addEventListener('click', () => loadMenu('slo'));
     langEngButton.addEventListener('click', () => loadMenu('eng'));
     langItaButton.addEventListener('click', () => loadMenu('ita'));
+    langDeButton.addEventListener('click', () => loadMenu('de'));
 
     // Initial Load: Always show the modal
     languageModal.style.display = 'flex'; // Show modal
@@ -78,45 +80,83 @@ document.addEventListener('DOMContentLoaded', () => {
         categoryTitle.textContent = category.category;
         categoryDiv.appendChild(categoryTitle);
 
-        category.items.forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.classList.add('menu-item');
+        // Check if the category has subcategories or direct items
+        if (category.subcategories) {
+            category.subcategories.forEach(subcategory => {
+                const subcategoryTitle = document.createElement('h3'); // Use h3 for subcategory titles
+                subcategoryTitle.classList.add('subcategory-title'); // Add a class for styling
+                subcategoryTitle.textContent = subcategory.name;
+                categoryDiv.appendChild(subcategoryTitle);
 
-            const detailsDiv = document.createElement('div');
-            detailsDiv.classList.add('item-details');
-
-            const title = document.createElement('h3');
-            title.textContent = item.title;
-            detailsDiv.appendChild(title);
-
-            if (item.description) {
-                const description = document.createElement('p');
-                description.textContent = item.description;
-                detailsDiv.appendChild(description);
-            }
-
-            itemDiv.appendChild(detailsDiv);
-
-            const priceSpan = document.createElement('span');
-            priceSpan.classList.add('item-price');
-
-            // Regex to identify size/unit and price parts
-            const priceRegex = /^((?:[\d,\.]+\s*(?:l|g|kg|ml)(?:\s*\/\s*)?)+)\s*(.*€.*)$/i;
-            const priceMatch = item.price ? item.price.match(priceRegex) : null;
-
-            if (priceMatch) {
-                priceSpan.innerHTML = `<span class="item-size">${priceMatch[1].trim()}</span> <span class="item-cost">${priceMatch[2].trim()}</span>`;
-            } else if (item.price) {
-                priceSpan.innerHTML = `<span class="item-cost">${item.price}</span>`;
-            } else {
-                priceSpan.innerHTML = `<span class="item-cost"></span>`; // Handle null/empty price
-            }
-
-            itemDiv.appendChild(priceSpan);
-
-            categoryDiv.appendChild(itemDiv);
-        });
+                subcategory.items.forEach(item => {
+                    categoryDiv.appendChild(createMenuItemElement(item));
+                });
+            });
+        } else if (category.items) {
+            // Handle categories with direct items (original structure)
+            category.items.forEach(item => {
+                categoryDiv.appendChild(createMenuItemElement(item));
+            });
+        }
 
         menuContent.appendChild(categoryDiv);
+    }
+
+    // Helper function to create a single menu item element
+    function createMenuItemElement(item) {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('menu-item');
+
+        const detailsDiv = document.createElement('div');
+        detailsDiv.classList.add('item-details');
+
+        const title = document.createElement('h4'); // Use h4 for item titles within subcategories
+        
+        // Check if this is a premium item and format the title accordingly
+        if (item.title && item.title.includes('[premium]')) {
+            // Split the title to remove [premium] tag
+            const formattedTitle = item.title.replace('[premium]', '');
+            
+            // Set the basic title text
+            title.textContent = formattedTitle;
+            
+            // Create premium tag span
+            const premiumTag = document.createElement('span');
+            premiumTag.classList.add('premium-tag');
+            premiumTag.textContent = 'premium';
+            
+            // Append the premium tag
+            title.appendChild(premiumTag);
+        } else {
+            title.textContent = item.title;
+        }
+        
+        detailsDiv.appendChild(title);
+
+        if (item.description) {
+            const description = document.createElement('p');
+            description.textContent = item.description;
+            detailsDiv.appendChild(description);
+        }
+
+        itemDiv.appendChild(detailsDiv);
+
+        const priceSpan = document.createElement('span');
+        priceSpan.classList.add('item-price');
+
+        // Regex to identify size/unit and price parts
+        const priceRegex = /^((?:[\d,.]+\s*(?:l|g|kg|ml)(?:\s*\/\s*)?)+)\s*(.*€.*)$/i;
+        const priceMatch = item.price ? item.price.match(priceRegex) : null;
+
+        if (priceMatch) {
+            priceSpan.innerHTML = `<span class="item-size">${priceMatch[1].trim()}</span> <span class="item-cost">${priceMatch[2].trim()}</span>`;
+        } else if (item.price) {
+            priceSpan.innerHTML = `<span class="item-cost">${item.price}</span>`;
+        } else {
+            priceSpan.innerHTML = `<span class="item-cost"></span>`; // Handle null/empty price
+        }
+
+        itemDiv.appendChild(priceSpan);
+        return itemDiv;
     }
 }); 
