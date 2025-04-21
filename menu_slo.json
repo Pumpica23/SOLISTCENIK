@@ -514,7 +514,7 @@
         ]
       },
       {
-        "name": "Slovenska kraft piva",
+        "name": "Slovenska craft piva",
         "items": [
           { "title": "Reservoir Dogs, Warrior PA, 5,5% alk.", "price": "0,33 l 4,70 €", "description": "(Pale Ale)" },
           { "title": "Reservoir Dogs, Grim Reaper IPA, 7,0% alk.", "price": "0,33 l 5,00 €", "description": "(IPA)" },
@@ -531,7 +531,7 @@
         ]
       },
       {
-        "name": "Jabolčnik",
+        "name": "CIDER",
         "items": [
           { "title": "Somersby, 4,5% alk.", "price": "0,33 l 3,70 €", "description": "(DEN, jabolčni cider)" },
           { "title": "Bunka", "price": "0,33 l 4,50 €", "description": "(SLO)" }
