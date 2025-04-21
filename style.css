@@ -248,6 +248,16 @@ footer p {
     font-weight: var(--heading-weight);
 }
 
+.wifi-password {
+    color: #fff;
+    background-color: rgba(213, 196, 143, 0.2);
+    padding: 10px;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
 .modal-content button {
     background-color: var(--menu-active-bg);
     color: var(--menu-active-color);

@@ -68,6 +68,11 @@
         "description": "(Clase Azul Plata, lemon juice, agave syrup, salt, fig leaf tonic water)"
       },
       {
+        "title": "Tokyo Mule [premium]",
+        "price": "10,00 €",
+        "description": "(Sake, Japanese Vodka, Wasabi paste, Yuzu puree, lime, ginger beer)"
+      },
+      {
         "title": "Clarified New York Sour [premium]",
         "price": "13,00 €",
         "description": "(Chivas XIII Extra, lemon juice, sugar syrup, Cabernet Sauvignon - crystal clear smooth version of a traditional New York Sour.)"
@@ -90,7 +95,7 @@
       {
         "title": "Cooling Potion",
         "price": "9,00 €",
-        "description": "(fresh cucumber, lime, maple syrup, soda)"
+        "description": "(Hendricks gin, fresh cucumber, lime, maple syrup, soda)"
       },
       {
         "title": "Extra Whiskey Sour [premium]",
@@ -116,6 +121,16 @@
         "title": "Tickle Pickle",
         "price": "10,00 €",
         "description": "(Amuerte, pickle juice, basil, lemon juice, sugar syrup)"
+      },
+      {
+        "title": "Matara Punch Sri Lanka",
+        "price": "13,00 €",
+        "description": "(Mezcal, curry powder, lime juice, fresh mango, pineapple juice)"
+      },
+      {
+        "title": "Pisco Sour",
+        "price": "11,00 €",
+        "description": "(Pisco, lemon juice, sugar syrup, bitters)"
       }
     ]
   },
@@ -329,7 +344,7 @@
           { "title": "Espresso Martini", "price": "9,00 €", "description": "(Absolut vodka, Kahlua, coffee)" },
           { "title": "White Russian", "price": "7,50 €", "description": "(Absolut vodka, Kahlua, cream)" },
           { "title": "Black Russian", "price": "7,30 €", "description": "(Absolut vodka, Kahlua)" },
-          { "title": "Twisted Bees Knees", "price": "15,00 €", "description": "(Gin, honey liqueur, lemon juice, honey pollen)" },
+          { "title": "Twisted Bees Knees", "price": "10,00 €", "description": "(Gin, honey liqueur, lemon juice, honey pollen)" },
           { "title": "Maestros Old Fashioned", "price": "10,50 €", "description": "(Havana Seleccion De Maestros, brown sugar, Angostura bitters)" },
           { "title": "Extra Old Fashioned", "price": "9,50 €", "description": "(Chivas XIII Extra, brown sugar, Angostura bitters)" }
         ]
@@ -373,8 +388,7 @@
           { "title": "Adios Mother****er", "price": "11,90 €", "description": "(Havana 3anos, Beefeater Gin, Vodka Absolut, Tequila Olmeca, Blue Curracao, lemon juice, sugar syrup, Sprite)" },
           { "title": "Bergamot Collins", "price": "9,50 €", "description": "(Italicus Bergamotto, Malfy Limone, lemon juice, sugar syrup, soda)" },
           { "title": "Bow Street Collins", "price": "9,00 €", "description": "(Jameson, Lillet Blanc, Elderflower syrup, lemon juice, soda)" },
-          { "title": "Bramble", "price": "14,00 €", "description": "(Beefeater 24 gin, Elderflower syrup, lemon juice, spherefied black currant topping)" },
-          { "title": "Rizz Fizz", "price": "10,00 €", "description": "(Beefeater gin, lemon juice, egg white, blue ice)" }
+          { "title": "Bramble", "price": "14,00 €", "description": "(Beefeater 24 gin, Elderflower syrup, lemon juice, spherefied black currant topping)" }
         ]
       },
       {
@@ -389,18 +403,16 @@
       {
         "name": "Solist Sours",
         "items": [
-          { "title": "Amaretto Sour", "price": "14,00 €", "description": "(Disaronno, lemon juice, sugar syrup, egg white, fresh orange juice, Angostura bitters)" },
-          { "title": "La Hachichera 2 Sour", "price": "15,00 €", "description": "(La Hachichera Banana, Angostura bitters, lemon juice, egg white)" },
-          { "title": "Pisco Sour", "price": "11,00 €", "description": "(Pisco, lemon juice, sugar syrup, bitters)" }
+          { "title": "Amaretto Sour", "price": "12,00 €", "description": "(Disaronno, lemon juice, sugar syrup, egg white, fresh orange juice, Angostura bitters)" },
+          { "title": "La Hachichera 2 Sour", "price": "13,00 €", "description": "(La Hachichera Banana, Angostura bitters, lemon juice, egg white)" }
         ]
       },
       {
         "name": "Special",
         "items": [
-          { "title": "Matara Punch Sri Lanka", "price": "17,00 €", "description": "(Mezcal, curry powder, lime juice, fresh mango, pineapple juice)" },
-          { "title": "Bloody Mary", "price": "16,00 €", "description": "(Elyx vodka, fresh cherry tomato, spices, lemon, tomato juice)" },
-          { "title": "Cuban Pineapple Smash", "price": "20,00 €", "description": "(Rum Havana 7yo., honey, fresh passion fruit, pineapple juice, fresh ginger, lime juice, bitters)" },
-          { "title": "Solist Ladykiller", "price": "14,00 €", "description": "(Hendricks Flora Adora, raspberry puree, vanillia, lime, prosecco)" }
+          { "title": "Bloody Mary", "price": "12,00 €", "description": "(Elyx vodka, fresh cherry tomato, spices, lemon, tomato juice)" },
+          { "title": "Cuban Pineapple Smasn (for two)", "price": "18,00 €", "description": "(Rum Havana 7yo., honey, fresh passion fruit, pineapple juice, fresh ginger, lime juice, bitters)" },
+          { "title": "Solist Ladykiller", "price": "14,00 €", "description": "(Hendricks Flora Adora, raspberry puree, vanilla, lime, prosecco)" }
         ]
       }
     ]
@@ -795,11 +807,7 @@
         "name": "Vodka",
         "items": [
           { "title": "Absolut", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Absolut Passion Fruit", "price": "0.03 l 5.00 €", "description": null },
           { "title": "Absolut Elyx Top Premium", "price": "0.03 l 6.50 €", "description": null },
-          { "title": "Absolut Pear", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Absolut Watermelon", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Absolut Raspberry", "price": "0.03 l 5.00 €", "description": null },
           { "title": "Belvedere", "price": "0.03 l 7.00 €", "description": null },
           { "title": "Grey Goose", "price": "0.03 l 8.50 €", "description": null }
         ]
@@ -809,21 +817,22 @@
         "items": [
           { "title": "Havana Club Anejo 3 Anos, 40% alc.", "price": "0.03 l 5.10 €", "description": null },
           { "title": "Havana Club Especial, 40% alc.", "price": "0.03 l 5.30 €", "description": null },
+          { "title": "Havana Club Spiced, 37% alc.", "price": "0.03 l 6.00 €", "description": null },
           { "title": "Havana Club 7 Anos, 40% alc.", "price": "0.03 l 6.50 €", "description": null },
           { "title": "Havana Club Selección De Maestros, 45% alc.", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Havana Club Pacto Navio, 40% alc.", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Havana Club 15 Anos, 40% alc.", "price": "0.03 l 10.50 €", "description": null },
-          { "title": "La Hachicera no. 1 (Muscat Finish)", "price": "0.03 l 9.50 €", "description": null },
-          { "title": "La Hachicera no. 2 (Banana Infused)", "price": "0.03 l 9.50 €", "description": null },
+          { "title": "La Hachicera no. 1 (muscat)", "price": "0.03 l 9.50 €", "description": null },
+          { "title": "La Hachicera no. 2 (banana)", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Mount Gay Black Barrel", "price": "0.03 l 7.00 €", "description": null },
-          { "title": "Ron Zacapa 23y", "price": "0.03 l 9.50 €", "description": null },
+          { "title": "Ron Zacapa 23yo", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Pyrat", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Diplomatico", "price": "0.03 l 9.50 €", "description": null },
+          { "title": "Homemade rum", "price": "0.03 l 5.00 €", "description": null },
           { "title": "La Hechicera Reserva", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Bumbu Original", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Bumbu XO", "price": "0.03 l 9.50 €", "description": null },
-          { "title": "Diplomatico Ambassador", "price": "0.03 l 32.50 €", "description": null },
-          { "title": "Eminente 10 yo.", "price": "0.03 l 10.00 €", "description": null }
+          { "title": "Diplomatico Ambassador", "price": "0.03 l 32.50 €", "description": null }
         ]
       },
       {
@@ -844,19 +853,16 @@
           { "title": "Beefeater Gin", "price": "0.03 l 5.20 €", "description": "(ENG)" },
           { "title": "Beefeater 24", "price": "0.03 l 6.50 €", "description": "(ENG)" },
           { "title": "Beefeater Burroughs Reserve", "price": "0.03 l 9.50 €", "description": "(ENG, aged gin)" },
-          { "title": "Plymouth", "price": "0.03 l 6.50 €", "description": "(ENG)" },
           { "title": "Malfy Gin Originale", "price": "0.03 l 5.50 €", "description": "(ITA)" },
           { "title": "Malfy Gin Rosa", "price": "0.03 l 6.00 €", "description": "(ITA)" },
           { "title": "Malfy Gin Con Limone", "price": "0.03 l 6.00 €", "description": "(ITA)" },
           { "title": "Malfy Gin Con Arancia", "price": "0.03 l 6.00 €", "description": "(ITA)" },
           { "title": "The Botanist", "price": "0.03 l 7.00 €", "description": "(SCO)" },
-          { "title": "Nordes", "price": "0.03 l 7.50 €", "description": "(ESP)" },
           { "title": "Hendrick's", "price": "0.03 l 6.50 €", "description": "(ENG)" },
           { "title": "Mare", "price": "0.03 l 8.00 €", "description": "(ESP)" },
           { "title": "Monkey 47", "price": "0.03 l 9.50 €", "description": "(GER)" },
-          { "title": "Nikka Coffey Gin", "price": "0.03 l 7.50 €", "description": "(JPN)" },
           { "title": "Gunpowder", "price": "0.03 l 7.50 €", "description": "(IRL)" },
-          { "title": "Amuerte Cocoa Gin", "price": "0.03 l 8.00 €", "description": "(BEL)" }
+          { "title": "Amuerte Coca Leaf Gin", "price": "0.03 l 8.00 €", "description": "(BEL)" }
         ]
       },
       {
@@ -874,27 +880,20 @@
           { "title": "Kahlua", "price": "0.03 l 4.50 €", "description": null },
           { "title": "Malibu", "price": "0.03 l 4.50 €", "description": null },
           { "title": "Carolans", "price": "0.03 l 4.50 €", "description": null },
-          { "title": "Cointreau", "price": "0.03 l 4.50 €", "description": null },
           { "title": "Amaretto", "price": "0.03 l 4.50 €", "description": null },
           { "title": "DeKuyper Original Peachtree", "price": "0.03 l 4.50 €", "description": null },
-          { "title": "DeKuyper Triple Sec", "price": "0.03 l 4.50 €", "description": null },
-          { "title": "Southern Comfort", "price": "0.03 l 5.00 €", "description": null }
+          { "title": "DeKuyper Triple Sec", "price": "0.03 l 4.50 €", "description": null }
         ]
       },
       {
         "name": "Cognac & Brandy",
         "items": [
           { "title": "Martell V.S.O.P.", "price": "0.03 l 7.50 €", "description": null },
-          { "title": "Martell Cordon Bleu", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Martell X.O.", "price": "0.03 l 14.50 €", "description": null },
-          { "title": "Remy Martin V.S.O.P.", "price": "0.03 l 7.50 €", "description": null },
-          { "title": "Remy Martin 1738", "price": "0.03 l 9.50 €", "description": null },
-          { "title": "Remy Martin X.O.", "price": "0.03 l 15.50 €", "description": null },
           { "title": "Hennessy V.S.O.P.", "price": "0.03 l 7.50 €", "description": null },
           { "title": "Hennessy X.O.", "price": "0.03 l 17.50 €", "description": null },
           { "title": "Hennessy Paradis", "price": "0.03 l 70.50 €", "description": null },
-          { "title": "Camus", "price": "0.03 l 14.50 €", "description": null },
-          { "title": "Ararat Akhtamar, 10 Y.O.", "price": "0.03 l 7.10 €", "description": "(Armenian)" }
+          { "title": "Camus", "price": "0.03 l 14.50 €", "description": null }
         ]
       },
       {
@@ -928,12 +927,9 @@
         "name": "Irish Whiskey",
         "items": [
           { "title": "Jameson", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Jameson Crested", "price": "0.03 l 5.50 €", "description": null },
           { "title": "Jameson Black Barrel", "price": "0.03 l 6.00 €", "description": null },
-          { "title": "Jameson 18y", "price": "0.03 l 10.00 €", "description": null },
           { "title": "Redbreast Single Pot Still", "price": "0.03 l 6.50 €", "description": null },
-          { "title": "Tullamore Dew", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Tullamore Dew 12y", "price": "0.03 l 7.00 €", "description": null }
+          { "title": "Tullamore Dew", "price": "0.03 l 5.00 €", "description": null }
         ]
       },
       {
@@ -957,6 +953,41 @@
           { "title": "Kavalan Single Malt", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Kavalan Solist Cask Strength", "price": "0.03 l 20.50 €", "description": null }
         ]
+      }
+    ]
+  },
+  {
+    "category": "BOAT",
+    "items": [
+      {
+        "title": "Absolut Boat 130e",
+        "price": "130,00 €",
+        "description": "(1l Absolut vodka + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Beefeater Boat 130 e",
+        "price": "130,00 €",
+        "description": "(1l Beefeater gin + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Havana 3yo Boat 130e",
+        "price": "130,00 €",
+        "description": "(1l Havala 3 anos white rum + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Belvedere Boat 170e",
+        "price": "170,00 €",
+        "description": "(1l Belvedere vodka + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Gray Goose Boat 200e",
+        "price": "200,00 €",
+        "description": "(1l Gray Goose vodka + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Hendricks Boat 170e",
+        "price": "170,00 €",
+        "description": "(Hendricks Gin 0.7l + 4 liters of juice of your choice)"
       }
     ]
   },
