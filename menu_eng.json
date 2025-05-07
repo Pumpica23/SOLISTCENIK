@@ -828,7 +828,7 @@
           { "title": "Ron Zacapa 23yo", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Pyrat", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Diplomatico", "price": "0.03 l 9.50 €", "description": null },
-          { "title": "Homemade rum", "price": "0.03 l 5.00 €", "description": null },
+          { "title": "House rum", "price": "0.03 l 4.50 €", "description": null },
           { "title": "La Hechicera Reserva", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Bumbu Original", "price": "0.03 l 8.50 €", "description": null },
           { "title": "Bumbu XO", "price": "0.03 l 9.50 €", "description": null },
@@ -844,7 +844,8 @@
           { "title": "Patron Silver", "price": "0.03 l 7.50 €", "description": null },
           { "title": "Patron Coffee", "price": "0.03 l 7.50 €", "description": null },
           { "title": "Clase Azul Reposado", "price": "0.03 l 29.50 €", "description": null },
-          { "title": "Codigo Rosa", "price": "0.03 l 8.50 €", "description": null }
+          { "title": "Codigo Rosa", "price": "0.03 l 8.50 €", "description": null },
+          { "title": "Clase de Azul Plata", "price": "0.03 l 12.00 €", "description": null }
         ]
       },
       {
@@ -862,7 +863,8 @@
           { "title": "Mare", "price": "0.03 l 8.00 €", "description": "(ESP)" },
           { "title": "Monkey 47", "price": "0.03 l 9.50 €", "description": "(GER)" },
           { "title": "Gunpowder", "price": "0.03 l 7.50 €", "description": "(IRL)" },
-          { "title": "Amuerte Coca Leaf Gin", "price": "0.03 l 8.00 €", "description": "(BEL)" }
+          { "title": "Amuerte Coca Leaf Gin", "price": "0.03 l 8.00 €", "description": "(BEL)" },
+          { "title": "Nikka Coffey", "price": "0.03 l 8.00 €", "description": null }
         ]
       },
       {
@@ -900,8 +902,8 @@
         "name": "Blended Scotch Whisky",
         "items": [
           { "title": "Ballantine's Finest", "price": "0.03 l 4.50 €", "description": null },
-          { "title": "Ballantine's 12y", "price": "0.03 l 5.00 €", "description": null },
-          { "title": "Ballantine's 17y", "price": "0.03 l 5.50 €", "description": null },
+          { "title": "Ballantine's 12y", "price": "0.03 l 5.50 €", "description": null },
+          { "title": "Ballantine's 17y", "price": "0.03 l 6.50 €", "description": null },
           { "title": "Ballantine's Brasil", "price": "0.03 l 5.00 €", "description": null },
           { "title": "Chivas Regal 12y", "price": "0.03 l 5.50 €", "description": null },
           { "title": "Chivas Extra", "price": "0.03 l 6.50 €", "description": null },
@@ -928,8 +930,10 @@
         "items": [
           { "title": "Jameson", "price": "0.03 l 5.00 €", "description": null },
           { "title": "Jameson Black Barrel", "price": "0.03 l 6.00 €", "description": null },
+          { "title": "Jameson 18y", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Redbreast Single Pot Still", "price": "0.03 l 6.50 €", "description": null },
-          { "title": "Tullamore Dew", "price": "0.03 l 5.00 €", "description": null }
+          { "title": "Tullamore Dew", "price": "0.03 l 5.00 €", "description": null },
+          { "title": "Tullamore Dew 12y", "price": "0.03 l 7.00 €", "description": null }
         ]
       },
       {
@@ -946,10 +950,10 @@
         ]
       },
       {
-        "name": "Asian Whiskey",
+        "name": "Asian Whisky",
         "items": [
           { "title": "Nikka Taketsuru 12y", "price": "0.03 l 9.50 €", "description": null },
-          { "title": "Nikka from the barrel", "price": "0.03 l 9.50 €", "description": null },
+          { "title": "Nikka From The Barrel", "price": "0.03 l 9.00 €", "description": null },
           { "title": "Kavalan Single Malt", "price": "0.03 l 9.50 €", "description": null },
           { "title": "Kavalan Solist Cask Strength", "price": "0.03 l 20.50 €", "description": null }
         ]
@@ -988,6 +992,21 @@
         "title": "Hendricks Boat 170e",
         "price": "170,00 €",
         "description": "(Hendricks Gin 0.7l + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Jack Boat 150e",
+        "price": "150,00 €",
+        "description": "(1l Jack Daniel's + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Jameson Boat 150e",
+        "price": "150,00 €",
+        "description": "(1l Jameson + 4 liters of juice of your choice)"
+      },
+      {
+        "title": "Malfy Boat 150e",
+        "price": "150,00 €",
+        "description": "(0.7l Malfy gin + 4 liters of juice of your choice)"
       }
     ]
   },
@@ -1027,16 +1046,6 @@
       {
         "title": "Toast",
         "price": "4,50 €",
-        "description": null
-      },
-      {
-        "title": "Salty Croissant",
-        "price": "6,00 €",
-        "description": null
-      },
-      {
-        "title": "Chips",
-        "price": "35g 3,00 €",
         "description": null
       },
       {
