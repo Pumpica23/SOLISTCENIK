@@ -323,7 +323,8 @@
       {
         "name": "Easy Mix",
         "items": [
-          { "title": "Gin Tonic", "price": "7,50 €", "description": null },
+          { "title": "Gin Tonic (Beefeater)", "price": "7,50 €", "description": null },
+          { "title": "Gin Tonic (Bombay Sapphire)", "price": "7,50 €", "description": null },
           { "title": "Jack Cola", "price": "7,50 €", "description": null },
           { "title": "Jameson Cola", "price": "7,50 €", "description": null },
           { "title": "Jameson Berry", "price": "8,00 €", "description": null },
