@@ -51,12 +51,7 @@
   },
   {
     "category": "SIGNATURE COCKTAILS",
-    "items": [
-      {
-        "title": "Solist Spritz",
-        "price": "10,00 €",
-        "description": "(Broken Bones Cloud, prosecco, hibiscus flower, lemon juice, soda water)"
-      },
+    "items": 
       {
         "title": "Midnight Mojito [premium]",
         "price": "10,00 €",
