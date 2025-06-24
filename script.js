@@ -26,14 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 menuData = data;
                 populateCategories();
-                // Display the first category by default
+                // Display the first category by default, but show Signature Cocktails after 16:00
                 if (menuData.length > 0) {
-                    displayCategory(menuData[0].category);
-                    // Set the first button as active
-                    const firstButton = categoryNav.querySelector('button');
-                    if (firstButton) {
-                        firstButton.classList.add('active');
+                    const currentHour = new Date().getHours();
+                    let defaultCategory = menuData[0].category;
+                    
+                    // After 18:00 (6 PM), show Signature Cocktails instead
+                    if (currentHour >= 18) {
+                        const signatureCategory = menuData.find(cat => 
+                            cat.category.toLowerCase().includes('signature') || 
+                            cat.category.toLowerCase().includes('cocktail signature')
+                        );
+                        if (signatureCategory) {
+                            defaultCategory = signatureCategory.category;
+                        }
                     }
+                    
+                    displayCategory(defaultCategory);
+                    // Set the corresponding button as active
+                    const buttons = categoryNav.querySelectorAll('button');
+                    buttons.forEach(btn => {
+                        if (btn.textContent === defaultCategory) {
+                            btn.classList.add('active');
+                        }
+                    });
                 }
             })
             .catch(error => {
