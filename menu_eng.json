@@ -465,12 +465,12 @@
         "items": [
           {
             "title": "Solist White",
-            "price": "0,1 l 3,50 €",
+            "price": "0,1 l 4,00 €",
             "description": null
           },
           {
             "title": "Solist Red",
-            "price": "0,1 l 3,50 €",
+            "price": "0,1 l 4,00 €",
             "description": null
           }
         ]
@@ -480,7 +480,7 @@
         "items": [
           {
             "title": "ARRETWINES, Rooster Run Cviček",
-            "price": "23,00 €",
+            "price": "26,00 €",
             "description": "(SLO, Dolenjska, 2024) 0,75l"
           }
         ]
@@ -490,37 +490,37 @@
         "items": [
           {
             "title": "GAŠPER, Rebula",
-            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "price": "0,1 l / 0,75 l 5,00 € / 34,50 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "ZARRO, Malvasia",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "Princic Chardonnay",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "ERZETIČ, Pinot Gris",
-            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "price": "0,1 l / 0,75 l 5,00 € / 34,50 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "FERJANČIČ, Pinela",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "BURJA, Zelen",
-            "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+            "price": "0,1 l / 0,75 l 4,60 € / 31,70 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "PRINČIČ, Jakot",
-            "price": "0,75 l 28,70 €",
+            "price": "0,75 l 31,70 €",
             "description": "(SLO, Goriška Brda, dry)"
           }
         ]
@@ -530,27 +530,27 @@
         "items": [
           {
             "title": "ŠČUREK, Stara Brajda",
-            "price": "0,75 l 42,00 €",
+            "price": "0,75 l 45,00 €",
             "description": "(SLO, Goriška Brda, dry, 2016)"
           },
           {
             "title": "Tilia Nostra",
-            "price": "0,75 l 35,00 €",
+            "price": "0,75 l 38,00 €",
             "description": "(SLO, Vipava Valley, dry)"
           },
           {
             "title": "SIMČIČ EDI, Triton lex",
-            "price": "0,75 l 46,00 €",
+            "price": "0,75 l 49,00 €",
             "description": "(SLO, Goriška Brda, dry 2017)"
           },
           {
             "title": "BATIČ, Angel",
-            "price": "0,75 l 64,00 €",
+            "price": "0,75 l 67,00 €",
             "description": "(SLO, Vipava Valley, dry, 2017)"
           },
           {
             "title": "KRISTANČIČ, Chardonnay PAVÓ, LIMITED EDITION",
-            "price": "0,75 l 74,00 €",
+            "price": "0,75 l 77,00 €",
             "description": "(SLO, Goriška Brda, 2019)"
           }
         ]
@@ -560,12 +560,12 @@
         "items": [
           {
             "title": "STEYER, Gewürztraminer",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Štajerska, semi-sweet)"
           },
           {
             "title": "ŠTURM, Yellow Muscat",
-            "price": "0,1 l / 0,75 l 5,50 € / 38,50 €",
+            "price": "0,1 l / 0,75 l 6,00 € / 41,50 €",
             "description": "(SLO, Bela Krajina, semi-sweet)"
           }
         ]
@@ -575,32 +575,32 @@
         "items": [
           {
             "title": "SIMČIČ MARJAN, Cabernet Sauvignon",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "ERZETIČ, Črna Rebula",
-            "price": "0,1 l / 0,75 l 4,10 € / 28,70 €",
+            "price": "0,1 l / 0,75 l 4,60 € / 31,70 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "ŠTOKA PRIMOŽ, Teran",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Kras, dry)"
           },
           {
             "title": "ROJAC, Refošk",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Goriška Brda, dry)"
           },
           {
             "title": "ŠUKLJE, Blaufränkisch",
-            "price": "0,1 l / 0,75 l 4,20 € / 29,40 €",
+            "price": "0,1 l / 0,75 l 4,70 € / 32,40 €",
             "description": "(SLO, Bela Krajina, dry)"
           },
           {
             "title": "FERJANČIČ, Merlot",
-            "price": "0,1 l / 0,75 l 4,50 € / 31,50 €",
+            "price": "0,1 l / 0,75 l 5,00 € / 34,50 €",
             "description": "(SLO, Goriška Brda, dry)"
           }
         ]
@@ -610,22 +610,22 @@
         "items": [
           {
             "title": "JAKONČIČ A., Carolina Red",
-            "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+            "price": "0,1 l / 0,75 l 7,50 € / 52,00 €",
             "description": "(SLO, Goriška Brda, dry, 2016)"
           },
           {
             "title": "TILIA, Rubido l.2017",
-            "price": "0,75 l 45,00 €",
+            "price": "0,75 l 48,00 €",
             "description": "(SLO, Vipava Valley, dry, 2017)"
           },
           {
             "title": "MOVIA, Veliko Rdeče",
-            "price": "0,75 l 74,00 €",
+            "price": "0,75 l 77,00 €",
             "description": "(SLO, Goriška Brda, dry 2010)"
           },
           {
             "title": "FEDORA, Pokalca - Črna Rebula",
-            "price": "0,75 l 49,00 €",
+            "price": "0,75 l 52,00 €",
             "description": "(SLO, Vipava, dry 2022)"
           }
         ]
@@ -635,7 +635,7 @@
         "items": [
           {
             "title": "BATIČ, Rose",
-            "price": "0,75 l 4,50 € / 31,50 €",
+            "price": "0,75 l 4,50 € / 34,50 €",
             "description": "(SLO, Vipava Valley, semi-dry)"
           }
         ]
@@ -645,17 +645,17 @@
         "items": [
           {
             "title": "ŠUMENJAK, Alter",
-            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,00 €",
             "description": "(SLO, Štajerska, semi-dry)"
           },
           {
             "title": "Zarro Malvasia",
-            "price": "0,75 l 40,00 €",
+            "price": "0,75 l 43,00 €",
             "description": "(SLO, Istria, dry)"
           },
           {
             "title": "GRAVNER, Rebula",
-            "price": "0,75 l 160,00 €",
+            "price": "0,75 l 163,00 €",
             "description": "(SLO/ITA, Collio, dry)"
           }
         ]
@@ -665,37 +665,37 @@
         "items": [
           {
             "title": "SOLIGO, Prosecco",
-            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,00 €",
             "description": "(ITA, Veneto, dry)"
           },
           {
             "title": "Villa Folini Blancs de Blancs",
-            "price": "0,75 l 33,00 €",
+            "price": "0,75 l 36,00 €",
             "description": "(ITA, Tuscany, dry)"
           },
           {
             "title": "Bagueri Zero Dosage",
-            "price": "0,75 l 35,00 €",
+            "price": "0,75 l 38,00 €",
             "description": "(SLO, Brda, dry)"
           },
           {
             "title": "BJANA, Sparkling BJANA Brut",
-            "price": "0,1 l / 0,75 l 6,50 € / 45,50 €",
+            "price": "0,1 l / 0,75 l 7,00 € / 48,50 €",
             "description": "(SLO, Goriška Brda, Brut)"
           },
           {
             "title": "BJANA, Sparkling BJANA Rose",
-            "price": "0,1 l / 0,75 l 7,00 € / 49,00 €",
+            "price": "0,1 l / 0,75 l 7,50 € / 52,00 €",
             "description": "(SLO, Goriška Brda, Brut)"
           },
           {
             "title": "JACOB'S CREEK, Sparkling Rose",
-            "price": "0,1 l / 0,75 l 4,00 € / 28,00 €",
+            "price": "0,1 l / 0,75 l 4,50 € / 31,00 €",
             "description": "(AUS, dry)"
           },
           {
             "title": "Domaine Slapšak Brut Reserve",
-            "price": "0,1 l / 0,75 l 5,00 € / 35,00 €",
+            "price": "0,1 l / 0,75 l 5,50 € / 38,00 €",
             "description": null
           }
         ]
@@ -705,57 +705,57 @@
         "items": [
           {
             "title": "Pol Roger, Brut Reserve",
-            "price": "0,75 l 100,00 €",
+            "price": "0,75 l 110,00 €",
             "description": null
           },
           {
             "title": "Mumm, Cordon Rouge",
-            "price": "0,75 l 110,00 €",
+            "price": "0,75 l 120,00 €",
             "description": null
           },
           {
             "title": "Moet & Chandon, Brut Imperial",
-            "price": "0,75 l 110,00 €",
+            "price": "0,75 l 120,00 €",
             "description": null
           },
           {
             "title": "Moet, Ice",
-            "price": "0,75 l 120,00 €",
-            "description": null
-          },
-          {
-            "title": "Veuve Clicquot, Brut-Yellow Label",
-            "price": "0,75 l 120,00 €",
-            "description": null
-          },
-          {
-            "title": "Veuve Clicquot, Rich",
             "price": "0,75 l 130,00 €",
             "description": null
           },
           {
+            "title": "Veuve Clicquot, Brut-Yellow Label",
+            "price": "0,75 l 130,00 €",
+            "description": null
+          },
+          {
+            "title": "Veuve Clicquot, Rich",
+            "price": "0,75 l 140,00 €",
+            "description": null
+          },
+          {
             "title": "Louis Roederer, Cristal 2002",
-            "price": "0,75 l 600,00 €",
+            "price": "0,75 l 610,00 €",
             "description": null
           },
           {
             "title": "Dom Perignon, Brut 2009",
-            "price": "0,75 l 300,00 €",
+            "price": "0,75 l 310,00 €",
             "description": null
           },
           {
             "title": "Belaire Luxe",
-            "price": "0,75 l 110,00 €",
+            "price": "0,75 l 120,00 €",
             "description": null
           },
           {
             "title": "Belaire Rose",
-            "price": "0,75 l 110,00 €",
+            "price": "0,75 l 120,00 €",
             "description": null
           },
           {
             "title": "Ruinart, Blanc de Blancs",
-            "price": "0,75 l 210,00 €",
+            "price": "0,75 l 220,00 €",
             "description": null
           }
         ]
