@@ -1,0 +1,319 @@
+:root {
+    --primary: #d5c48f;
+    --body-bg: #171719;
+    --body-color: #b1b0b0;
+    --heading-color: #d5c48f;
+    --menu-bg: #2c2c31;
+    --menu-link: #d5c48f;
+    --menu-link-bg: transparent;
+    --menu-active-bg: #d5c48f;
+    --menu-active-color: #1e1e20;
+    --product-bg: #2c2c31;
+    --product-border-color: #2c2c31;
+    --product-info-title-color: #d5c48f;
+    --product-info-desc-color: #b1b0b0;
+    --radius: 8px;
+    --primary-font: 'Mulish', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --heading-weight: 900;
+    --header-title-transform: uppercase;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0 auto;
+    padding: 0;
+    color: var(--body-color);
+    background-color: var(--body-bg);
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 600px;
+    font-weight: 400;
+}
+
+header {
+    text-align: center;
+    height: 350px;
+    background-image: url('Screenshot 2025-04-10 011837.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+#category-nav {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: rgba(50, 50, 50, 0.8);
+    -webkit-overflow-scrolling: touch;
+    margin-top: 15px;
+    border-radius: var(--radius);
+}
+
+#category-nav button {
+    background-color: var(--menu-link-bg);
+    color: var(--menu-link);
+    border: 1px solid var(--menu-link);
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+#category-nav button:last-child {
+    margin-right: 0;
+}
+
+#category-nav button.active {
+    background-color: var(--menu-active-bg);
+    color: var(--menu-active-color);
+    border-color: var(--menu-active-bg);
+}
+
+#category-nav button:hover {
+    background-color: var(--menu-link);
+    color: var(--menu-active-color);
+}
+
+#category-nav::-webkit-scrollbar {
+    display: none;
+}
+
+#category-nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+main {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: var(--radius);
+    background-color: var(--menu-bg);
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h2 {
+    border-bottom: 2px solid var(--heading-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: var(--heading-color);
+    text-transform: var(--header-title-transform);
+    font-weight: var(--heading-weight);
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #555;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--product-info-desc-color);
+}
+
+.item-price {
+    /* Container for size and cost */
+    white-space: nowrap;
+    margin-left: 15px;
+    text-align: right; /* Align nested spans to the right */
+}
+
+.item-size {
+    display: block; /* Put size on its own line */
+    font-size: 0.85em; /* Make size smaller */
+    color: var(--product-info-desc-color); /* Use description color for size */
+    font-weight: 400; /* Normal weight for size */
+}
+
+.item-cost {
+    display: block; /* Put cost on its own line */
+    font-size: 1.1em; /* Keep original price font size */
+    font-weight: 600; /* Keep original price font weight */
+    color: white; /* Keep price color white */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 250px;
+    }
+
+    #category-nav button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    main {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .menu-category h2 {
+        font-size: 1.3em;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-price {
+        margin-left: 0;
+        margin-top: 8px; /* Adjusted margin for two lines */
+        font-size: 1em; /* Adjusted base size for mobile */
+        text-align: left; /* Align left on mobile */
+    }
+
+    .item-size {
+        display: inline; /* Keep size inline on mobile */
+        margin-right: 8px; /* Add space between size and cost */
+    }
+
+    .item-cost {
+         display: inline; /* Keep cost inline on mobile */
+         font-size: 1em; /* Adjust cost size for mobile */
+    }
+
+    .item-details h3 {
+        font-size: 1em;
+    }
+}
+
+/* Language Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+    /* Initially hidden - JS will show it */
+    /* display: none;  <-- We will control this via JS */
+}
+
+.modal-content {
+    background-color: var(--menu-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+.modal-content h2 {
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: var(--heading-weight);
+}
+
+.wifi-password {
+    color: #fff;
+    background-color: rgba(213, 196, 143, 0.2);
+    padding: 10px;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.modal-content button {
+    background-color: var(--menu-active-bg);
+    color: var(--menu-active-color);
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    font-size: 1.1em;
+    transition: opacity 0.3s ease;
+    min-width: 100px;
+}
+
+.modal-content button:hover {
+    opacity: 0.8;
+}
+
+/* Styles for subcategory titles */
+.subcategory-title {
+    margin-top: 25px;      /* Add some space above the subcategory title */
+    margin-bottom: 15px;   /* Add space below the subcategory title, before items */
+    font-size: 1.3em;      /* Make it larger than item titles but smaller than main category titles */
+    color: var(--heading-color); /* Use the heading color for consistency */
+    font-weight: 700;      /* Make it bold */
+    border-bottom: 1px solid var(--heading-color); /* Add an underline */
+    padding-bottom: 5px;   /* Space between text and underline */
+    text-transform: uppercase; /* Optional: make it uppercase like main titles */
+}
+
+/* Adjust item title (h4) styles if needed */
+.menu-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: white; /* Keep item titles distinct */
+    font-weight: 600;
+}
+
+/* Premium tag styling */
+.premium-tag {
+  display: inline-block;
+  border: 1px solid gold;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 8px;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(212, 175, 55, 0.7);
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Add hover effect for interactive menus */
+.premium-tag:hover {
+  background-color: rgba(212, 175, 55, 0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+} 
