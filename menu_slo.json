@@ -65,22 +65,17 @@
       {
         "title": "Fig Leaf [premium]",
         "price": "14,00 €",
-        "description": "(Clase Azul Plata, limonin sok, agavin sirup, sol, tonik voda iz figovih listov)"
+        "description": "(Clase Azul Plata, limonin sok, agavin sirup, sol, Three Cents Fig Leaf)"
       },
       {
         "title": "Tokyo Mule [premium]",
         "price": "10,00 €",
-        "description": "(Sake, japonska vodka, wasabi pasta, yuzu pire, limeta, ginger beer)"
+        "description": "(Sake, japonska vodka, wasabi pasta, yuzu pire, limeta, Three Cents Ginger Beer)"
       },
       {
-        "title": "Clarified New York Sour [premium]",
-        "price": "13,00 €",
-        "description": "(Chivas XIII Extra, limonin sok, sladkorni sirup, Cabernet Sauvignon - Kristalno čista gladka različica tradicionalnega New York Sourja.)"
-      },
-      {
-        "title": "Clarified Whiskey Sour [premium]",
-        "price": "12,00 €",
-        "description": "(Chivas XIII Extra, limonin sok, sladkorni sirup - Kristalno čista gladka različica tradicionalnega Whiskey Sourja.)"
+        "title": "GOOSE SODA",
+        "price": "9,00 €",
+        "description": "(Grey Goose vodka, Two Cents Plain, limona)"
       },
       {
         "title": "Pornstar Martini [premium]",
@@ -383,7 +378,7 @@
         "name": "Aperitivi",
         "items": [
           { "title": "Ramazzotti Rosato Spritz", "price": "7,90 €", "description": "(prosecco, Ramazzotti rosato, bazilika)" },
-          { "title": "Ramazzotti Rosato Tonic", "price": "7,90 €", "description": "(Schweppes tonic water, Ramazzotti rosato, limeta)" },
+          { "title": "Ramazzotti Rosato Tonic", "price": "7,90 €", "description": "(Schweppes Tonic Water, Ramazzotti rosato, limeta)" },
           { "title": "Aperol Spritz", "price": "8,00 €", "description": "(Aperol, Prosecco Costaross, soda)" },
           { "title": "Hugo Spritz", "price": "8,00 €", "description": "(Bezgov liker, Prosecco Costaross, meta, soda)" },
           { "title": "Lillet Hugo Spritz", "price": "9,00 €", "description": "(prosecco, Lillet Blanc, limeta, meta)" },
@@ -452,10 +447,10 @@
           { "title": "Caipiroska", "price": "8,50 €", "description": "(Absolut vodka, rjavi sladkor, limeta)" },
           { "title": "Mojito", "price": "8,50 €", "description": "(Havana 3 Anos rum, soda, beli sladkor, meta, limeta)" },
           { "title": "Fruit Mojito", "price": "9,00 €", "description": "(Havana 3 Anos rum, soda, beli sladkor, meta, limeta, sveže sadje)" },
-          { "title": "Moscow Mule", "price": "8,50 €", "description": "(vodka Absolut, limeta, ginger beer)" },
-          { "title": "Moscow Mule Fruit", "price": "9,00 €", "description": "(vodka Absolut, limeta, sadni pire, ginger beer)" },
-          { "title": "Brexit Mule", "price": "8,50 €", "description": "(Beefeater Gin, limeta, ginger beer)" },
-          { "title": "Brexit Mule Fruit", "price": "9,00 €", "description": "(Beefeater Gin, limeta, ginger beer, sadni pire)" },
+          { "title": "Moscow Mule", "price": "8,50 €", "description": "(vodka Absolut, limeta, Three Cents Ginger Beer)" },
+          { "title": "Moscow Mule Fruit", "price": "9,00 €", "description": "(vodka Absolut, limeta, sadni pire, Three Cents Ginger Beer)" },
+          { "title": "Brexit Mule", "price": "8,50 €", "description": "(Beefeater Gin, limeta, Three Cents Ginger Beer)" },
+          { "title": "Brexit Mule Fruit", "price": "9,00 €", "description": "(Beefeater Gin, limeta, Three Cents Ginger Beer, sadni pire)" },
           { "title": "Fruit Caipirinha", "price": "9,00 €", "description": "(Janeiro Cachaca, rjavi sladkor, limeta, sveže sadje)" },
           { "title": "Caipirissima", "price": "8,00 €", "description": "(Havana 3 Anos, rjavi sladkor, limeta)" },
           { "title": "Fruit Caipirissima", "price": "8,50 €", "description": "(Havana 3anos, rjavi sladkor, limeta, sadni pire)" },
@@ -895,7 +890,7 @@
           { "title": "La Hachicera no. 2 (banana)", "price": "0,03 l 9,50 €", "description": null },
           { "title": "Mount Gay Black Barrel", "price": "0,03 l 7,00 €", "description": null },
           { "title": "Ron Zacapa 23y", "price": "0,03 l 9,50 €", "description": null },
-          { "title": "Pyrat", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Pyrat XO Reserve", "price": "0,03 l 8,50 €", "description": null },
           { "title": "Diplomatico", "price": "0,03 l 9,50 €", "description": null },
           { "title": "Domači rum", "price": "0,03 l 4,50 €", "description": null },
           { "title": "La Hechicera Reserva", "price": "0,03 l 8,50 €", "description": null },
@@ -921,6 +916,7 @@
         "name": "Gin",
         "items": [
           { "title": "Beefeater Gin", "price": "0,03 l 5,20 €", "description": "(ANG)" },
+          { "title": "Bombay Sapphire", "price": "0,03 l 5,20 €", "description": "(ANG)" },
           { "title": "Beefeater 24", "price": "0,03 l 6,50 €", "description": "(ANG)" },
           { "title": "Beefeater Burroughs Reserve", "price": "0,03 l 9,50 €", "description": "(ANG, staran gin)" },
           { "title": "Malfy gin Originale", "price": "0,03 l 5,50 €", "description": "(ITA)" },
@@ -1050,9 +1046,9 @@
         "description": "(1l Belvedere vodka + 4 litre soka po izbiri)"
       },
       {
-        "title": "Gray Goose Boat",
+        "title": "Grey Goose Boat",
         "price": "200,00 €",
-        "description": "(1l Gray Goose vodka + 4 litre soka po izbiri)"
+        "description": "(1l Grey Goose vodka + 4 litre soka po izbiri)"
       },
       {
         "title": "Hendricks Boat",

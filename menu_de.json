@@ -65,22 +65,17 @@
       {
         "title": "Fig Leaf [premium]",
         "price": "14,00 €",
-        "description": "(Clase Azul Plata, Zitronensaft, Agavensirup, Salz, Feigenblatt-Tonic Water)"
+        "description": "(Clase Azul Plata, Zitronensaft, Agavensirup, Salz, Three Cents Fig Leaf)"
       },
       {
         "title": "Tokyo Mule [premium]",
         "price": "10,00 €",
-        "description": "(Sake, Japanischer Wodka, Wasabi-Paste, Yuzu-Püree, Limette, Ginger Beer)"
+        "description": "(Sake, Japanischer Wodka, Wasabi-Paste, Yuzu-Püree, Limette, Three Cents Ginger Beer)"
       },
       {
-        "title": "Clarified New York Sour [premium]",
-        "price": "13,00 €",
-        "description": "(Chivas XIII Extra, Zitronensaft, Zuckersirup, Cabernet Sauvignon - kristallklare, sanfte Version eines traditionellen New York Sour.)"
-      },
-      {
-        "title": "Clarified Whiskey Sour [premium]",
-        "price": "12,00 €",
-        "description": "(Chivas XIII Extra, Zitronensaft, Zuckersirup - kristallklare, sanfte Version eines traditionellen Whiskey Sour.)"
+        "title": "GOOSE SODA",
+        "price": "9,00 €",
+        "description": "(Grey Goose Wodka, Two Cents Plain, Zitrone)"
       },
       {
         "title": "Pornstar Martini [premium]",
@@ -294,10 +289,10 @@
           { "title": "Caipiroska", "price": "8,50 €", "description": "(Absolut Wodka, brauner Zucker, Limette)" },
           { "title": "Mojito", "price": "8,50 €", "description": "(Havana 3 Anos Rum, Soda, weißer Zucker, Minze, Limette)" },
           { "title": "Frucht Mojito", "price": "9,00 €", "description": "(Havana 3 Anos Rum, Soda, weißer Zucker, Minze, Limette, frisches Obst)" },
-          { "title": "Moscow Mule", "price": "8,50 €", "description": "(Absolut Wodka, Limette, Ginger Beer)" },
-          { "title": "Moscow Mule Frucht", "price": "9,00 €", "description": "(Absolut Wodka, Limette, Fruchtpüree, Ginger Beer)" },
-          { "title": "Brexit Mule", "price": "8,50 €", "description": "(Beefeater Gin, Limette, Ginger Beer)" },
-          { "title": "Brexit Mule Frucht", "price": "9,00 €", "description": "(Beefeater Gin, Limette, Ginger Beer, Fruchtpüree)" },
+          { "title": "Moscow Mule", "price": "8,50 €", "description": "(Absolut Wodka, Limette, Three Cents Ginger Beer)" },
+          { "title": "Moscow Mule Frucht", "price": "9,00 €", "description": "(Absolut Wodka, Limette, Fruchtpüree, Three Cents Ginger Beer)" },
+          { "title": "Brexit Mule", "price": "8,50 €", "description": "(Beefeater Gin, Limette, Three Cents Ginger Beer)" },
+          { "title": "Brexit Mule Frucht", "price": "9,00 €", "description": "(Beefeater Gin, Limette, Three Cents Ginger Beer, Fruchtpüree)" },
           { "title": "Frucht Caipirinha", "price": "9,00 €", "description": "(Janeiro Cachaca, brauner Zucker, Limette, frisches Obst)" },
           { "title": "Caipirissima", "price": "8,00 €", "description": "(Havana 3 Anos, brauner Zucker, Limette)" },
           { "title": "Frucht Caipirissima", "price": "8,50 €", "description": "(Havana 3 Anos, brauner Zucker, Limette, Fruchtpüree)" },
@@ -541,7 +536,7 @@
           { "title": "La Hachicera Nr. 2 (Bananen-Infusion)", "price": "0,03 l 9,50 €", "description": null },
           { "title": "Mount Gay Black Barrel", "price": "0,03 l 7,00 €", "description": null },
           { "title": "Ron Zacapa 23J", "price": "0,03 l 9,50 €", "description": null },
-          { "title": "Pyrat", "price": "0,03 l 8,50 €", "description": null },
+          { "title": "Pyrat XO Reserve", "price": "0,03 l 8,50 €", "description": null },
           { "title": "Diplomatico", "price": "0,03 l 9,50 €", "description": null },
           { "title": "Hausgemachter Rum", "price": "0,03 l 4,50 €", "description": null },
           { "title": "La Hechicera Reserva", "price": "0,03 l 8,50 €", "description": null },
@@ -567,6 +562,7 @@
         "name": "Gin",
         "items": [
           { "title": "Beefeater Gin", "price": "0,03 l 5,20 €", "description": "(ENG)" },
+          { "title": "Bombay Sapphire", "price": "0,03 l 5,20 €", "description": "(ENG)" },
           { "title": "Beefeater 24", "price": "0,03 l 6,50 €", "description": "(ENG)" },
           { "title": "Beefeater Burroughs Reserve", "price": "0,03 l 9,50 €", "description": "(ENG, gereifter Gin)" },
           { "title": "Malfy Gin Originale", "price": "0,03 l 5,50 €", "description": "(ITA)" },
@@ -696,9 +692,9 @@
         "description": "(1l Belvedere Wodka + 4 Liter Saft nach Wahl)"
       },
       {
-        "title": "Gray Goose Boat",
+        "title": "Grey Goose Boat",
         "price": "200,00 €",
-        "description": "(1l Gray Goose Wodka + 4 Liter Saft nach Wahl)"
+        "description": "(1l Grey Goose Wodka + 4 Liter Saft nach Wahl)"
       },
       {
         "title": "Hendricks Boat",
