@@ -24,7 +24,12 @@
           { "title": "Vin brulé (bianco, rosso)", "price": "4,30 €", "description": null },
           { "title": "Medica", "price": "5,00 €", "description": "(grappa al miele)" },
           { "title": "Grog Punch", "price": "5,50 €", "description": null },
-          { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Caffè, latte montato, panna, Patrón Tequila Coffee)" },
+          { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Caffè, latte montato, panna, Patrón Tequila Coffee)" }
+        ]
+      },
+      {
+        "name": "Cioccolate Calde - Alcoliche",
+        "items": [
           { "title": "Diplomatico", "price": "9,50 €", "description": "(cioccolata calda fondente con panna e rum Diplomatico Reserva Exclusiva)" },
           { "title": "Salty Havana", "price": "8,50 €", "description": "(cioccolata calda fondente con ripieno di caramello salato e arachidi, Havana Spiced, guarnita con arachidi salate e panna)" },
           { "title": "Creamy Malibu", "price": "8,50 €", "description": "(cioccolata calda bianca con cocco e biscotti, rum Malibu, guarnita con scaglie di cocco e panna)" }
@@ -33,7 +38,12 @@
       {
         "name": "Analcolici",
         "items": [
-          { "title": "Caffè con Panna", "price": "3,50 €", "description": "(Caffè, latte montato, panna)" },
+          { "title": "Caffè con Panna", "price": "3,50 €", "description": "(Caffè, latte montato, panna)" }
+        ]
+      },
+      {
+        "name": "Cioccolate Calde - Analcoliche",
+        "items": [
           { "title": "CIOCCOLATA CALDA (FONDENTE/BIANCA)", "price": "5,30 €", "description": null },
           { "title": "Pistacchio", "price": "8,50 €", "description": "(cioccolata calda bianca con crema al pistacchio 100%, guarnita con lamponi liofilizzati)" },
           { "title": "Mango Bianco", "price": "8,50 €", "description": "(cioccolata calda bianca con purea di mango fresco, pezzi di mango e panna)" },
