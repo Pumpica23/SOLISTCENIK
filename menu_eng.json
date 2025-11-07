@@ -1,5 +1,48 @@
 [
   {
+    "category": "Winter Offer",
+    "featured": [
+      { "title": "White Raspberry", "price": "8,00 €", "description": "(white hot chocolate with fresh raspberry purée, raspberry pieces and cream)", "image": "WHITE RASPBERRY.jpg" },
+      { "title": "Hot Strawberry", "price": "7,50 €", "description": "(milk hot chocolate filled with vanilla cream, house strawberry sauce, topped with chocolate sprinkles)", "image": "HOT STRAWBERRY.jpg" },
+      { "title": "Snickers", "price": "8,00 €", "description": "(milk hot chocolate filled with peanut and caramel cream, topped with salted peanuts)", "image": "SNICKERS.jpg" }
+    ],
+    "subcategories": [
+      {
+        "name": "Alcoholic",
+        "items": [
+          { "title": "Hot Peach Cobbler", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, lemon juice, fresh white peach, apple juice, cinnamon)" },
+          { "title": "Hot Passion Punch", "price": "8,50 €", "description": "(Havana Especial, lime juice, passion fruit purée, honey, apple juice)" },
+          { "title": "Winter Tiki", "price": "8,50 €", "description": "(Havana 7yo, orgeat syrup, lime juice, pineapple purée, pineapple juice)" },
+          { "title": "Hot Beefeater Pink", "price": "7,50 €", "description": "(Beefeater Pink, strawberry purée, apple juice, honey, lemon juice, cinnamon)" },
+          { "title": "Hot Jameson", "price": "7,50 €", "description": "(Jameson, apple juice, honey, lemon juice, cinnamon)" },
+          { "title": "Hot Beefeater", "price": "7,50 €", "description": "(Beefeater gin, apple juice, honey, lemon juice, cinnamon)" },
+          { "title": "Malibu Apple Strudel", "price": "6,50 €", "description": "(Malibu, apple juice, honey, lemon juice, cinnamon)" },
+          { "title": "Bombardino", "price": "5,00 €", "description": "(Egg liqueur with cream and cinnamon)" },
+          { "title": "Crazy Santa", "price": "8,50 €", "description": "(Jameson, lemon juice, sugar syrup, Cabernet Sauvignon, orange peel)" },
+          { "title": "Penicillin", "price": "7,50 €", "description": "(Four Roses whiskey, lemon juice, honey syrup, ginger beer, candied ginger)" },
+          { "title": "Mulled Wine (white, red)", "price": "4,30 €", "description": null },
+          { "title": "Medica", "price": "5,00 €", "description": "(Honey brandy)" },
+          { "title": "Grog Punch", "price": "5,50 €", "description": null },
+          { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Coffee, frothed milk, cream, Patrón Tequila Coffee)" },
+          { "title": "Diplomatico", "price": "9,50 €", "description": "(dark hot chocolate with cream and Diplomatico Reserva Exclusiva rum)" },
+          { "title": "Salty Havana", "price": "8,50 €", "description": "(dark hot chocolate with salted caramel filling and peanuts, Havana Spiced, topped with salted peanuts and cream)" },
+          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(white hot chocolate with coconut and cookies, Malibu rum, topped with coconut flakes and cream)" }
+        ]
+      },
+      {
+        "name": "Non-Alcoholic",
+        "items": [
+          { "title": "Caffè con Panna", "price": "3,50 €", "description": "(Coffee, frothed milk, cream)" },
+          { "title": "HOT CHOCOLATE (DARK/WHITE)", "price": "5,30 €", "description": null },
+          { "title": "Pistachio", "price": "8,50 €", "description": "(white hot chocolate with 100% pistachio cream, topped with freeze-dried raspberries)" },
+          { "title": "White Mango", "price": "8,50 €", "description": "(white hot chocolate with fresh mango purée, mango pieces and cream)" },
+          { "title": "Banana", "price": "8,00 €", "description": "(milk hot chocolate with fresh banana purée, topped with banana chips)" },
+          { "title": "Raffaello Hot Chocolate", "price": "8,00 €", "description": "(white hot chocolate filled with coconut cream and cookie, topped with coconut flakes)" }
+        ]
+      }
+    ]
+  },
+  {
     "category": "Solist Summer Refreshing Drinks",
     "items": [
       {

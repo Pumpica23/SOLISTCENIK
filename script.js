@@ -96,6 +96,53 @@ document.addEventListener('DOMContentLoaded', () => {
         categoryTitle.textContent = category.category;
         categoryDiv.appendChild(categoryTitle);
 
+        // Render featured section (if present) at the top of the category
+        if (category.featured && Array.isArray(category.featured) && category.featured.length > 0) {
+            const featuredGrid = document.createElement('div');
+            featuredGrid.classList.add('featured-grid');
+
+            category.featured.forEach(item => {
+                const card = document.createElement('div');
+                card.classList.add('featured-card');
+
+                if (item.image) {
+                    const img = document.createElement('img');
+                    img.src = item.image;
+                    img.alt = item.title || '';
+                    card.appendChild(img);
+                }
+
+                const info = document.createElement('div');
+                info.classList.add('featured-info');
+
+                if (item.title) {
+                    const t = document.createElement('h4');
+                    t.classList.add('featured-title');
+                    t.textContent = item.title;
+                    info.appendChild(t);
+                }
+
+                if (item.description) {
+                    const d = document.createElement('p');
+                    d.classList.add('featured-desc');
+                    d.textContent = item.description;
+                    info.appendChild(d);
+                }
+
+                if (item.price) {
+                    const p = document.createElement('span');
+                    p.classList.add('featured-price');
+                    p.textContent = item.price;
+                    info.appendChild(p);
+                }
+
+                card.appendChild(info);
+                featuredGrid.appendChild(card);
+            });
+
+            categoryDiv.appendChild(featuredGrid);
+        }
+
         // Check if the category has subcategories or direct items
         if (category.subcategories) {
             category.subcategories.forEach(subcategory => {

@@ -1,5 +1,48 @@
 [
   {
+    "category": "ZIMSKA PONUDBA",
+    "featured": [
+      { "title": "WHITE RASPBERRY", "price": "8,00 €", "description": "(bela vroča čokolada s svežim malinovim pirejem, koščki malin in smetano)", "image": "WHITE RASPBERRY.jpg" },
+      { "title": "HOT STRAWBERRY", "price": "7,50 €", "description": "(mlečna vroča čokolada, polnjena z vanilijevo kremo, domačim jagodnim prelivom in posuta s čokoladnimi mrvicami)", "image": "HOT STRAWBERRY.jpg" },
+      { "title": "SNICKERS", "price": "8,00 €", "description": "(mlečna vroča čokolada, polnjena s kremo arašidov in karamele, posuta s slanimi arašidi)", "image": "SNICKERS.jpg" }
+    ],
+    "subcategories": [
+      {
+        "name": "Alkoholne",
+        "items": [
+          { "title": "HOT PEACH COBBLER", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, limonin sok, sveža bela breskev, jabolčni sok, cimet)" },
+          { "title": "HOT PASSION PUNČ", "price": "8,50 €", "description": "(Havana Especial, limetin sok, pasijonkin pire, med, jabolčni sok)" },
+          { "title": "WINTER TIKI", "price": "8,50 €", "description": "(Havana 7yo, orgeat sirup, limetin sok, ananasov pire, ananasov sok)" },
+          { "title": "HOT BEEFEATER PINK", "price": "7,50 €", "description": "(Beefeater Pink, jagodni pire, jabolčni sok, med, limonin sok, cimet)" },
+          { "title": "HOT JAMESON", "price": "7,50 €", "description": "(Jameson, jabolčni sok, med, limonin sok, cimet)" },
+          { "title": "HOT BEEFEATER", "price": "7,50 €", "description": "(Beefeater gin, jabolčni sok, med, limonin sok, cimet)" },
+          { "title": "MALIBU APFEL STRUDEL", "price": "6,50 €", "description": "(Malibu, jabolčni sok, med, limonin sok, cimet)" },
+          { "title": "BOMBARDINO", "price": "5,00 €", "description": "(Jajčni liker s smetano in cimetom)" },
+          { "title": "CRAZY SANTA", "price": "8,50 €", "description": "(Jameson, limonin sok, sladkorni sirup, Cabernet Sauvignon, pomarančna lupina)" },
+          { "title": "PENICILIN", "price": "7,50 €", "description": "(Four Roses whiskey, limonin sok, medeni sirup, ginger beer, kandiran ingver)" },
+          { "title": "KUHANO VINO (belo, rdeče)", "price": "4,30 €", "description": null },
+          { "title": "MEDICA", "price": "5,00 €", "description": "(Medeno žganje)" },
+          { "title": "GROG-PUNČ", "price": "5,50 €", "description": null },
+          { "title": "CAFFE CON PANNA PATRON", "price": "7,50 €", "description": "(Kava, spenjeno mleko, smetana, Patrón Tequila Coffee)" },
+          { "title": "DIPLOMATICO", "price": "9,50 €", "description": "(črna vroča čokolada s smetano in rumom Diplomatico Reserva Exclusiva)" },
+          { "title": "SALTY HAVANA", "price": "8,50 €", "description": "(črna vroča čokolada s polnilom slane karamele in arašidi, Havana Spiced, posuta s slanimi arašidi in s smetano)" },
+          { "title": "CREAMY MALIBU", "price": "8,50 €", "description": "(bela vroča čokolada s kokosom in piškoti, Malibu rum, posuta s kokosovim čipsom in s smetano)" }
+        ]
+      },
+      {
+        "name": "Brezalkoholne",
+        "items": [
+          { "title": "CAFFE CON PANNA", "price": "3,50 €", "description": "(Kava, spenjeno mleko, smetana)" },
+          { "title": "VROČA ČOKOLADA (ČRNA/BELA)", "price": "5,30 €", "description": null },
+          { "title": "PISTACHIO", "price": "8,50 €", "description": "(bela vroča čokolada s 100% pistacijevo kremo, posuta z liofiliziranimi malinami)" },
+          { "title": "WHITE MANGO", "price": "8,50 €", "description": "(bela vroča čokolada s svežim mangovim pirejem, koščki manga in smetano)" },
+          { "title": "BANANA", "price": "8,00 €", "description": "(mlečna vroča čokolada, polnjena s svežim bananinim pirejem, posuta z bananinim čipsom)" },
+          { "title": "RAFFAELLO VROČA ČOKOLADA", "price": "8,00 €", "description": "(bela vroča čokolada, polnjena s kokosovo kremo in piškotom, posuta s kokosovim čipsom)" }
+        ]
+      }
+    ]
+  },
+  {
     "category": "SOLIST poletni osvežilni napitki",
     "items": [
       {

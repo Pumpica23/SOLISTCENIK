@@ -1,5 +1,48 @@
 [
   {
+    "category": "Offerta Invernale",
+    "featured": [
+      { "title": "Lampone Bianco", "price": "8,00 €", "description": "(cioccolata calda bianca con purea di lamponi fresca, pezzi di lampone e panna)", "image": "WHITE RASPBERRY.jpg" },
+      { "title": "Fragola Calda", "price": "7,50 €", "description": "(cioccolata calda al latte ripiena di crema alla vaniglia, coulis di fragole fatto in casa, guarnita con scaglie di cioccolato)", "image": "HOT STRAWBERRY.jpg" },
+      { "title": "Snickers", "price": "8,00 €", "description": "(cioccolata calda al latte ripiena di crema di arachidi e caramello, guarnita con arachidi salate)", "image": "SNICKERS.jpg" }
+    ],
+    "subcategories": [
+      {
+        "name": "Alcolici",
+        "items": [
+          { "title": "Hot Peach Cobbler", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, succo di limone, pesca bianca fresca, succo di mela, cannella)" },
+          { "title": "Punch Caldo alla Passione", "price": "8,50 €", "description": "(Havana Especial, succo di lime, purea di frutto della passione, miele, succo di mela)" },
+          { "title": "Winter Tiki", "price": "8,50 €", "description": "(Havana 7yo, sciroppo orgeat, succo di lime, purea di ananas, succo di ananas)" },
+          { "title": "Beefeater Pink Caldo", "price": "7,50 €", "description": "(Beefeater Pink, purea di fragole, succo di mela, miele, succo di limone, cannella)" },
+          { "title": "Jameson Caldo", "price": "7,50 €", "description": "(Jameson, succo di mela, miele, succo di limone, cannella)" },
+          { "title": "Beefeater Caldo", "price": "7,50 €", "description": "(Gin Beefeater, succo di mela, miele, succo di limone, cannella)" },
+          { "title": "Malibu Strudel di Mele", "price": "6,50 €", "description": "(Malibu, succo di mela, miele, succo di limone, cannella)" },
+          { "title": "Bombardino", "price": "5,00 €", "description": "(Liquore all'uovo con panna e cannella)" },
+          { "title": "Crazy Santa", "price": "8,50 €", "description": "(Jameson, succo di limone, sciroppo di zucchero, Cabernet Sauvignon, scorza d'arancia)" },
+          { "title": "Penicillin", "price": "7,50 €", "description": "(Four Roses whiskey, succo di limone, sciroppo al miele, ginger beer, zenzero candito)" },
+          { "title": "Vin brulé (bianco, rosso)", "price": "4,30 €", "description": null },
+          { "title": "Medica", "price": "5,00 €", "description": "(grappa al miele)" },
+          { "title": "Grog Punch", "price": "5,50 €", "description": null },
+          { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Caffè, latte montato, panna, Patrón Tequila Coffee)" },
+          { "title": "Diplomatico", "price": "9,50 €", "description": "(cioccolata calda fondente con panna e rum Diplomatico Reserva Exclusiva)" },
+          { "title": "Salty Havana", "price": "8,50 €", "description": "(cioccolata calda fondente con ripieno di caramello salato e arachidi, Havana Spiced, guarnita con arachidi salate e panna)" },
+          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(cioccolata calda bianca con cocco e biscotti, rum Malibu, guarnita con scaglie di cocco e panna)" }
+        ]
+      },
+      {
+        "name": "Analcolici",
+        "items": [
+          { "title": "Caffè con Panna", "price": "3,50 €", "description": "(Caffè, latte montato, panna)" },
+          { "title": "CIOCCOLATA CALDA (FONDENTE/BIANCA)", "price": "5,30 €", "description": null },
+          { "title": "Pistacchio", "price": "8,50 €", "description": "(cioccolata calda bianca con crema al pistacchio 100%, guarnita con lamponi liofilizzati)" },
+          { "title": "Mango Bianco", "price": "8,50 €", "description": "(cioccolata calda bianca con purea di mango fresco, pezzi di mango e panna)" },
+          { "title": "Banana", "price": "8,00 €", "description": "(cioccolata calda al latte con purea di banana fresca, guarnita con chips di banana)" },
+          { "title": "Raffaello Cioccolata Calda", "price": "8,00 €", "description": "(cioccolata calda bianca ripiena di crema al cocco e biscotto, guarnita con scaglie di cocco)" }
+        ]
+      }
+    ]
+  },
+  {
     "category": "Bevande Rinfrescanti Estive Solist",
     "items": [
       {

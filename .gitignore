@@ -1,0 +1,7 @@
+# Ignore Windows alternate data streams copied as files
+*:Zone.Identifier
+*:mshield
+
+# Common OS cruft
+.DS_Store
+Thumbs.db

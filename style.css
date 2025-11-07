@@ -316,4 +316,58 @@ footer p {
 .premium-tag:hover {
   background-color: rgba(212, 175, 55, 0.9);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-} 
+}
+
+/* Featured section (image cards) */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.featured-card {
+  background-color: var(--product-bg);
+  border: 1px solid var(--product-border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-info {
+  padding: 10px;
+}
+
+.featured-title {
+  margin: 0 0 6px 0;
+  font-size: 1.05em;
+  color: #fff;
+  font-weight: 700;
+}
+
+.featured-desc {
+  margin: 0 0 6px 0;
+  font-size: 0.9em;
+  color: var(--product-info-desc-color);
+}
+
+.featured-price {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  .featured-card img {
+    height: 180px;
+  }
+}
