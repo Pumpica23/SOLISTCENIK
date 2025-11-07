@@ -28,20 +28,6 @@
         ]
       },
       {
-        "name": "Hot Chocolates - Alcoholic",
-        "items": [
-          { "title": "Diplomatico", "price": "9,50 €", "description": "(dark hot chocolate with cream and Diplomatico Reserva Exclusiva rum)" },
-          { "title": "Salty Havana", "price": "8,50 €", "description": "(dark hot chocolate with salted caramel filling and peanuts, Havana Spiced, topped with salted peanuts and cream)" },
-          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(white hot chocolate with coconut and cookies, Malibu rum, topped with coconut flakes and cream)" }
-        ]
-      },
-      {
-        "name": "Non-Alcoholic",
-        "items": [
-          { "title": "Caffè con Panna", "price": "3,50 €", "description": "(Coffee, frothed milk, cream)" }
-        ]
-      },
-      {
         "name": "Hot Chocolates - Non-Alcoholic",
         "items": [
           { "title": "HOT CHOCOLATE (DARK/WHITE)", "price": "5,30 €", "description": null },
@@ -49,6 +35,14 @@
           { "title": "White Mango", "price": "8,50 €", "description": "(white hot chocolate with fresh mango purée, mango pieces and cream)" },
           { "title": "Banana", "price": "8,00 €", "description": "(milk hot chocolate with fresh banana purée, topped with banana chips)" },
           { "title": "Raffaello Hot Chocolate", "price": "8,00 €", "description": "(white hot chocolate filled with coconut cream and cookie, topped with coconut flakes)" }
+        ]
+      },
+      {
+        "name": "Hot Chocolates - Alcoholic",
+        "items": [
+          { "title": "Diplomatico", "price": "9,50 €", "description": "(dark hot chocolate with cream and Diplomatico Reserva Exclusiva rum)" },
+          { "title": "Salty Havana", "price": "8,50 €", "description": "(dark hot chocolate with salted caramel filling and peanuts, Havana Spiced, topped with salted peanuts and cream)" },
+          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(white hot chocolate with coconut and cookies, Malibu rum, topped with coconut flakes and cream)" }
         ]
       }
     ]

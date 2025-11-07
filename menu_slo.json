@@ -28,20 +28,6 @@
         ]
       },
       {
-        "name": "Vroče čokolade - Alkoholne",
-        "items": [
-          { "title": "DIPLOMATICO", "price": "9,50 €", "description": "(črna vroča čokolada s smetano in rumom Diplomatico Reserva Exclusiva)" },
-          { "title": "SALTY HAVANA", "price": "8,50 €", "description": "(črna vroča čokolada s polnilom slane karamele in arašidi, Havana Spiced, posuta s slanimi arašidi in s smetano)" },
-          { "title": "CREAMY MALIBU", "price": "8,50 €", "description": "(bela vroča čokolada s kokosom in piškoti, Malibu rum, posuta s kokosovim čipsom in s smetano)" }
-        ]
-      },
-      {
-        "name": "Brezalkoholne",
-        "items": [
-          { "title": "CAFFE CON PANNA", "price": "3,50 €", "description": "(Kava, spenjeno mleko, smetana)" }
-        ]
-      },
-      {
         "name": "Vroče čokolade - Brezalkoholne",
         "items": [
           { "title": "VROČA ČOKOLADA (ČRNA/BELA)", "price": "5,30 €", "description": null },
@@ -49,6 +35,14 @@
           { "title": "WHITE MANGO", "price": "8,50 €", "description": "(bela vroča čokolada s svežim mangovim pirejem, koščki manga in smetano)" },
           { "title": "BANANA", "price": "8,00 €", "description": "(mlečna vroča čokolada, polnjena s svežim bananinim pirejem, posuta z bananinim čipsom)" },
           { "title": "RAFFAELLO VROČA ČOKOLADA", "price": "8,00 €", "description": "(bela vroča čokolada, polnjena s kokosovo kremo in piškotom, posuta s kokosovim čipsom)" }
+        ]
+      },
+      {
+        "name": "Vroče čokolade - Alkoholne",
+        "items": [
+          { "title": "DIPLOMATICO", "price": "9,50 €", "description": "(črna vroča čokolada s smetano in rumom Diplomatico Reserva Exclusiva)" },
+          { "title": "SALTY HAVANA", "price": "8,50 €", "description": "(črna vroča čokolada s polnilom slane karamele in arašidi, Havana Spiced, posuta s slanimi arašidi in s smetano)" },
+          { "title": "CREAMY MALIBU", "price": "8,50 €", "description": "(bela vroča čokolada s kokosom in piškoti, Malibu rum, posuta s kokosovim čipsom in s smetano)" }
         ]
       }
     ]
