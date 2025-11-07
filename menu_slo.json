@@ -10,6 +10,7 @@
       {
         "name": "Alkoholne",
         "items": [
+          { "title": "WINTER MIDNIGHT", "price": "8,50 €", "description": "(Bumbu rum, crème de cassis, bananin pire, borovničev pire, jabolčni sok, limonin sok, sveža meta)" },
           { "title": "HOT PEACH COBBLER", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, limonin sok, sveža bela breskev, jabolčni sok, cimet)" },
           { "title": "HOT PASSION PUNČ", "price": "8,50 €", "description": "(Havana Especial, limetin sok, pasijonkin pire, med, jabolčni sok)" },
           { "title": "WINTER TIKI", "price": "8,50 €", "description": "(Havana 7yo, orgeat sirup, limetin sok, ananasov pire, ananasov sok)" },
@@ -26,8 +27,7 @@
           { "title": "CAFFE CON PANNA PATRON", "price": "7,50 €", "description": "(Kava, spenjeno mleko, smetana, Patrón Tequila Coffee)" },
           { "title": "DIPLOMATICO", "price": "9,50 €", "description": "(črna vroča čokolada s smetano in rumom Diplomatico Reserva Exclusiva)" },
           { "title": "SALTY HAVANA", "price": "8,50 €", "description": "(črna vroča čokolada s polnilom slane karamele in arašidi, Havana Spiced, posuta s slanimi arašidi in s smetano)" },
-          { "title": "CREAMY MALIBU", "price": "8,50 €", "description": "(bela vroča čokolada s kokosom in piškoti, Malibu rum, posuta s kokosovim čipsom in s smetano)" },
-          { "title": "Winter Midnight", "price": "8,50 €", "description": "(Bumbu rum, crème de cassis, bananin pire, borovničev pire, jabolčni sok, limonin sok, sveža meta)" }
+          { "title": "CREAMY MALIBU", "price": "8,50 €", "description": "(bela vroča čokolada s kokosom in piškoti, Malibu rum, posuta s kokosovim čipsom in s smetano)" }
         ]
       },
       {
