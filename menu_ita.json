@@ -26,7 +26,8 @@
           { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Caffè, latte montato, panna, Patrón Tequila Coffee)" },
           { "title": "Diplomatico", "price": "9,50 €", "description": "(cioccolata calda fondente con panna e rum Diplomatico Reserva Exclusiva)" },
           { "title": "Salty Havana", "price": "8,50 €", "description": "(cioccolata calda fondente con ripieno di caramello salato e arachidi, Havana Spiced, guarnita con arachidi salate e panna)" },
-          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(cioccolata calda bianca con cocco e biscotti, rum Malibu, guarnita con scaglie di cocco e panna)" }
+          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(cioccolata calda bianca con cocco e biscotti, rum Malibu, guarnita con scaglie di cocco e panna)" },
+          { "title": "Winter Midnight", "price": "8,50 €", "description": "(Rum Bumbu, Crème de Cassis, purea di banana, purea di mirtilli, succo di mela, succo di limone, menta fresca)" }
         ]
       },
       {
