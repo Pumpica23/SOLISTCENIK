@@ -146,14 +146,37 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check if the category has subcategories or direct items
         if (category.subcategories) {
             category.subcategories.forEach(subcategory => {
-                const subcategoryTitle = document.createElement('h3'); // Use h3 for subcategory titles
-                subcategoryTitle.classList.add('subcategory-title'); // Add a class for styling
+                // Create a wrapper for each subcategory to visually separate sections
+                const section = document.createElement('section');
+                section.classList.add('subcategory-section');
+
+                // Detect alcoholic vs non-alcoholic subcategory across languages
+                const nameLower = (subcategory.name || '').toLowerCase();
+                if ([
+                    'alcoholic',      // EN
+                    'alcolici',       // IT
+                    'alkoholne',      // SLO
+                    'alkoholische'    // DE
+                ].includes(nameLower)) {
+                    section.classList.add('subcat--alcoholic');
+                } else if ([
+                    'non-alcoholic',  // EN
+                    'analcolici',     // IT
+                    'brezalkoholne'   // SLO
+                ].includes(nameLower)) {
+                    section.classList.add('subcat--nonalcoholic');
+                }
+
+                const subcategoryTitle = document.createElement('h3');
+                subcategoryTitle.classList.add('subcategory-title');
                 subcategoryTitle.textContent = subcategory.name;
-                categoryDiv.appendChild(subcategoryTitle);
+                section.appendChild(subcategoryTitle);
 
                 subcategory.items.forEach(item => {
-                    categoryDiv.appendChild(createMenuItemElement(item));
+                    section.appendChild(createMenuItemElement(item));
                 });
+
+                categoryDiv.appendChild(section);
             });
         } else if (category.items) {
             // Handle categories with direct items (original structure)

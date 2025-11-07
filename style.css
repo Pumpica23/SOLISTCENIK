@@ -277,14 +277,40 @@ footer p {
 
 /* Styles for subcategory titles */
 .subcategory-title {
-    margin-top: 25px;      /* Add some space above the subcategory title */
-    margin-bottom: 15px;   /* Add space below the subcategory title, before items */
+    margin: 0 0 12px 0;   /* Tighten inside section; section has its own spacing */
     font-size: 1.3em;      /* Make it larger than item titles but smaller than main category titles */
     color: var(--heading-color); /* Use the heading color for consistency */
     font-weight: 700;      /* Make it bold */
-    border-bottom: 1px solid var(--heading-color); /* Add an underline */
-    padding-bottom: 5px;   /* Space between text and underline */
     text-transform: uppercase; /* Optional: make it uppercase like main titles */
+}
+
+/* Subcategory section wrapper for clearer separation */
+.subcategory-section {
+    margin: 20px 0; 
+    padding: 14px;
+    border-radius: var(--radius);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Accents by type to distinguish hot cocktails vs hot chocolates */
+.subcat--alcoholic {
+    box-shadow: inset 4px 0 0 rgba(213, 196, 143, 0.9);
+}
+.subcat--nonalcoholic {
+    box-shadow: inset 4px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Small icon cue after the subcategory title (purely visual) */
+.subcat--alcoholic .subcategory-title::after {
+    content: " \01F378"; /* 🍸 */
+    font-size: 0.95em;
+    margin-left: 6px;
+}
+.subcat--nonalcoholic .subcategory-title::after {
+    content: " \2615"; /* ☕ */
+    font-size: 0.95em;
+    margin-left: 6px;
 }
 
 /* Adjust item title (h4) styles if needed */
