@@ -8,12 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const langDeButton = document.getElementById('lang-de');
     let menuData = [];
 
+    // Validity text translations per language
+    const validityByLang = {
+        slo: 'Cenik velja od 07.11.2025 oz. do izdaje novega',
+        eng: 'Price list valid from 07.11.2025 or until a new one is issued',
+        ita: 'Listino valido dal 07.11.2025 o fino a nuova emissione',
+        de:  'Preisliste gültig ab 07.11.2025 bzw. bis zur Herausgabe einer neuen'
+    };
+
     function loadMenu(lang) {
         languageModal.style.display = 'none'; // Hide modal
 
         // Clear previous menu content and nav
         categoryNav.innerHTML = '';
         menuContent.innerHTML = '';
+
+        // Update validity text for the selected language (footer)
+        const validityEl = document.getElementById('validity-text');
+        if (validityEl) {
+            validityEl.textContent = validityByLang[lang] || validityByLang.slo;
+        }
 
         // Fetch menu data for the selected language
         fetch(`menu_${lang}.json`)
