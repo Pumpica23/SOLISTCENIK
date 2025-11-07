@@ -152,19 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Detect alcoholic vs non-alcoholic subcategory across languages
                 const nameLower = (subcategory.name || '').toLowerCase();
-                if (
-                    nameLower.includes('alcoholic') ||   // EN (+ works for Hot Chocolates - Alcoholic)
-                    nameLower.includes('alcolic')  ||    // IT (alcolici / alcoliche)
-                    nameLower.includes('alkohol') ||     // SLO/DE (alkoholne / alkoholische)
-                    nameLower.includes('cocktail')       // explicit hot cocktails naming
-                ) {
-                    section.classList.add('subcat--alcoholic');
+                const isNonAlc = (
+                  nameLower.includes('non-alcoholic') ||
+                  nameLower.includes('analcol') ||
+                  nameLower.includes('brezalkohol') ||
+                  nameLower.includes('alkoholfrei')
+                );
+                if (isNonAlc) {
+                  section.classList.add('subcat--nonalcoholic');
                 } else if (
-                    nameLower.includes('non-alcoholic') ||
-                    nameLower.includes('analcolic') ||
-                    nameLower.includes('brezalkohol')
+                  nameLower.includes('cocktail') ||
+                  nameLower.includes('alcoholic') ||
+                  nameLower.includes('alcolic') ||
+                  nameLower.includes('alkohol')
                 ) {
-                    section.classList.add('subcat--nonalcoholic');
+                  section.classList.add('subcat--alcoholic');
                 }
 
                 const subcategoryTitle = document.createElement('h3');
