@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const langDeButton = document.getElementById('lang-de');
     let menuData = [];
 
+    const defaultCategoryByLang = {
+        slo: 'ZIMSKA PONUDBA',
+        eng: 'Winter Offer',
+        ita: 'Offerta Invernale',
+        de: 'Winter Angebot'
+    };
+
     // Validity text translations per language
     const validityByLang = {
         slo: 'Cenik velja od 07.11.2025 oz. do izdaje novega',
@@ -40,27 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 menuData = data;
                 populateCategories();
-                // Display the first category by default, but show Signature Cocktails after 16:00
                 if (menuData.length > 0) {
-                    const currentHour = new Date().getHours();
-                    let defaultCategory = menuData[0].category;
-                    
-                    // After 18:00 (6 PM), show Signature Cocktails instead
-                    if (currentHour >= 18) {
-                        const signatureCategory = menuData.find(cat => 
-                            cat.category.toLowerCase().includes('signature') || 
-                            cat.category.toLowerCase().includes('cocktail signature')
-                        );
-                        if (signatureCategory) {
-                            defaultCategory = signatureCategory.category;
-                        }
-                    }
-                    
-                    displayCategory(defaultCategory);
+                    const desiredDefaultName = (defaultCategoryByLang[lang] || '').toLowerCase();
+                    const matchedCategory = menuData.find(cat =>
+                        cat.category.toLowerCase() === desiredDefaultName
+                    );
+
+                    const categoryToShow = matchedCategory ? matchedCategory.category : menuData[0].category;
+
+                    displayCategory(categoryToShow);
                     // Set the corresponding button as active
                     const buttons = categoryNav.querySelectorAll('button');
                     buttons.forEach(btn => {
-                        if (btn.textContent === defaultCategory) {
+                        if (btn.textContent === categoryToShow) {
                             btn.classList.add('active');
                         }
                     });
