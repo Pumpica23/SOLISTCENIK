@@ -212,24 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
         detailsDiv.classList.add('item-details');
 
         const title = document.createElement('h4'); // Use h4 for item titles within subcategories
-        
-        // Check if this is a premium item and format the title accordingly
-        if (item.title && item.title.includes('[premium]')) {
-            // Split the title to remove [premium] tag
-            const formattedTitle = item.title.replace('[premium]', '');
-            
-            // Set the basic title text
-            title.textContent = formattedTitle;
-            
-            // Create premium tag span
+        const rawTitle = item.title || '';
+        const isPremium = rawTitle.includes('[premium]');
+        const cleanTitle = rawTitle.replace('[premium]', '').trim();
+        title.textContent = cleanTitle;
+
+        if (item.cold) {
+            const statusIcon = document.createElement('span');
+            statusIcon.classList.add('status-icon', 'status-icon--cold');
+            statusIcon.textContent = '❄️';
+            statusIcon.setAttribute('role', 'img');
+            statusIcon.setAttribute('aria-label', 'cold cocktail');
+            statusIcon.title = 'cold cocktail';
+            title.appendChild(statusIcon);
+        }
+
+        if (isPremium) {
             const premiumTag = document.createElement('span');
             premiumTag.classList.add('premium-tag');
             premiumTag.textContent = 'premium';
-            
-            // Append the premium tag
             title.appendChild(premiumTag);
-        } else {
-            title.textContent = item.title;
         }
         
         detailsDiv.appendChild(title);

@@ -338,6 +338,17 @@ footer p {
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
+.status-icon {
+  display: inline-flex;
+  margin-left: 6px;
+  font-size: 0.95em;
+  vertical-align: middle;
+}
+
+.status-icon--cold {
+  color: #9ce2ff;
+}
+
 /* Add hover effect for interactive menus */
 .premium-tag:hover {
   background-color: rgba(212, 175, 55, 0.9);
