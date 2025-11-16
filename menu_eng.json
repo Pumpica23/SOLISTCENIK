@@ -11,9 +11,9 @@
         "name": "Hot Cocktails",
         "items": [
           { "title": "HOT WINTER MIDNIGHT", "price": "9,50 €", "description": "(Bumbu rum, crème de cassis, banana purée, blueberry purée, apple juice, lemon juice, fresh mint)" },
-          { "title": "Hot Tokyo", "price": "9,00 €", "description": "(Vodka, sake, metin liker, wasabi, yuzu pire, ingver, limona, jabolcni sok)" },
-          { "title": "Howly-Day Spritz", "price": "9,00 €", "description": "(Prosecco, vodka, apple cider, sirup karamela)" },
-          { "title": "Snow Fashioned", "price": "9,00 €", "description": "(Four Roses Bourbon, orehkov likee, javorjev siru])" },
+          { "title": "HOT TOKYO", "price": "9,00 €", "description": "(VODKA, SAKE, MINT LIQUEUR, WASABI, YUZU PURÉE, GINGER, LEMON, APPLE JUICE)" },
+          { "title": "HOWLY-DAY SPRITZ", "price": "9,00 €", "description": "(PROSECCO, VODKA, APPLE CIDER, CARAMEL SYRUP)" },
+          { "title": "SNOW FASHIONED", "price": "9,00 €", "description": "(FOUR ROSES BOURBON, WALNUT LIQUEUR, MAPLE SYRUP)" },
           { "title": "Hot Peach Cobbler", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, lemon juice, fresh white peach, apple juice, cinnamon)" },
           { "title": "Hot Passion Punch", "price": "8,50 €", "description": "(Havana Especial, lime juice, passion fruit purée, honey, apple juice)" },
           { "title": "Winter Tiki", "price": "8,50 €", "description": "(Havana 7yo, orgeat syrup, lime juice, pineapple purée, pineapple juice)" },
