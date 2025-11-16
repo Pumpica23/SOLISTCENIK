@@ -11,6 +11,9 @@
         "name": "Alcolici",
         "items": [
           { "title": "HOT WINTER MIDNIGHT", "price": "9,50 €", "description": "(Rum Bumbu, Crème de Cassis, purea di banana, purea di mirtilli, succo di mela, succo di limone, menta fresca)" },
+          { "title": "Hot Tokyo", "price": "9,00 €", "description": "(Vodka, sake, metin liker, wasabi, yuzu pire, ingver, limona, jabolcni sok)" },
+          { "title": "Howly-Day Spritz", "price": "9,00 €", "description": "(Prosecco, vodka, apple cider, sirup karamela)" },
+          { "title": "Snow Fashioned", "price": "9,00 €", "description": "(Four Roses Bourbon, orehkov likee, javorjev siru])" },
           { "title": "Hot Peach Cobbler", "price": "8,50 €", "description": "(Chivas Extra whisky, amaretto, Peachtree, succo di limone, pesca bianca fresca, succo di mela, cannella)" },
           { "title": "Punch Caldo alla Passione", "price": "8,50 €", "description": "(Havana Especial, succo di lime, purea di frutto della passione, miele, succo di mela)" },
           { "title": "Winter Tiki", "price": "8,50 €", "description": "(Havana 7yo, sciroppo orgeat, succo di lime, purea di ananas, succo di ananas)" },
