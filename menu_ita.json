@@ -114,6 +114,26 @@
             "title": "ŠTURM, Rumeni muškat",
             "price": "0,75 l 52,00 €",
             "description": "(SLO, Bela krajina, semi-dolce)"
+          },
+          {
+            "title": "SOLIGO, Prosecco",
+            "price": "0,75 l 39,00 €",
+            "description": "(ITA, Veneto, secco)"
+          },
+          {
+            "title": "BJANA, Penina BJANA Brut",
+            "price": "0,75 l 61,00 €",
+            "description": "(SLO, Goriška Brda, Brut)"
+          },
+          {
+            "title": "BJANA, Penina BJANA Rose",
+            "price": "0,75 l 65,00 €",
+            "description": "(SLO, Goriška Brda, Brut)"
+          },
+          {
+            "title": "MOET & CHANDON, Brut Imperial",
+            "price": "0,75 l 150,00 €",
+            "description": null
           }
         ]
       },
