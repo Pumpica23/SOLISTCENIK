@@ -1,5 +1,59 @@
 [
   {
+    "category": "OFFERTA DI CAPODANNO",
+    "subcategories": [
+      {
+        "name": "Bevande",
+        "items": [
+          { "title": "Absolut mix", "price": "10,00 €", "description": "(Arancia, Mirtillo rosso, Ananas, Mela)" },
+          { "title": "Beefeater mix", "price": "10,00 €", "description": null },
+          { "title": "Gin Tonic", "price": "10,00 €", "description": "(Beefeater Gin, tonica)" },
+          { "title": "Jack Daniels cola", "price": "10,00 €", "description": "(Jack Daniel's, Coca-Cola)" },
+          { "title": "Jameson cola", "price": "10,00 €", "description": "(Jameson, Coca-Cola)" },
+          { "title": "Korlat grappa", "price": "6,00 €", "description": null },
+          { "title": "Pelinkovec", "price": "5,00 €", "description": null },
+          { "title": "Birra", "price": "0,5 l 6,50 €", "description": null },
+          { "title": "Vino bianco della casa", "price": "4,50 €", "description": null },
+          { "title": "Vino rosso della casa", "price": "4,50 €", "description": null }
+        ]
+      },
+      {
+        "name": "Cocktail",
+        "items": [
+          { "title": "Mojito", "price": "12,00 €", "description": "(Havana 3 Anos rum, soda, zucchero bianco, menta, lime)" },
+          { "title": "Mai Tai", "price": "12,00 €", "description": "(Havana 3 Anos rum, Havana Especial rum, Peachtree, Amaretto, granatina, succo di limone)" },
+          { "title": "Sex on The Beach", "price": "12,00 €", "description": "(Absolut vodka, Peachtree, succo di mirtillo rosso, succo d'arancia)" },
+          { "title": "Long Island", "price": "12,00 €", "description": "(Beefeater Gin, Absolut vodka, Olmeca tequila, Havana 3 Anos rum, Coca-Cola, succo di limone)" },
+          { "title": "Tequila Sunrise", "price": "12,00 €", "description": "(Olmeca tequila, succo d'arancia, granatina, succo di limone)" }
+        ]
+      },
+      {
+        "name": "Vini",
+        "items": [
+          { "title": "Moet, Ice", "price": "0,75 l 163,00 €", "description": null },
+          { "title": "ZARRO, Malvazija", "price": "0,75 l 41,00 €", "description": "(SLO, Goriška Brda, secco)" },
+          { "title": "SIMČIČ MARJAN, Cabernet sauvignon", "price": "0,75 l 41,00 €", "description": "(SLO, Goriška Brda, secco)" },
+          { "title": "BATIČ, Rose", "price": "0,75 l 44,00 €", "description": "(SLO, Vipavska dolina, semi-secco)" },
+          { "title": "ŠTURM, Rumeni muškat", "price": "0,75 l 52,00 €", "description": "(SLO, Bela krajina, semi-dolce)" }
+        ]
+      },
+      {
+        "name": "Boats",
+        "items": [
+          { "title": "Absolut Boat", "price": "163,00 €", "description": "(1l Absolut vodka + 4 litri di succo a scelta)" },
+          { "title": "Beefeater Boat", "price": "163,00 €", "description": "(1l Beefeater gin + 4 litri di succo a scelta)" },
+          { "title": "Havana 3yo Boat", "price": "163,00 €", "description": "(1l Havana 3 anos rum bianco + 4 litri di succo a scelta)" },
+          { "title": "Bombay Sapphire Boat", "price": "213,00 €", "description": "(1l Bombay Sapphire gin + 4 litri di succo a scelta)" },
+          { "title": "Grey Goose Boat", "price": "250,00 €", "description": "(1l Grey Goose vodka + 4 litri di succo a scelta)" },
+          { "title": "Hendricks Boat", "price": "213,00 €", "description": "(Hendricks Gin 0.7l + 4 litri di succo a scelta)" },
+          { "title": "Jack Boat", "price": "188,00 €", "description": "(1l Jack Daniel's + 4 litri di succo a scelta)" },
+          { "title": "Jameson Boat", "price": "188,00 €", "description": "(1l Jameson + 4 litri di succo a scelta)" },
+          { "title": "Malfy Boat", "price": "188,00 €", "description": "(0.7l Malfy gin + 4 litri di succo a scelta)" }
+        ]
+      }
+    ]
+  },
+  {
     "category": "Offerta Invernale",
     "featured": [
       { "title": "Lampone Bianco", "price": "8,00 €", "description": "(cioccolata calda bianca con purea di lamponi fresca, pezzi di lampone e panna)", "image": "WHITE RASPBERRY.jpg" },
@@ -2032,60 +2086,6 @@
         "title": "Cornetto",
         "price": "2,30 €",
         "description": "(pistacchio)"
-      }
-    ]
-  },
-  {
-    "category": "OFFERTA DI CAPODANNO",
-    "subcategories": [
-      {
-        "name": "Bevande",
-        "items": [
-          { "title": "Absolut mix", "price": "10,00 €", "description": "(Arancia, Mirtillo rosso, Ananas, Mela)" },
-          { "title": "Beefeater mix", "price": "10,00 €", "description": null },
-          { "title": "Gin Tonic", "price": "10,00 €", "description": "(Beefeater Gin, tonica)" },
-          { "title": "Jack Daniels cola", "price": "10,00 €", "description": "(Jack Daniel's, Coca-Cola)" },
-          { "title": "Jameson cola", "price": "10,00 €", "description": "(Jameson, Coca-Cola)" },
-          { "title": "Korlat grappa", "price": "6,00 €", "description": null },
-          { "title": "Pelinkovec", "price": "5,00 €", "description": null },
-          { "title": "Birra", "price": "0,5 l 6,50 €", "description": null },
-          { "title": "Vino bianco della casa", "price": "4,50 €", "description": null },
-          { "title": "Vino rosso della casa", "price": "4,50 €", "description": null }
-        ]
-      },
-      {
-        "name": "Cocktail",
-        "items": [
-          { "title": "Mojito", "price": "12,00 €", "description": "(Havana 3 Anos rum, soda, zucchero bianco, menta, lime)" },
-          { "title": "Mai Tai", "price": "12,00 €", "description": "(Havana 3 Anos rum, Havana Especial rum, Peachtree, Amaretto, granatina, succo di limone)" },
-          { "title": "Sex on The Beach", "price": "12,00 €", "description": "(Absolut vodka, Peachtree, succo di mirtillo rosso, succo d'arancia)" },
-          { "title": "Long Island", "price": "12,00 €", "description": "(Beefeater Gin, Absolut vodka, Olmeca tequila, Havana 3 Anos rum, Coca-Cola, succo di limone)" },
-          { "title": "Tequila Sunrise", "price": "12,00 €", "description": "(Olmeca tequila, succo d'arancia, granatina, succo di limone)" }
-        ]
-      },
-      {
-        "name": "Vini",
-        "items": [
-          { "title": "Moet, Ice", "price": "0,75 l 163,00 €", "description": null },
-          { "title": "ZARRO, Malvazija", "price": "0,75 l 41,00 €", "description": "(SLO, Goriška Brda, secco)" },
-          { "title": "SIMČIČ MARJAN, Cabernet sauvignon", "price": "0,75 l 41,00 €", "description": "(SLO, Goriška Brda, secco)" },
-          { "title": "BATIČ, Rose", "price": "0,75 l 44,00 €", "description": "(SLO, Vipavska dolina, semi-secco)" },
-          { "title": "ŠTURM, Rumeni muškat", "price": "0,75 l 52,00 €", "description": "(SLO, Bela krajina, semi-dolce)" }
-        ]
-      },
-      {
-        "name": "Boats",
-        "items": [
-          { "title": "Absolut Boat", "price": "163,00 €", "description": "(1l Absolut vodka + 4 litri di succo a scelta)" },
-          { "title": "Beefeater Boat", "price": "163,00 €", "description": "(1l Beefeater gin + 4 litri di succo a scelta)" },
-          { "title": "Havana 3yo Boat", "price": "163,00 €", "description": "(1l Havana 3 anos rum bianco + 4 litri di succo a scelta)" },
-          { "title": "Bombay Sapphire Boat", "price": "213,00 €", "description": "(1l Bombay Sapphire gin + 4 litri di succo a scelta)" },
-          { "title": "Grey Goose Boat", "price": "250,00 €", "description": "(1l Grey Goose vodka + 4 litri di succo a scelta)" },
-          { "title": "Hendricks Boat", "price": "213,00 €", "description": "(Hendricks Gin 0.7l + 4 litri di succo a scelta)" },
-          { "title": "Jack Boat", "price": "188,00 €", "description": "(1l Jack Daniel's + 4 litri di succo a scelta)" },
-          { "title": "Jameson Boat", "price": "188,00 €", "description": "(1l Jameson + 4 litri di succo a scelta)" },
-          { "title": "Malfy Boat", "price": "188,00 €", "description": "(0.7l Malfy gin + 4 litri di succo a scelta)" }
-        ]
       }
     ]
   },
