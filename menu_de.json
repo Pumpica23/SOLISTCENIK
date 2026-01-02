@@ -1,56 +1,5 @@
 [
   {
-    "category": "Winter Angebot",
-    "featured": [
-      { "title": "White Raspberry", "price": "8,00 €", "description": "(white hot chocolate with fresh raspberry purée, raspberry pieces and cream)", "image": "WHITE RASPBERRY.jpg" },
-      { "title": "Hot Strawberry", "price": "7,50 €", "description": "(milk hot chocolate filled with vanilla cream, house strawberry sauce, topped with chocolate sprinkles)", "image": "HOT STRAWBERRY.jpg" },
-      { "title": "Snickers", "price": "8,00 €", "description": "(milk hot chocolate filled with peanut and caramel cream, topped with salted peanuts)", "image": "SNICKERS.jpg" }
-    ],
-    "subcategories": [
-      {
-        "name": "Heiße Cocktails",
-        "items": [
-          { "title": "HOT WINTER MIDNIGHT", "price": "9,50 €", "description": "(Bumbu Rum, Crème de Cassis, Bananenpüree, Heidelbeerpüree, Apfelsaft, Zitronensaft, frische Minze)" },
-          { "title": "HOT TOKYO", "price": "9,00 €", "description": "(WODKA, SAKE, MINZLIKÖR, WASABI, YUZU-PÜREE, INGWER, ZITRONE, APFELSAFT)" },
-          { "title": "HOWLY-DAY SPRITZ", "price": "9,00 €", "description": "(PROSECCO, WODKA, APFELCIDER, KARAMELLSIRUP)" },
-          { "title": "SNOW FASHIONED", "price": "9,00 €", "description": "(FOUR ROSES BOURBON, WALNUSSLIKÖR, AHORNSIRUP)" },
-          { "title": "Hot Peach Cobbler", "price": "8,50 €", "description": "(Chivas Extra Whisky, Amaretto, Peachtree, Zitronensaft, frischer Weißpfirsich, Apfelsaft, Zimt)" },
-          { "title": "Hot Passion Punch", "price": "8,50 €", "description": "(Havana Especial, Limettensaft, Passionsfruchtpüree, Honig, Apfelsaft)" },
-          { "title": "Winter Tiki", "price": "8,50 €", "description": "(Havana 7yo, Orgeat-Sirup, Limettensaft, Ananaspüree, Ananassaft)" },
-          { "title": "Hot Beefeater Pink", "price": "8,00 €", "description": "(Beefeater Pink, Erdbeerpüree, Apfelsaft, Honig, Zitronensaft, Zimt)" },
-          { "title": "Hot Jameson", "price": "8,00 €", "description": "(Jameson, Apfelsaft, Honig, Zitronensaft, Zimt)" },
-          { "title": "Hot Beefeater", "price": "8,00 €", "description": "(Beefeater Gin, Apfelsaft, Honig, Zitronensaft, Zimt)" },
-          { "title": "MALIBU APFEL STRUDEL", "price": "8,00 €", "description": "(Malibu, Apfelsaft, Honig, Zitronensaft, Zimt)" },
-          { "title": "Bombardino", "price": "5,00 €", "description": "(Eierlikör mit Sahne und Zimt)" },
-          { "title": "Crazy Santa", "price": "9,50 €", "description": "(Jameson, Zitronensaft, Zuckersirup, Cabernet Sauvignon, Orangenzeste)", "cold": true },
-          { "title": "Penicillin", "price": "8,50 €", "description": "(Four Roses Whiskey, Zitronensaft, Honigsirup, Ginger Beer, kandierter Ingwer)", "cold": true },
-          { "title": "Glühwein (weiß, rot)", "price": "4,00 €", "description": null },
-          { "title": "Medica", "price": "5,00 €", "description": "(Honigbrand)" },
-          { "title": "Grog Punch", "price": "5,50 €", "description": null },
-          { "title": "Caffè con Panna Patrón", "price": "7,50 €", "description": "(Kaffee, aufgeschäumte Milch, Sahne, Patrón Tequila Coffee)" }
-        ]
-      },
-      {
-        "name": "Heiße Schokoladen - Alkoholfrei",
-        "items": [
-          { "title": "HOT CHOCOLATE (DARK/WHITE)", "price": "5,30 €", "description": null },
-          { "title": "Pistachio", "price": "8,50 €", "description": "(white hot chocolate with 100% pistachio cream, topped with freeze-dried raspberries)" },
-          { "title": "White Mango", "price": "8,50 €", "description": "(white hot chocolate with fresh mango purée, mango pieces and cream)" },
-          { "title": "Banana", "price": "8,00 €", "description": "(milk hot chocolate with fresh banana purée, topped with banana chips)" },
-          { "title": "Raffaello Hot Chocolate", "price": "8,00 €", "description": "(white hot chocolate filled with coconut cream and cookie, topped with coconut flakes)" }
-        ]
-      },
-      {
-        "name": "Heiße Schokoladen - Alkoholisch",
-        "items": [
-          { "title": "Diplomatico", "price": "9,50 €", "description": "(dark hot chocolate with cream and Diplomatico Reserva Exclusiva rum)" },
-          { "title": "Salty Havana", "price": "8,50 €", "description": "(dark hot chocolate with salted caramel filling and peanuts, Havana Spiced, topped with salted peanuts and cream)" },
-          { "title": "Creamy Malibu", "price": "8,50 €", "description": "(white hot chocolate with coconut and cookies, Malibu rum, topped with coconut flakes and cream)" }
-        ]
-      }
-    ]
-  },
-  {
     "category": "Solist Sommer Erfrischungsgetränke",
     "items": [
       {
