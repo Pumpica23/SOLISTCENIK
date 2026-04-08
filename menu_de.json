@@ -56,22 +56,22 @@
         "name": "Premium",
         "items": [
           {
-            "title": "Midnight Mojito [premium]",
+            "title": "Midnight Mojito",
             "price": "10,00 €",
             "description": "(Rum La Hachichera Banana, Creme de Cassis, lime, brown sugar, mint, banana puree, black currant puree, soda)"
           },
           {
-            "title": "Tokyo Mule [premium]",
+            "title": "Tokyo Mule",
             "price": "10,00 €",
             "description": "(Sake, Japanese vodka, wasabi paste, yuzu puree, lime, Three Cents Ginger Beer)"
           },
           {
-            "title": "Pornstar Martini [premium]",
+            "title": "Pornstar Martini",
             "price": "14,00 €",
             "description": "(Grey Goose vodka, passion fruit puree, vanilla syrup, lime juice, prosecco shot)"
           },
           {
-            "title": "Extra Whiskey Sour [premium]",
+            "title": "Extra Whiskey Sour",
             "price": "11,00 €",
             "description": "(Whiskey, pineapple-mango jam, lemon juice, fresh orange juice, egg white)"
           },
