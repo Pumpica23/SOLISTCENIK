@@ -351,6 +351,11 @@
             "description": null
           },
           {
+            "title": "Rauch 0,20 l",
+            "price": "3,70 €",
+            "description": "(ananas, breskev, jabolko, jagoda, pomaranča)"
+          },
+          {
             "title": "Lome Spremuta – 100% naravni sok Klementina 0,2 l",
             "price": "4,40 €",
             "description": null
@@ -940,6 +945,11 @@
       {
         "name": "Rose vina",
         "items": [
+          {
+            "title": "Batič Rose",
+            "price": "0,1 l / 0,75 l — 5,00 € / 44,00 €",
+            "description": "(Rose | Vipava, Slovenija | 2024)"
+          },
           {
             "title": "Les Deux Anges Rosé IGP Méditerranée",
             "price": "0,1 l / 0,75 l — 5,50 € / 37,50 €",
