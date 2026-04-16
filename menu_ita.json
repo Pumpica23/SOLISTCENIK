@@ -351,6 +351,11 @@
             "description": null
           },
           {
+            "title": "Rauch 0,20 l",
+            "price": "3,70 €",
+            "description": "(ananas, pesca, mela, fragola, arancia)"
+          },
+          {
             "title": "Lome Spremuta – succo naturale 100% Clementina 0,2 l",
             "price": "4,40 €",
             "description": null
@@ -960,6 +965,11 @@
       {
         "name": "Vini Rosati",
         "items": [
+          {
+            "title": "Batič Rose",
+            "price": "0,1 l / 0,75 l — 5,00 € / 44,00 €",
+            "description": "(Rose | Vipava, Slovenia | 2024)"
+          },
           {
             "title": "Les Deux Anges Rosé IGP Méditerranée",
             "price": "0,1 l / 0,75 l — 5,50 € / 37,50 €",
