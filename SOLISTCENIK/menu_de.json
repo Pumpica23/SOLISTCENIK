@@ -351,6 +351,11 @@
             "description": null
           },
           {
+            "title": "Rauch 0,20 l",
+            "price": "3,70 €",
+            "description": "(Ananas, Pfirsich, Apfel, Erdbeere, Orange)"
+          },
+          {
             "title": "Lome Spremuta – 100% natürlicher Saft Clementine 0,2 l",
             "price": "4,40 €",
             "description": null
@@ -940,6 +945,11 @@
       {
         "name": "Roséweine",
         "items": [
+          {
+            "title": "Batič Rose",
+            "price": "0,1 l / 0,75 l — 5,00 € / 35,00 €",
+            "description": "(Rose | Vipava, Slowenien | 2024)"
+          },
           {
             "title": "Les Deux Anges Rosé IGP Méditerranée",
             "price": "0,1 l / 0,75 l — 5,50 € / 37,50 €",
