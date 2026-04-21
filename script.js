@@ -23,26 +23,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = null;
     let menuData = [];
     let isAdmin = false;
-
-    const storageKey = (lang) => `solist_menu_${lang}`;
+    let hasUnsavedChanges = false;
+    let streamConnection = null;
 
     function cloneData(data) {
         return JSON.parse(JSON.stringify(data));
     }
 
-    function saveData() {
-        if (!currentLang) return;
-        localStorage.setItem(storageKey(currentLang), JSON.stringify(menuData));
+    function setSavingState(isSaving) {
+        adminLoginBtn.disabled = isSaving;
+        adminLoginBtn.textContent = isSaving ? 'Saving...' : (isAdmin ? 'Logout' : 'Login');
     }
 
-    function loadStoredData(lang, fallback) {
-        const raw = localStorage.getItem(storageKey(lang));
-        if (!raw) return cloneData(fallback);
+    function markDirty() {
+        if (!isAdmin) return;
+        hasUnsavedChanges = true;
+        adminLoginBtn.textContent = 'Logout*';
+    }
+
+    async function saveDataToServer() {
+        if (!isAdmin || !currentLang || !hasUnsavedChanges) return;
+        setSavingState(true);
         try {
-            const parsed = JSON.parse(raw);
-            return Array.isArray(parsed) ? parsed : cloneData(fallback);
+            const response = await fetch(`/api/menu/${currentLang}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(menuData)
+            });
+            if (!response.ok) {
+                throw new Error('Failed to save changes.');
+            }
+            hasUnsavedChanges = false;
         } catch {
-            return cloneData(fallback);
+            alert('Could not save changes to server. Please try logout again.');
+            throw new Error('save failed');
+        } finally {
+            setSavingState(false);
         }
     }
 
@@ -59,6 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCategory(currentCategory);
     }
 
+    function connectRealtimeUpdates(lang) {
+        if (streamConnection) {
+            streamConnection.close();
+        }
+
+        streamConnection = new EventSource(`/api/stream/${lang}`);
+        streamConnection.onmessage = (event) => {
+            const incomingData = JSON.parse(event.data);
+            if (!Array.isArray(incomingData)) return;
+
+            if (isAdmin && hasUnsavedChanges) return;
+            const selectedCategory = currentCategory;
+            menuData = cloneData(incomingData);
+            currentCategory = selectedCategory;
+            refreshView();
+        };
+
+        streamConnection.onerror = () => {
+            // browser reconnects automatically
+        };
+    }
+
     function loadMenu(lang) {
         currentLang = lang;
         languageModal.style.display = 'none';
@@ -66,16 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
         validityEl.textContent = validityByLang[lang] || validityByLang.slo;
         updateLanguageButtons();
 
-        fetch(`menu_${lang}.json`)
+        fetch(`/api/menu/${lang}`)
             .then(r => {
                 if (!r.ok) throw new Error('Could not load menu data');
                 return r.json();
             })
             .then(data => {
-                menuData = loadStoredData(lang, data);
+                menuData = Array.isArray(data) ? cloneData(data) : [];
                 const desiredDefault = (defaultCategoryByLang[lang] || '').toLowerCase();
                 const match = menuData.find(cat => (cat.category || '').toLowerCase() === desiredDefault);
                 currentCategory = match ? match.category : (menuData[0] ? menuData[0].category : null);
+                hasUnsavedChanges = false;
+                connectRealtimeUpdates(lang);
                 refreshView();
             })
             .catch(() => {
@@ -124,12 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 adminTools.className = 'inline-tools';
                 adminTools.appendChild(createButton('↑', 'tiny-btn', () => {
                     moveInArray(menuData, index, -1);
-                    saveData();
+                    markDirty();
                     refreshView();
                 }));
                 adminTools.appendChild(createButton('↓', 'tiny-btn', () => {
                     moveInArray(menuData, index, 1);
-                    saveData();
+                    markDirty();
                     refreshView();
                 }));
                 wrap.appendChild(adminTools);
@@ -142,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
             categoryNav.appendChild(createButton('+ Category', 'add-btn', () => {
                 menuData.push({ category: 'New Category', items: [] });
                 currentCategory = 'New Category';
-                saveData();
+                markDirty();
                 refreshView();
             }));
         }
@@ -201,23 +241,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('input');
         title.value = item.title || '';
         title.placeholder = 'Title';
-        title.oninput = () => { item.title = title.value; saveData(); refreshView(); };
+        title.oninput = () => { item.title = title.value; markDirty(); refreshView(); };
 
         const desc = document.createElement('input');
         desc.value = item.description || '';
         desc.placeholder = 'Description';
-        desc.oninput = () => { item.description = desc.value; saveData(); refreshView(); };
+        desc.oninput = () => { item.description = desc.value; markDirty(); refreshView(); };
 
         const price = document.createElement('input');
         price.value = item.price || '';
         price.placeholder = 'Price';
-        price.oninput = () => { item.price = price.value; saveData(); refreshView(); };
+        price.oninput = () => { item.price = price.value; markDirty(); refreshView(); };
 
         const controls = document.createElement('div');
         controls.className = 'inline-tools';
-        controls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(list, index, -1); saveData(); refreshView(); }));
-        controls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(list, index, 1); saveData(); refreshView(); }));
-        controls.appendChild(createButton('✕', 'tiny-btn danger', () => { list.splice(index, 1); saveData(); refreshView(); }));
+        controls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(list, index, -1); markDirty(); refreshView(); }));
+        controls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(list, index, 1); markDirty(); refreshView(); }));
+        controls.appendChild(createButton('✕', 'tiny-btn danger', () => { list.splice(index, 1); markDirty(); refreshView(); }));
 
         row.append(title, desc, price, controls);
         parent.appendChild(row);
@@ -238,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const oldName = category.category;
             category.category = categoryName.value;
             if (currentCategory === oldName) currentCategory = category.category;
-            saveData();
+            markDirty();
             refreshView();
         };
         panel.appendChild(categoryName);
@@ -248,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         categoryActions.appendChild(createButton('Delete category', 'tiny-btn danger', () => {
             menuData.splice(categoryIndex, 1);
             currentCategory = menuData[0] ? menuData[0].category : null;
-            saveData();
+            markDirty();
             refreshView();
         }));
         panel.appendChild(categoryActions);
@@ -260,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category.featured.forEach((item, idx) => makeItemEditor(featured, category.featured, idx));
         featured.appendChild(createButton('+ Featured article', 'add-btn', () => {
             category.featured.push({ title: 'New featured', description: '', price: '', image: '' });
-            saveData();
+            markDirty();
             refreshView();
         }));
         panel.appendChild(featured);
@@ -272,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category.items.forEach((item, idx) => makeItemEditor(directItems, category.items, idx));
         directItems.appendChild(createButton('+ Article', 'add-btn', () => {
             category.items.push({ title: 'New article', description: '', price: '' });
-            saveData();
+            markDirty();
             refreshView();
         }));
         panel.appendChild(directItems);
@@ -290,20 +330,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const subName = document.createElement('input');
             subName.value = sub.name || '';
             subName.placeholder = 'Subcategory name';
-            subName.oninput = () => { sub.name = subName.value; saveData(); refreshView(); };
+            subName.oninput = () => { sub.name = subName.value; markDirty(); refreshView(); };
             subBlock.appendChild(subName);
 
             const subControls = document.createElement('div');
             subControls.className = 'inline-tools';
-            subControls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, -1); saveData(); refreshView(); }));
-            subControls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, 1); saveData(); refreshView(); }));
-            subControls.appendChild(createButton('✕', 'tiny-btn danger', () => { category.subcategories.splice(sIndex, 1); saveData(); refreshView(); }));
+            subControls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, -1); markDirty(); refreshView(); }));
+            subControls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, 1); markDirty(); refreshView(); }));
+            subControls.appendChild(createButton('✕', 'tiny-btn danger', () => { category.subcategories.splice(sIndex, 1); markDirty(); refreshView(); }));
             subBlock.appendChild(subControls);
 
             sub.items.forEach((item, idx) => makeItemEditor(subBlock, sub.items, idx));
             subBlock.appendChild(createButton('+ Subcategory article', 'add-btn', () => {
                 sub.items.push({ title: 'New article', description: '', price: '' });
-                saveData();
+                markDirty();
                 refreshView();
             }));
             subWrap.appendChild(subBlock);
@@ -311,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         subWrap.appendChild(createButton('+ Subcategory', 'add-btn', () => {
             category.subcategories.push({ name: 'New subcategory', items: [] });
-            saveData();
+            markDirty();
             refreshView();
         }));
         panel.appendChild(subWrap);
@@ -393,13 +433,21 @@ document.addEventListener('DOMContentLoaded', () => {
         menuContent.appendChild(categoryDiv);
     }
 
-    adminLoginBtn.addEventListener('click', () => {
+    adminLoginBtn.addEventListener('click', async () => {
         if (isAdmin) {
+            try {
+                await saveDataToServer();
+            } catch {
+                return;
+            }
+
             isAdmin = false;
+            hasUnsavedChanges = false;
             adminLoginBtn.textContent = 'Login';
             refreshView();
             return;
         }
+
         const username = prompt('Admin username:');
         const password = prompt('Admin password:');
         const expectedUserToken = 'T2xp';
