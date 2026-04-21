@@ -2,11 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryNav = document.getElementById('category-nav');
     const menuContent = document.getElementById('menu-content');
     const languageModal = document.getElementById('language-modal');
-    const langSloButton = document.getElementById('lang-slo');
-    const langEngButton = document.getElementById('lang-eng');
-    const langItaButton = document.getElementById('lang-ita');
-    const langDeButton = document.getElementById('lang-de');
-    let menuData = [];
+    const adminLoginBtn = document.getElementById('admin-login-btn');
+    const languageSwitcher = document.getElementById('language-switcher');
 
     const defaultCategoryByLang = {
         slo: 'ZIMSKA PONUDBA',
@@ -15,195 +12,158 @@ document.addEventListener('DOMContentLoaded', () => {
         de: 'Winter Angebot'
     };
 
-    // Validity text translations per language
     const validityByLang = {
         slo: 'Cenik velja od 07.11.2025 oz. do izdaje novega',
         eng: 'Price list valid from 07.11.2025 or until a new one is issued',
         ita: 'Listino valido dal 07.11.2025 o fino a nuova emissione',
-        de:  'Preisliste gültig ab 07.11.2025 bzw. bis zur Herausgabe einer neuen'
+        de: 'Preisliste gültig ab 07.11.2025 bzw. bis zur Herausgabe einer neuen'
     };
 
-    function loadMenu(lang) {
-        languageModal.style.display = 'none'; // Hide modal
+    let currentLang = null;
+    let currentCategory = null;
+    let menuData = [];
+    let isAdmin = false;
+    let adminAuthToken = null;
+    let saveTimer = null;
 
-        // Clear previous menu content and nav
-        categoryNav.innerHTML = '';
-        menuContent.innerHTML = '';
-
-        // Update validity text for the selected language (footer)
-        const validityEl = document.getElementById('validity-text');
-        if (validityEl) {
-            validityEl.textContent = validityByLang[lang] || validityByLang.slo;
-        }
-
-        // Fetch menu data for the selected language
-        fetch(`menu_${lang}.json`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                menuData = data;
-                populateCategories();
-                if (menuData.length > 0) {
-                    const desiredDefaultName = (defaultCategoryByLang[lang] || '').toLowerCase();
-                    const matchedCategory = menuData.find(cat =>
-                        cat.category.toLowerCase() === desiredDefaultName
-                    );
-
-                    const categoryToShow = matchedCategory ? matchedCategory.category : menuData[0].category;
-
-                    displayCategory(categoryToShow);
-                    // Set the corresponding button as active
-                    const buttons = categoryNav.querySelectorAll('button');
-                    buttons.forEach(btn => {
-                        if (btn.textContent === categoryToShow) {
-                            btn.classList.add('active');
-                        }
-                    });
-                }
-            })
-            .catch(error => {
-                console.error(`Error fetching menu data for ${lang}:`, error);
-                menuContent.innerHTML = '<p>Error loading menu. Please try again later.</p>';
-            });
-    }
-
-    // Add event listeners to language buttons
-    langSloButton.addEventListener('click', () => loadMenu('slo'));
-    langEngButton.addEventListener('click', () => loadMenu('eng'));
-    langItaButton.addEventListener('click', () => loadMenu('ita'));
-    langDeButton.addEventListener('click', () => loadMenu('de'));
-
-    // Initial Load: Always show the modal
-    languageModal.style.display = 'flex'; // Show modal
-
-    // Populate category navigation
-    function populateCategories() {
-        menuData.forEach(categoryData => {
-            const button = document.createElement('button');
-            button.textContent = categoryData.category;
-            button.onclick = () => {
-                displayCategory(categoryData.category);
-                // Update active button style
-                document.querySelectorAll('#category-nav button').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            };
-            categoryNav.appendChild(button);
+    async function persistMenu(authToken) {
+        if (!currentLang || !authToken) return;
+        await fetch(`/api/menu/${currentLang}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Basic ${authToken}`
+            },
+            body: JSON.stringify(menuData)
         });
     }
 
-    // Display items for a selected category
-    function displayCategory(categoryName) {
-        const category = menuData.find(cat => cat.category === categoryName);
-        menuContent.innerHTML = ''; // Clear previous content
-
-        if (!category) return;
-
-        const categoryDiv = document.createElement('div');
-        categoryDiv.classList.add('menu-category');
-
-        const categoryTitle = document.createElement('h2');
-        categoryTitle.textContent = category.category;
-        categoryDiv.appendChild(categoryTitle);
-
-        // Render featured section (if present) at the top of the category
-        if (category.featured && Array.isArray(category.featured) && category.featured.length > 0) {
-            const featuredGrid = document.createElement('div');
-            featuredGrid.classList.add('featured-grid');
-
-            category.featured.forEach(item => {
-                const card = document.createElement('div');
-                card.classList.add('featured-card');
-
-                if (item.image) {
-                    const img = document.createElement('img');
-                    img.src = item.image;
-                    img.alt = item.title || '';
-                    card.appendChild(img);
-                }
-
-                const info = document.createElement('div');
-                info.classList.add('featured-info');
-
-                if (item.title) {
-                    const t = document.createElement('h4');
-                    t.classList.add('featured-title');
-                    t.textContent = item.title;
-                    info.appendChild(t);
-                }
-
-                if (item.description) {
-                    const d = document.createElement('p');
-                    d.classList.add('featured-desc');
-                    d.textContent = item.description;
-                    info.appendChild(d);
-                }
-
-                if (item.price) {
-                    const p = document.createElement('span');
-                    p.classList.add('featured-price');
-                    p.textContent = item.price;
-                    info.appendChild(p);
-                }
-
-                card.appendChild(info);
-                featuredGrid.appendChild(card);
-            });
-
-            categoryDiv.appendChild(featuredGrid);
-        }
-
-        // Check if the category has subcategories or direct items
-        if (category.subcategories) {
-            category.subcategories.forEach(subcategory => {
-                // Create a wrapper for each subcategory to visually separate sections
-                const section = document.createElement('section');
-                section.classList.add('subcategory-section');
-
-                // Detect alcoholic vs non-alcoholic subcategory across languages
-                const nameLower = (subcategory.name || '').toLowerCase();
-                const isNonAlc = (
-                  nameLower.includes('non-alcoholic') ||
-                  nameLower.includes('analcol') ||
-                  nameLower.includes('brezalkohol') ||
-                  nameLower.includes('alkoholfrei')
-                );
-                if (isNonAlc) {
-                  section.classList.add('subcat--nonalcoholic');
-                } else if (
-                  nameLower.includes('cocktail') ||
-                  nameLower.includes('alcoholic') ||
-                  nameLower.includes('alcolic') ||
-                  nameLower.includes('alkohol')
-                ) {
-                  section.classList.add('subcat--alcoholic');
-                }
-
-                const subcategoryTitle = document.createElement('h3');
-                subcategoryTitle.classList.add('subcategory-title');
-                subcategoryTitle.textContent = subcategory.name;
-                section.appendChild(subcategoryTitle);
-
-                subcategory.items.forEach(item => {
-                    section.appendChild(createMenuItemElement(item));
-                });
-
-                categoryDiv.appendChild(section);
-            });
-        } else if (category.items) {
-            // Handle categories with direct items (original structure)
-            category.items.forEach(item => {
-                categoryDiv.appendChild(createMenuItemElement(item));
-            });
-        }
-
-        menuContent.appendChild(categoryDiv);
+    function saveData() {
+        if (!currentLang || !isAdmin || !adminAuthToken) return;
+        if (saveTimer) clearTimeout(saveTimer);
+        const tokenForSave = adminAuthToken;
+        saveTimer = setTimeout(async () => {
+            try {
+                await persistMenu(tokenForSave);
+            } catch (error) {
+                console.error('Failed to save menu data on server:', error);
+            }
+        }, 250);
     }
 
-    // Helper function to create a single menu item element
+    function refreshView() {
+        populateCategories();
+        if (!menuData.length) {
+            menuContent.innerHTML = '<p>No categories.</p>';
+            return;
+        }
+
+        if (!menuData.some(cat => cat.category === currentCategory)) {
+            currentCategory = menuData[0].category;
+        }
+        displayCategory(currentCategory);
+    }
+
+    function loadMenu(lang) {
+        currentLang = lang;
+        languageModal.style.display = 'none';
+        const validityEl = document.getElementById('validity-text');
+        validityEl.textContent = validityByLang[lang] || validityByLang.slo;
+        updateLanguageButtons();
+
+        fetch(`/api/menu/${lang}`)
+            .then(r => {
+                if (!r.ok) throw new Error('Could not load menu data');
+                return r.json();
+            })
+            .then(data => {
+                menuData = Array.isArray(data) ? data : [];
+                const desiredDefault = (defaultCategoryByLang[lang] || '').toLowerCase();
+                const match = menuData.find(cat => (cat.category || '').toLowerCase() === desiredDefault);
+                currentCategory = match ? match.category : (menuData[0] ? menuData[0].category : null);
+                refreshView();
+            })
+            .catch(() => {
+                fetch(`menu_${lang}.json`)
+                    .then(r => r.json())
+                    .then(data => {
+                        menuData = Array.isArray(data) ? data : [];
+                        const desiredDefault = (defaultCategoryByLang[lang] || '').toLowerCase();
+                        const match = menuData.find(cat => (cat.category || '').toLowerCase() === desiredDefault);
+                        currentCategory = match ? match.category : (menuData[0] ? menuData[0].category : null);
+                        refreshView();
+                    })
+                    .catch(() => {
+                        menuContent.innerHTML = '<p>Error loading menu. Please try again later.</p>';
+                    });
+            });
+    }
+
+    function moveInArray(arr, index, dir) {
+        const next = index + dir;
+        if (next < 0 || next >= arr.length) return;
+        [arr[index], arr[next]] = [arr[next], arr[index]];
+    }
+
+    function updateLanguageButtons() {
+        if (!languageSwitcher) return;
+        languageSwitcher.querySelectorAll('button').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === currentLang);
+        });
+    }
+
+    function createButton(text, className, onClick) {
+        const btn = document.createElement('button');
+        btn.textContent = text;
+        btn.className = className;
+        btn.onclick = onClick;
+        return btn;
+    }
+
+    function populateCategories() {
+        categoryNav.innerHTML = '';
+        menuData.forEach((categoryData, index) => {
+            const wrap = document.createElement('div');
+            wrap.className = 'category-btn-wrap';
+
+            const button = document.createElement('button');
+            button.textContent = categoryData.category;
+            if (categoryData.category === currentCategory) button.classList.add('active');
+            button.onclick = () => {
+                currentCategory = categoryData.category;
+                refreshView();
+            };
+            wrap.appendChild(button);
+
+            if (isAdmin) {
+                const adminTools = document.createElement('div');
+                adminTools.className = 'inline-tools';
+                adminTools.appendChild(createButton('↑', 'tiny-btn', () => {
+                    moveInArray(menuData, index, -1);
+                    saveData();
+                    refreshView();
+                }));
+                adminTools.appendChild(createButton('↓', 'tiny-btn', () => {
+                    moveInArray(menuData, index, 1);
+                    saveData();
+                    refreshView();
+                }));
+                wrap.appendChild(adminTools);
+            }
+
+            categoryNav.appendChild(wrap);
+        });
+
+        if (isAdmin) {
+            categoryNav.appendChild(createButton('+ Category', 'add-btn', () => {
+                menuData.push({ category: 'New Category', items: [] });
+                currentCategory = 'New Category';
+                saveData();
+                refreshView();
+            }));
+        }
+    }
+
     function createMenuItemElement(item) {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('menu-item');
@@ -211,21 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const detailsDiv = document.createElement('div');
         detailsDiv.classList.add('item-details');
 
-        const title = document.createElement('h4'); // Use h4 for item titles within subcategories
+        const title = document.createElement('h4');
         const rawTitle = item.title || '';
         const isPremium = rawTitle.includes('[premium]');
         const cleanTitle = rawTitle.replace('[premium]', '').trim();
         title.textContent = cleanTitle;
-
-        if (item.cold) {
-            const statusIcon = document.createElement('span');
-            statusIcon.classList.add('status-icon', 'status-icon--cold');
-            statusIcon.textContent = '❄️';
-            statusIcon.setAttribute('role', 'img');
-            statusIcon.setAttribute('aria-label', 'cold cocktail');
-            statusIcon.title = 'cold cocktail';
-            title.appendChild(statusIcon);
-        }
 
         if (isPremium) {
             const premiumTag = document.createElement('span');
@@ -233,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             premiumTag.textContent = 'premium';
             title.appendChild(premiumTag);
         }
-        
+
         detailsDiv.appendChild(title);
 
         if (item.description) {
@@ -246,20 +196,262 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const priceSpan = document.createElement('span');
         priceSpan.classList.add('item-price');
-
-        // Regex to identify size/unit and price parts
         const priceRegex = /^((?:[\d,.]+\s*(?:l|g|kg|ml)(?:\s*\/\s*)?)+)\s*(.*€.*)$/i;
         const priceMatch = item.price ? item.price.match(priceRegex) : null;
 
         if (priceMatch) {
             priceSpan.innerHTML = `<span class="item-size">${priceMatch[1].trim()}</span> <span class="item-cost">${priceMatch[2].trim()}</span>`;
-        } else if (item.price) {
-            priceSpan.innerHTML = `<span class="item-cost">${item.price}</span>`;
         } else {
-            priceSpan.innerHTML = `<span class="item-cost"></span>`; // Handle null/empty price
+            priceSpan.innerHTML = `<span class="item-cost">${item.price || ''}</span>`;
         }
 
         itemDiv.appendChild(priceSpan);
         return itemDiv;
     }
-}); 
+
+    function makeItemEditor(parent, list, index) {
+        const item = list[index];
+        const row = document.createElement('div');
+        row.className = 'editor-row';
+
+        const title = document.createElement('input');
+        title.value = item.title || '';
+        title.placeholder = 'Title';
+        title.oninput = () => { item.title = title.value; saveData(); refreshView(); };
+
+        const desc = document.createElement('input');
+        desc.value = item.description || '';
+        desc.placeholder = 'Description';
+        desc.oninput = () => { item.description = desc.value; saveData(); refreshView(); };
+
+        const price = document.createElement('input');
+        price.value = item.price || '';
+        price.placeholder = 'Price';
+        price.oninput = () => { item.price = price.value; saveData(); refreshView(); };
+
+        const controls = document.createElement('div');
+        controls.className = 'inline-tools';
+        controls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(list, index, -1); saveData(); refreshView(); }));
+        controls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(list, index, 1); saveData(); refreshView(); }));
+        controls.appendChild(createButton('✕', 'tiny-btn danger', () => { list.splice(index, 1); saveData(); refreshView(); }));
+
+        row.append(title, desc, price, controls);
+        parent.appendChild(row);
+    }
+
+    function renderAdminEditor(category, categoryIndex) {
+        const panel = document.createElement('div');
+        panel.className = 'admin-panel';
+
+        const title = document.createElement('h3');
+        title.textContent = 'Admin CMS';
+        panel.appendChild(title);
+
+        const categoryName = document.createElement('input');
+        categoryName.value = category.category || '';
+        categoryName.placeholder = 'Category name';
+        categoryName.oninput = () => {
+            const oldName = category.category;
+            category.category = categoryName.value;
+            if (currentCategory === oldName) currentCategory = category.category;
+            saveData();
+            refreshView();
+        };
+        panel.appendChild(categoryName);
+
+        const categoryActions = document.createElement('div');
+        categoryActions.className = 'inline-tools';
+        categoryActions.appendChild(createButton('Delete category', 'tiny-btn danger', () => {
+            menuData.splice(categoryIndex, 1);
+            currentCategory = menuData[0] ? menuData[0].category : null;
+            saveData();
+            refreshView();
+        }));
+        panel.appendChild(categoryActions);
+
+        const featured = document.createElement('details');
+        featured.open = true;
+        featured.innerHTML = '<summary>Featured articles</summary>';
+        if (!Array.isArray(category.featured)) category.featured = [];
+        category.featured.forEach((item, idx) => makeItemEditor(featured, category.featured, idx));
+        featured.appendChild(createButton('+ Featured article', 'add-btn', () => {
+            category.featured.push({ title: 'New featured', description: '', price: '', image: '' });
+            saveData();
+            refreshView();
+        }));
+        panel.appendChild(featured);
+
+        const directItems = document.createElement('details');
+        directItems.open = true;
+        directItems.innerHTML = '<summary>Category articles</summary>';
+        if (!Array.isArray(category.items)) category.items = [];
+        category.items.forEach((item, idx) => makeItemEditor(directItems, category.items, idx));
+        directItems.appendChild(createButton('+ Article', 'add-btn', () => {
+            category.items.push({ title: 'New article', description: '', price: '' });
+            saveData();
+            refreshView();
+        }));
+        panel.appendChild(directItems);
+
+        const subWrap = document.createElement('details');
+        subWrap.open = true;
+        subWrap.innerHTML = '<summary>Subcategories</summary>';
+        if (!Array.isArray(category.subcategories)) category.subcategories = [];
+
+        category.subcategories.forEach((sub, sIndex) => {
+            if (!Array.isArray(sub.items)) sub.items = [];
+            const subBlock = document.createElement('div');
+            subBlock.className = 'sub-editor';
+
+            const subName = document.createElement('input');
+            subName.value = sub.name || '';
+            subName.placeholder = 'Subcategory name';
+            subName.oninput = () => { sub.name = subName.value; saveData(); refreshView(); };
+            subBlock.appendChild(subName);
+
+            const subControls = document.createElement('div');
+            subControls.className = 'inline-tools';
+            subControls.appendChild(createButton('↑', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, -1); saveData(); refreshView(); }));
+            subControls.appendChild(createButton('↓', 'tiny-btn', () => { moveInArray(category.subcategories, sIndex, 1); saveData(); refreshView(); }));
+            subControls.appendChild(createButton('✕', 'tiny-btn danger', () => { category.subcategories.splice(sIndex, 1); saveData(); refreshView(); }));
+            subBlock.appendChild(subControls);
+
+            sub.items.forEach((item, idx) => makeItemEditor(subBlock, sub.items, idx));
+            subBlock.appendChild(createButton('+ Subcategory article', 'add-btn', () => {
+                sub.items.push({ title: 'New article', description: '', price: '' });
+                saveData();
+                refreshView();
+            }));
+            subWrap.appendChild(subBlock);
+        });
+
+        subWrap.appendChild(createButton('+ Subcategory', 'add-btn', () => {
+            category.subcategories.push({ name: 'New subcategory', items: [] });
+            saveData();
+            refreshView();
+        }));
+        panel.appendChild(subWrap);
+
+        return panel;
+    }
+
+    function displayCategory(categoryName) {
+        const category = menuData.find(cat => cat.category === categoryName);
+        const categoryIndex = menuData.findIndex(cat => cat.category === categoryName);
+        menuContent.innerHTML = '';
+        if (!category) return;
+
+        const categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('menu-category');
+
+        const categoryTitle = document.createElement('h2');
+        categoryTitle.textContent = category.category;
+        categoryDiv.appendChild(categoryTitle);
+
+        if (Array.isArray(category.featured) && category.featured.length > 0) {
+            const featuredGrid = document.createElement('div');
+            featuredGrid.classList.add('featured-grid');
+            category.featured.forEach(item => {
+                const card = document.createElement('div');
+                card.classList.add('featured-card');
+                if (item.image) {
+                    const img = document.createElement('img');
+                    img.src = item.image;
+                    img.alt = item.title || '';
+                    card.appendChild(img);
+                }
+                const info = document.createElement('div');
+                info.classList.add('featured-info');
+                if (item.title) {
+                    const t = document.createElement('h4');
+                    t.classList.add('featured-title');
+                    t.textContent = item.title;
+                    info.appendChild(t);
+                }
+                if (item.description) {
+                    const d = document.createElement('p');
+                    d.classList.add('featured-desc');
+                    d.textContent = item.description;
+                    info.appendChild(d);
+                }
+                if (item.price) {
+                    const p = document.createElement('span');
+                    p.classList.add('featured-price');
+                    p.textContent = item.price;
+                    info.appendChild(p);
+                }
+                card.appendChild(info);
+                featuredGrid.appendChild(card);
+            });
+            categoryDiv.appendChild(featuredGrid);
+        }
+
+        if (Array.isArray(category.subcategories)) {
+            category.subcategories.forEach(subcategory => {
+                const section = document.createElement('section');
+                section.classList.add('subcategory-section');
+                const subcategoryTitle = document.createElement('h3');
+                subcategoryTitle.classList.add('subcategory-title');
+                subcategoryTitle.textContent = subcategory.name;
+                section.appendChild(subcategoryTitle);
+                (subcategory.items || []).forEach(item => section.appendChild(createMenuItemElement(item)));
+                categoryDiv.appendChild(section);
+            });
+        }
+
+        if (Array.isArray(category.items)) {
+            category.items.forEach(item => categoryDiv.appendChild(createMenuItemElement(item)));
+        }
+
+        if (isAdmin) {
+            menuContent.appendChild(renderAdminEditor(category, categoryIndex));
+        }
+        menuContent.appendChild(categoryDiv);
+    }
+
+    adminLoginBtn.addEventListener('click', async () => {
+        if (isAdmin) {
+            const tokenAtLogout = adminAuthToken;
+            if (saveTimer) {
+                clearTimeout(saveTimer);
+                saveTimer = null;
+            }
+            try {
+                await persistMenu(tokenAtLogout);
+            } catch (error) {
+                console.error('Failed to save during logout:', error);
+                alert('Logout save failed. Please check server connection and try again.');
+                return;
+            }
+            isAdmin = false;
+            adminAuthToken = null;
+            adminLoginBtn.textContent = 'Login';
+            refreshView();
+            return;
+        }
+        const username = prompt('Admin username:');
+        const password = prompt('Admin password:');
+        const expectedUserToken = 'T2xp';
+        const expectedPassToken = 'aXp2T2xpMTIz';
+        if (btoa(username || '') === expectedUserToken && btoa(password || '') === expectedPassToken) {
+            isAdmin = true;
+            adminAuthToken = btoa(`${username}:${password}`);
+            adminLoginBtn.textContent = 'Logout';
+            refreshView();
+        } else {
+            alert('Wrong credentials.');
+        }
+    });
+
+    document.getElementById('lang-slo').addEventListener('click', () => loadMenu('slo'));
+    document.getElementById('lang-eng').addEventListener('click', () => loadMenu('eng'));
+    document.getElementById('lang-ita').addEventListener('click', () => loadMenu('ita'));
+    document.getElementById('lang-de').addEventListener('click', () => loadMenu('de'));
+    if (languageSwitcher) {
+        languageSwitcher.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => loadMenu(btn.dataset.lang));
+        });
+    }
+
+    languageModal.style.display = 'flex';
+});
