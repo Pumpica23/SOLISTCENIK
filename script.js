@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAdmin = false;
     let hasUnsavedChanges = false;
     let streamConnection = null;
+    let usingApiBackend = true;
 
     function cloneData(data) {
         return JSON.parse(JSON.stringify(data));
@@ -43,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function saveDataToServer() {
         if (!isAdmin || !currentLang || !hasUnsavedChanges) return;
+        if (!usingApiBackend) {
+            hasUnsavedChanges = false;
+            return;
+        }
         setSavingState(true);
         try {
             const response = await fetch(`/api/menu/${currentLang}`, {
@@ -76,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function connectRealtimeUpdates(lang) {
+        if (!usingApiBackend) return;
+
         if (streamConnection) {
             streamConnection.close();
         }
@@ -97,6 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    async function fetchMenuData(lang) {
+        try {
+            const apiResponse = await fetch(`/api/menu/${lang}`);
+            if (!apiResponse.ok) throw new Error('API request failed');
+            usingApiBackend = true;
+            return await apiResponse.json();
+        } catch {
+            const fileResponse = await fetch(`menu_${lang}.json`);
+            if (!fileResponse.ok) throw new Error('Static menu request failed');
+            usingApiBackend = false;
+            return await fileResponse.json();
+        }
+    }
+
     function loadMenu(lang) {
         currentLang = lang;
         languageModal.style.display = 'none';
@@ -104,11 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validityEl.textContent = validityByLang[lang] || validityByLang.slo;
         updateLanguageButtons();
 
-        fetch(`/api/menu/${lang}`)
-            .then(r => {
-                if (!r.ok) throw new Error('Could not load menu data');
-                return r.json();
-            })
+        fetchMenuData(lang)
             .then(data => {
                 menuData = Array.isArray(data) ? cloneData(data) : [];
                 const desiredDefault = (defaultCategoryByLang[lang] || '').toLowerCase();
