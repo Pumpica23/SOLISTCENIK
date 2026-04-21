@@ -25,9 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
     let isAdmin = false;
     let hasUnsavedChanges = false;
     let streamConnection = null;
+    let usingApiBackend = true;
 
     function cloneData(data) {
         return JSON.parse(JSON.stringify(data));
+    }
+
+    function menuStorageKey(lang) {
+        return `solist_menu_${lang}`;
+    }
+
+    function readLocalMenu(lang) {
+        try {
+            const raw = localStorage.getItem(menuStorageKey(lang));
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : null;
+        } catch {
+            return null;
+        }
+    }
+
+    function writeLocalMenu(lang, data) {
+        try {
+            localStorage.setItem(menuStorageKey(lang), JSON.stringify(data));
+        } catch {
+            // ignore storage quota/privacy mode errors
+        }
     }
 
     function setSavingState(isSaving) {
@@ -39,10 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isAdmin) return;
         hasUnsavedChanges = true;
         adminLoginBtn.textContent = 'Logout*';
+        if (!usingApiBackend && currentLang) {
+            writeLocalMenu(currentLang, menuData);
+        }
     }
 
     async function saveDataToServer() {
         if (!isAdmin || !currentLang || !hasUnsavedChanges) return;
+        if (!usingApiBackend) {
+            writeLocalMenu(currentLang, menuData);
+            hasUnsavedChanges = false;
+            return;
+        }
         setSavingState(true);
         try {
             const response = await fetch(`/api/menu/${currentLang}`, {
@@ -76,6 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function connectRealtimeUpdates(lang) {
+        if (!usingApiBackend) return;
+
         if (streamConnection) {
             streamConnection.close();
         }
@@ -97,6 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    async function fetchMenuData(lang) {
+        try {
+            const apiResponse = await fetch(`/api/menu/${lang}`);
+            if (!apiResponse.ok) throw new Error('API request failed');
+            usingApiBackend = true;
+            return await apiResponse.json();
+        } catch {
+            const fileResponse = await fetch(`menu_${lang}.json`);
+            if (!fileResponse.ok) throw new Error('Static menu request failed');
+            usingApiBackend = false;
+            const staticData = await fileResponse.json();
+            const localData = readLocalMenu(lang);
+            return localData || staticData;
+        }
+    }
+
     function loadMenu(lang) {
         currentLang = lang;
         languageModal.style.display = 'none';
@@ -104,11 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         validityEl.textContent = validityByLang[lang] || validityByLang.slo;
         updateLanguageButtons();
 
-        fetch(`/api/menu/${lang}`)
-            .then(r => {
-                if (!r.ok) throw new Error('Could not load menu data');
-                return r.json();
-            })
+        fetchMenuData(lang)
             .then(data => {
                 menuData = Array.isArray(data) ? cloneData(data) : [];
                 const desiredDefault = (defaultCategoryByLang[lang] || '').toLowerCase();
