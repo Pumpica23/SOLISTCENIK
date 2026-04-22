@@ -7,6 +7,7 @@ function event(method, lang, body, headers = {}) {
   return {
     httpMethod: method,
     queryStringParameters: { lang },
+    path: `/api/menu/${lang}`,
     headers,
     body: body === undefined ? undefined : JSON.stringify(body)
   };
@@ -58,6 +59,41 @@ test('GET falls back to seed JSON before the first CMS save', async () => {
 
   assert.equal(response.statusCode, 200);
   assert.deepEqual(JSON.parse(response.body), [{ category: 'Seed menu', items: [] }]);
+});
+
+test('GET accepts language from rewritten Netlify path', async () => {
+  const store = createStore();
+  const handler = createMenuHandler({
+    getStore: () => store,
+    readSeedMenu: async () => [{ category: 'Path language menu', items: [] }]
+  });
+
+  const response = await handler({
+    httpMethod: 'GET',
+    queryStringParameters: {},
+    path: '/api/menu/de',
+    headers: {}
+  });
+
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(JSON.parse(response.body), [{ category: 'Path language menu', items: [] }]);
+});
+
+test('connects the Netlify Blobs Lambda environment before opening the store', async () => {
+  const calls = [];
+  const handler = createMenuHandler({
+    connectLambda: async () => calls.push('connect'),
+    getStore: () => {
+      calls.push('store');
+      return createStore({ slo: [{ category: 'Connected', items: [] }] });
+    },
+    readSeedMenu: async () => []
+  });
+
+  const response = await handler(event('GET', 'slo'));
+
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(calls, ['connect', 'store']);
 });
 
 test('POST requires valid CMS credentials', async () => {

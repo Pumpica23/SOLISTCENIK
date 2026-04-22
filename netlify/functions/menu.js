@@ -1,6 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
-const { getStore: getNetlifyStore } = require('@netlify/blobs');
+const { connectLambda: connectNetlifyLambda, getStore: getNetlifyStore } = require('@netlify/blobs');
 
 const LANGS = new Set(['slo', 'eng', 'ita', 'de']);
 const STORE_NAME = 'solist-menus';
@@ -38,6 +38,14 @@ function isAuthorized(headers, cmsUsername, cmsPassword) {
   return username === cmsUsername && password === cmsPassword;
 }
 
+function getLang(event) {
+  const queryLang = event.queryStringParameters && event.queryStringParameters.lang;
+  if (queryLang) return queryLang;
+
+  const pathMatch = (event.path || '').match(/\/api\/menu\/([a-z]+)$/);
+  return pathMatch ? pathMatch[1] : null;
+}
+
 async function readSeedMenu(lang) {
   const fileName = `menu_${lang}.json`;
   const candidates = [
@@ -60,12 +68,15 @@ async function readSeedMenu(lang) {
 
 function createMenuHandler(options = {}) {
   const getStore = options.getStore || (() => getNetlifyStore(STORE_NAME));
+  const connectLambda = options.connectLambda || (options.getStore ? async () => {} : connectNetlifyLambda);
   const loadSeedMenu = options.readSeedMenu || readSeedMenu;
   const cmsUsername = options.cmsUsername || process.env.CMS_USERNAME || DEFAULT_CMS_USERNAME;
   const cmsPassword = options.cmsPassword || process.env.CMS_PASSWORD || DEFAULT_CMS_PASSWORD;
 
   return async function handler(event) {
-    const lang = event.queryStringParameters && event.queryStringParameters.lang;
+    await connectLambda(event);
+
+    const lang = getLang(event);
     if (!LANGS.has(lang)) {
       return jsonResponse(404, { error: 'Unsupported language' });
     }

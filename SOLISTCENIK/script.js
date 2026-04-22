@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const expectedPassToken = 'aXp2T2xpMTIz';
         if (btoa(username || '') === expectedUserToken && btoa(password || '') === expectedPassToken) {
             if (!usingApiBackend) {
-                alert('CMS saving is unavailable because the server API is not connected. Open this page through the Node server URL.');
+                alert('CMS saving is unavailable because the Netlify menu API is not connected yet. Wait for the latest deploy, then refresh and try again.');
                 return;
             }
             adminUsername = username || '';

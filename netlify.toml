@@ -3,5 +3,5 @@
 
 [[redirects]]
   from = "/api/menu/:lang"
-  to = "/.netlify/functions/menu?lang=:lang"
+  to = "/.netlify/functions/menu"
   status = 200
