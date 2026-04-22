@@ -21,7 +21,7 @@ function createStore(initial = {}) {
   const data = new Map(Object.entries(initial));
   return {
     async get(key, options) {
-      assert.deepEqual(options, { type: 'json', consistency: 'strong' });
+      assert.deepEqual(options, { type: 'json' });
       return data.has(key) ? data.get(key) : null;
     },
     async setJSON(key, value) {
@@ -46,6 +46,25 @@ test('GET returns blob menu when it exists', async () => {
   assert.equal(response.statusCode, 200);
   assert.equal(response.headers['Cache-Control'], 'no-store');
   assert.deepEqual(JSON.parse(response.body), [{ category: 'Blob menu', items: [] }]);
+});
+
+test('GET uses default Blob read consistency for Netlify compatibility', async () => {
+  let readOptions;
+  const store = {
+    async get(key, options) {
+      readOptions = options;
+      return [{ category: `${key} menu`, items: [] }];
+    }
+  };
+  const handler = createMenuHandler({
+    getStore: () => store,
+    readSeedMenu: async () => []
+  });
+
+  const response = await handler(event('GET', 'slo'));
+
+  assert.equal(response.statusCode, 200);
+  assert.deepEqual(readOptions, { type: 'json' });
 });
 
 test('GET falls back to seed JSON before the first CMS save', async () => {

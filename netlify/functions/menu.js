@@ -84,7 +84,7 @@ function createMenuHandler(options = {}) {
     const store = getStore();
 
     if (event.httpMethod === 'GET') {
-      const savedMenu = await store.get(lang, { type: 'json', consistency: 'strong' });
+      const savedMenu = await store.get(lang, { type: 'json' });
       const menu = savedMenu || await loadSeedMenu(lang);
       return jsonResponse(200, menu);
     }
