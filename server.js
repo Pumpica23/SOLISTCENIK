@@ -21,6 +21,7 @@ const CONTENT_TYPES = {
 
 const menus = {};
 const clientsByLang = new Map();
+const menuWatchers = new Map();
 
 function menuPath(lang) {
   return path.join(ROOT, `menu_${lang}.json`);
@@ -28,15 +29,25 @@ function menuPath(lang) {
 
 async function loadMenus() {
   for (const lang of LANGS) {
-    const raw = await fs.readFile(menuPath(lang), 'utf-8');
-    menus[lang] = JSON.parse(raw);
+    await loadMenu(lang);
   }
+}
+
+async function loadMenu(lang) {
+  const raw = await fs.readFile(menuPath(lang), 'utf-8');
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed)) {
+    throw new Error(`menu_${lang}.json must contain an array`);
+  }
+  menus[lang] = parsed;
+  return parsed;
 }
 
 function sendJson(res, status, data) {
   const body = JSON.stringify(data);
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store',
     'Content-Length': Buffer.byteLength(body)
   });
   res.end(body);
@@ -46,6 +57,31 @@ function broadcast(lang, data) {
   const clients = clientsByLang.get(lang) || [];
   const payload = `data: ${JSON.stringify(data)}\n\n`;
   clients.forEach((res) => res.write(payload));
+}
+
+function startMenuWatchers() {
+  for (const lang of LANGS) {
+    const filePath = menuPath(lang);
+    let reloadTimer = null;
+
+    const watcher = fscb.watch(filePath, () => {
+      if (reloadTimer) clearTimeout(reloadTimer);
+      reloadTimer = setTimeout(async () => {
+        try {
+          const updatedMenu = await loadMenu(lang);
+          broadcast(lang, updatedMenu);
+        } catch (error) {
+          console.error(`Failed to reload ${path.basename(filePath)}`, error);
+        }
+      }, 75);
+    });
+
+    watcher.on('error', (error) => {
+      console.error(`File watcher error for ${path.basename(filePath)}`, error);
+    });
+
+    menuWatchers.set(lang, watcher);
+  }
 }
 
 function parseBody(req) {
@@ -91,7 +127,11 @@ async function serveStatic(reqPath, res) {
 
     const ext = path.extname(absolutePath).toLowerCase();
     const contentType = CONTENT_TYPES[ext] || 'application/octet-stream';
-    res.writeHead(200, { 'Content-Type': contentType });
+    const headers = { 'Content-Type': contentType };
+    if (ext === '.json') {
+      headers['Cache-Control'] = 'no-store';
+    }
+    res.writeHead(200, headers);
     fscb.createReadStream(absolutePath).pipe(res);
   } catch {
     res.writeHead(404);
@@ -113,7 +153,13 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (type === 'menu' && req.method === 'GET') {
-      sendJson(res, 200, menus[lang]);
+      try {
+        const menu = await loadMenu(lang);
+        sendJson(res, 200, menu);
+      } catch (error) {
+        console.error(`Failed to load menu_${lang}.json`, error);
+        sendJson(res, 500, { error: 'Failed to load menu' });
+      }
       return;
     }
 
@@ -163,6 +209,7 @@ const server = http.createServer(async (req, res) => {
 
 loadMenus()
   .then(() => {
+    startMenuWatchers();
     server.listen(PORT, () => {
       console.log(`SOLIST CMS server running on http://localhost:${PORT}`);
     });
