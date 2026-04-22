@@ -1,0 +1,7 @@
+[functions."menu"]
+  included_files = ["menu_*.json"]
+
+[[redirects]]
+  from = "/api/menu/:lang"
+  to = "/.netlify/functions/menu?lang=:lang"
+  status = 200

@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let menuData = [];
     let isAdmin = false;
     let hasUnsavedChanges = false;
-    let streamConnection = null;
+    let refreshTimer = null;
     let usingApiBackend = true;
+    let adminUsername = null;
+    let adminPassword = null;
 
     function cloneData(data) {
         return JSON.parse(JSON.stringify(data));
@@ -48,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`/api/menu/${currentLang}`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Basic ${btoa(`${adminUsername || ''}:${adminPassword || ''}`)}`
+                },
                 body: JSON.stringify(menuData)
             });
             if (!response.ok) {
@@ -57,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             usingApiBackend = true;
             hasUnsavedChanges = false;
         } catch {
-            alert('Could not save changes to server. Open this page through the Node server URL, not as a static file, then try again.');
+            alert('Could not save changes to server. Please make sure the Netlify API is deployed and try again.');
             throw new Error('save failed');
         } finally {
             setSavingState(false);
@@ -77,28 +82,36 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCategory(currentCategory);
     }
 
+    function applyIncomingMenu(incomingData) {
+        if (!Array.isArray(incomingData)) return;
+        if (isAdmin && hasUnsavedChanges) return;
+
+        const selectedCategory = currentCategory;
+        menuData = cloneData(incomingData);
+        currentCategory = selectedCategory;
+        refreshView();
+    }
+
+    async function refreshMenuFromServer(lang) {
+        if (!usingApiBackend || !lang || document.hidden) return;
+
+        try {
+            const incomingData = await fetchMenuData(lang);
+            if (lang !== currentLang) return;
+            applyIncomingMenu(incomingData);
+        } catch {
+            // Keep the current menu visible until the next successful refresh.
+        }
+    }
+
     function connectRealtimeUpdates(lang) {
         if (!usingApiBackend) return;
 
-        if (streamConnection) {
-            streamConnection.close();
+        if (refreshTimer) {
+            clearInterval(refreshTimer);
         }
 
-        streamConnection = new EventSource(`/api/stream/${lang}`);
-        streamConnection.onmessage = (event) => {
-            const incomingData = JSON.parse(event.data);
-            if (!Array.isArray(incomingData)) return;
-
-            if (isAdmin && hasUnsavedChanges) return;
-            const selectedCategory = currentCategory;
-            menuData = cloneData(incomingData);
-            currentCategory = selectedCategory;
-            refreshView();
-        };
-
-        streamConnection.onerror = () => {
-            // browser reconnects automatically
-        };
+        refreshTimer = setInterval(() => refreshMenuFromServer(lang), 30000);
     }
 
     async function fetchMenuData(lang) {
@@ -457,6 +470,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             isAdmin = false;
             hasUnsavedChanges = false;
+            adminUsername = null;
+            adminPassword = null;
             adminLoginBtn.textContent = 'Login';
             refreshView();
             return;
@@ -471,6 +486,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('CMS saving is unavailable because the server API is not connected. Open this page through the Node server URL.');
                 return;
             }
+            adminUsername = username || '';
+            adminPassword = password || '';
             isAdmin = true;
             adminLoginBtn.textContent = 'Logout';
             refreshView();
