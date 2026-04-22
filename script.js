@@ -44,10 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function saveDataToServer() {
         if (!isAdmin || !currentLang || !hasUnsavedChanges) return;
-        if (!usingApiBackend) {
-            hasUnsavedChanges = false;
-            return;
-        }
         setSavingState(true);
         try {
             const response = await fetch(`/api/menu/${currentLang}`, {
@@ -58,9 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error('Failed to save changes.');
             }
+            usingApiBackend = true;
             hasUnsavedChanges = false;
         } catch {
-            alert('Could not save changes to server. Please try logout again.');
+            alert('Could not save changes to server. Open this page through the Node server URL, not as a static file, then try again.');
             throw new Error('save failed');
         } finally {
             setSavingState(false);
@@ -106,12 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchMenuData(lang) {
         try {
-            const apiResponse = await fetch(`/api/menu/${lang}`);
+            const apiResponse = await fetch(`/api/menu/${lang}`, { cache: 'no-store' });
             if (!apiResponse.ok) throw new Error('API request failed');
             usingApiBackend = true;
             return await apiResponse.json();
         } catch {
-            const fileResponse = await fetch(`menu_${lang}.json`);
+            const fileResponse = await fetch(`menu_${lang}.json`, { cache: 'no-store' });
             if (!fileResponse.ok) throw new Error('Static menu request failed');
             usingApiBackend = false;
             return await fileResponse.json();
@@ -470,6 +467,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const expectedUserToken = 'T2xp';
         const expectedPassToken = 'aXp2T2xpMTIz';
         if (btoa(username || '') === expectedUserToken && btoa(password || '') === expectedPassToken) {
+            if (!usingApiBackend) {
+                alert('CMS saving is unavailable because the server API is not connected. Open this page through the Node server URL.');
+                return;
+            }
             isAdmin = true;
             adminLoginBtn.textContent = 'Logout';
             refreshView();

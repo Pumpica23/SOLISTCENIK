@@ -125,6 +125,29 @@ test('GET reloads menu changes made on disk while server is running', async () =
   }
 });
 
+test('POST saves menu changes that are visible after a refresh', async () => {
+  const server = await startFixtureServer();
+  try {
+    const nextMenu = [{ category: 'slo saved from cms', items: [{ title: 'New item', price: '1.00 €' }] }];
+    const saveResponse = await fetch(`http://127.0.0.1:${server.port}/api/menu/slo`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(nextMenu)
+    });
+
+    assert.equal(saveResponse.status, 200);
+    assert.deepEqual(await saveResponse.json(), { ok: true });
+
+    const refreshResponse = await fetch(`http://127.0.0.1:${server.port}/api/menu/slo`);
+    assert.deepEqual(await refreshResponse.json(), nextMenu);
+
+    const savedFile = JSON.parse(await fs.readFile(path.join(server.tempDir, 'menu_slo.json'), 'utf-8'));
+    assert.deepEqual(savedFile, nextMenu);
+  } finally {
+    await server.stop();
+  }
+});
+
 test('stream subscribers receive menu changes made on disk', async () => {
   const server = await startFixtureServer();
   try {
