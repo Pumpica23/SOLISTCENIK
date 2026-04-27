@@ -268,17 +268,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.createElement('input');
         title.value = item.title || '';
         title.placeholder = 'Title';
-        title.oninput = () => { item.title = title.value; markDirty(); refreshView(); };
+        title.onchange = () => { item.title = title.value; markDirty(); refreshView(); };
 
         const desc = document.createElement('input');
         desc.value = item.description || '';
         desc.placeholder = 'Description';
-        desc.oninput = () => { item.description = desc.value; markDirty(); refreshView(); };
+        desc.onchange = () => { item.description = desc.value; markDirty(); refreshView(); };
 
         const price = document.createElement('input');
         price.value = item.price || '';
         price.placeholder = 'Price';
-        price.oninput = () => { item.price = price.value; markDirty(); refreshView(); };
+        price.onchange = () => { item.price = price.value; markDirty(); refreshView(); };
 
         const controls = document.createElement('div');
         controls.className = 'inline-tools';
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoryName = document.createElement('input');
         categoryName.value = category.category || '';
         categoryName.placeholder = 'Category name';
-        categoryName.oninput = () => {
+        categoryName.onchange = () => {
             const oldName = category.category;
             category.category = categoryName.value;
             if (currentCategory === oldName) currentCategory = category.category;
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const subName = document.createElement('input');
             subName.value = sub.name || '';
             subName.placeholder = 'Subcategory name';
-            subName.oninput = () => { sub.name = subName.value; markDirty(); refreshView(); };
+            subName.onchange = () => { sub.name = subName.value; markDirty(); refreshView(); };
             subBlock.appendChild(subName);
 
             const subControls = document.createElement('div');
